@@ -43,3 +43,6 @@ require('plugins.autopair')
 
 -- Indent Blankline Guide
 require('plugins.indentblankline')
+
+-- Fsnippet
+require('plugins.fsnippet')

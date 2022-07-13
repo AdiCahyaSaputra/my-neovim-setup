@@ -59,4 +59,7 @@ return require('packer').startup(function()
 	-- Wakatime
 	use 'wakatime/vim-wakatime'
 
+	-- Friendly Snippets
+	use "rafamadriz/friendly-snippets"
+
 end)
