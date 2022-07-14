@@ -46,3 +46,9 @@ require('plugins.indentblankline')
 
 -- Fsnippet
 require('plugins.fsnippet')
+
+-- Null ls 
+require('plugins.null-ls')
+
+-- Telescope
+require('plugins.telescope')

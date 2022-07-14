@@ -56,7 +56,7 @@ local on_attach = function(client, bufnr)
   end, bufopts)
   vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
   vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
-  vim.keymap.set('n', '<space>a', vim.lsp.buf.code_action, bufopts)
+  vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
   vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
 end
@@ -71,6 +71,8 @@ require('lspconfig')['tsserver'].setup{
     flags = lsp_flags,
 }
 
+nmap('<space>c', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+
 ----
 -- Neotree
 ----
@@ -83,3 +85,9 @@ nmap('<Leader>o', '<cmd>Neotree focus<cr>') -- Toggle Window
 nmap('<S-h>', '<cmd>BufferPrevious<cr>')
 nmap('<S-l>', '<cmd>BufferNext<cr>')
 nmap('<S-c>', '<cmd>BufferClose<cr>')
+
+
+----
+-- Telescope
+----
+nmap('<space>ff', '<cmd>Telescope find_files<cr>')
