@@ -62,14 +62,23 @@ return require('packer').startup(function()
 	-- Friendly Snippets
 	use "rafamadriz/friendly-snippets"
 	
-	-- null ls
-	use "jose-elias-alvarez/null-ls.nvim"
-
 	-- telescope
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.0',
 		-- or                            , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
+	}
+
+	use {'nvim-telescope/telescope-ui-select.nvim' }
+
+	-- Lsp Signature 
+	use "ray-x/lsp_signature.nvim"
+
+	-- Quick Lint 
+	use {
+		'quick-lint/quick-lint-js', 
+		rtp = 'plugin/vim/quick-lint-js.vim',
+		opt = true
 	}
 
 end)

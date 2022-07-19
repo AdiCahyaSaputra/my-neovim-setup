@@ -72,6 +72,7 @@ require('lspconfig')['tsserver'].setup{
 }
 
 nmap('<space>c', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+nmap('<space>lf', '<cmd>lua vim.lsp.buf.formatting()<cr>')
 
 ----
 -- Neotree
