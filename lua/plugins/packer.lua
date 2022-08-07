@@ -82,4 +82,7 @@ return require('packer').startup(function()
 		-- tag = 'release' -- To use the latest release
 	}
 
+	-- Optimizing Load time
+	use 'lewis6991/impatient.nvim'
+
 end)

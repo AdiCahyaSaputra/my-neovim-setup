@@ -1,3 +1,6 @@
+-- Optimizing
+require('plugins.impatient')
+
 -- Settings Nvim
 require('settings.keybinding')
 require('settings.options')
