@@ -12,9 +12,18 @@ lsp.html.setup {
 	capabilities = capabilities,
 }
 
+-- css
+lsp.cssls.setup{
+	capabilities = capabilities
+}
+
 -- Java
 lsp.jdtls.setup {}
 
 -- Lua
 lsp.sumneko_lua.setup {}
+
+-- PHP
+lsp.phpactor.setup {}
+lsp.intelephense.setup {}
 

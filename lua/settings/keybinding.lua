@@ -20,7 +20,7 @@ end
 ----
 -- Set Map Leader
 ----
-vim.g.mapleader = ' '
+vim.g.mapleader = ' ' -- Space
 
 imap('jk', '<Esc>')
 nmap('<Leader>w', '<cmd>w<cr>')
@@ -86,7 +86,6 @@ nmap('<Leader>o', '<cmd>Neotree focus<cr>') -- Toggle Window
 nmap('<S-h>', '<cmd>BufferPrevious<cr>')
 nmap('<S-l>', '<cmd>BufferNext<cr>')
 nmap('<S-c>', '<cmd>BufferClose<cr>')
-
 
 ----
 -- Telescope

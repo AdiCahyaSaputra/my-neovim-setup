@@ -32,6 +32,9 @@ require('plugins.lualine')
 -- Onedark
 require('plugins.onedark')
 
+-- Tokyonight
+-- require('plugins.tokyonight')
+
 -- Tressiter
 require('plugins.treesitter')
 
@@ -53,3 +56,6 @@ require('plugins.telescope_ui')
 
 -- Lsp signature
 require("plugins.lsp_signature")
+
+-- Git Sign 
+require("plugins.gitsign")

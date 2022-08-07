@@ -2,32 +2,32 @@ return require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
 
 	-- Install Plugins here
-	
+
 	-- LSP first hehe
 	use 'neovim/nvim-lspconfig'
 	use 'williamboman/nvim-lsp-installer'
 
 	-- Auto complete
 	use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
-  use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
-  use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
-  use 'L3MON4D3/LuaSnip'
+	use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+	use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
+	use 'L3MON4D3/LuaSnip'
 
 	-- Neotree
 	use {
-  "nvim-neo-tree/neo-tree.nvim",
-    branch = "v2.x",
-    requires = {
-      "nvim-lua/plenary.nvim",
-      "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
-    }
-  }
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v2.x",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
+			"MunifTanjim/nui.nvim",
+		}
+	}
 
 	-- Barbar (tabline)
 	use {
 		'romgrk/barbar.nvim',
-		requires = {'kyazdani42/nvim-web-devicons'}
+		requires = { 'kyazdani42/nvim-web-devicons' }
 	}
 
 	-- Lualine
@@ -38,7 +38,9 @@ return require('packer').startup(function()
 
 	-- Onedark Theme
 	use 'navarasu/onedark.nvim'
-	
+
+	use 'folke/tokyonight.nvim'
+
 	-- Treesitter
 	use {
 		'nvim-treesitter/nvim-treesitter',
@@ -61,24 +63,23 @@ return require('packer').startup(function()
 
 	-- Friendly Snippets
 	use "rafamadriz/friendly-snippets"
-	
+
 	-- telescope
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.0',
 		-- or                            , branch = '0.1.x',
-		requires = { {'nvim-lua/plenary.nvim'} }
+		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
 
-	use {'nvim-telescope/telescope-ui-select.nvim' }
+	use { 'nvim-telescope/telescope-ui-select.nvim' }
 
-	-- Lsp Signature 
+	-- Lsp Signature
 	use "ray-x/lsp_signature.nvim"
 
-	-- Quick Lint 
+	-- Git sign
 	use {
-		'quick-lint/quick-lint-js', 
-		rtp = 'plugin/vim/quick-lint-js.vim',
-		opt = true
+		'lewis6991/gitsigns.nvim',
+		-- tag = 'release' -- To use the latest release
 	}
 
 end)
