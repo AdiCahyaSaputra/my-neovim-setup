@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["impatient.nvim"] = {
+    loaded = true,
+    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/impatient.nvim",
+    url = "https://github.com/lewis6991/impatient.nvim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -179,12 +184,6 @@ _G.packer_plugins = {
     path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["quick-lint-js"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/quick-lint-js/plugin/vim/quick-lint-js.vim",
-    url = "https://github.com/quick-lint/quick-lint-js"
-  },
   ["telescope-ui-select.nvim"] = {
     loaded = true,
     path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/telescope-ui-select.nvim",
@@ -208,10 +207,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Runtimepath customization
-time([[Runtimepath customization]], true)
-vim.o.runtimepath = vim.o.runtimepath .. ",/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/quick-lint-js/plugin/vim/quick-lint-js.vim"
-time([[Runtimepath customization]], false)
 if should_profile then save_profiles() end
 
 end)

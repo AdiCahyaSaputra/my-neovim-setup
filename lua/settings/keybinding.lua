@@ -25,6 +25,9 @@ vim.g.mapleader = ' ' -- Space
 imap('jk', '<Esc>')
 nmap('<Leader>w', '<cmd>w<cr>')
 
+-- Select all
+nmap('<space>a', 'gg<S-v>G')
+
 ----
 -- LSP Map
 ----

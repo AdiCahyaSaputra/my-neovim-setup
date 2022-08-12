@@ -1,5 +1,5 @@
 -- Optimizing
-require('plugins.impatient')
+require('impatient')
 
 -- Settings Nvim
 require('settings.keybinding')
@@ -60,5 +60,5 @@ require('plugins.telescope_ui')
 -- Lsp signature
 require("plugins.lsp_signature")
 
--- Git Sign 
+-- Git Sign
 require("plugins.gitsign")

@@ -10,6 +10,7 @@ return require('packer').startup(function()
 	-- Auto complete
 	use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
 	use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+	use 'hrsh7th/cmp-buffer' -- Completion source for buffer words
 	use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
 	use 'L3MON4D3/LuaSnip'
 
