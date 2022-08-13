@@ -6,7 +6,7 @@ require('settings.keybinding')
 require('settings.options')
 
 -- Plugins Manager
-require('plugins.packer')
+require('plugins')
 
 -- LSP
 require('lsp.lsp_setting')
@@ -27,38 +27,5 @@ for _, lsp in ipairs(servers) do
 	}
 end
 
-require('plugins.cmp')
-
--- Lualine
-require('plugins.lualine')
-
--- Onedark
-require('plugins.onedark')
-
 -- Tokyonight
 -- require('plugins.tokyonight')
-
--- Tressiter
-require('plugins.treesitter')
-
--- Comment
-require('plugins.comment')
-
--- Autopair
-require('plugins.autopair')
-
--- Indent Blankline Guide
-require('plugins.indentblankline')
-
--- Frendly snippet
-require('plugins.fsnippet')
-
--- Telescope
-require('plugins.telescope')
-require('plugins.telescope_ui')
-
--- Lsp signature
-require("plugins.lsp_signature")
-
--- Git Sign
-require("plugins.gitsign")

@@ -1,4 +1,7 @@
-local cfg = {
+local ok, lsp_s = pcall(require, 'lsp_signature')
+if not ok then return end
+
+lsp_s.setup {
 	debug = false, -- set to true to enable debug logging
 	log_path = vim.fn.stdpath("cache") .. "/lsp_signature.log", -- log dir when debug is on
 	-- default is  ~/.cache/nvim/lsp_signature.log
@@ -54,6 +57,3 @@ local cfg = {
 	select_signature_key = nil, -- cycle to next signature, e.g. '<M-n>' function overloading
 	move_cursor_key = nil, -- imap, use nvim_set_current_win to move cursor between current win and floating
 }
-
--- recommended:
-require 'lsp_signature'.setup(cfg) -- no need to specify bufnr if you don't use toggle_key

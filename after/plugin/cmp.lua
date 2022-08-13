@@ -1,8 +1,10 @@
+local ok, cmp = pcall(require, 'cmp')
+if not ok then return end
+
 -- luasnip setup
 local luasnip = require 'luasnip'
 
 -- nvim-cmp setup
-local cmp = require 'cmp'
 cmp.setup {
 	snippet = {
 		expand = function(args)

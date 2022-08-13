@@ -1,4 +1,12 @@
-return require('packer').startup(function()
+local ok, packer = pcall(require, 'packer')
+if not ok then
+	print("Packer Not Installed!")
+	return
+end
+
+vim.cmd([[packadd packer.nvim]])
+
+packer.startup(function()
 	use 'wbthomason/packer.nvim'
 
 	-- Install Plugins here
@@ -85,5 +93,6 @@ return require('packer').startup(function()
 
 	-- Optimizing Load time
 	use 'lewis6991/impatient.nvim'
+
 
 end)
