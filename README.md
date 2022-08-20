@@ -7,17 +7,21 @@
 
 ## **List** plugin
 
-- [Auto Pairs](https://github.com/windwp/nvim-autopairs)
+- [LSP Config](https://github.com/neovim/nvim-lspconfig)
+- [LSP Installer](https://github.com/williamboman/nvim-lsp-installer)
 - [Nvim CMP](https://github.com/hrsh7th/nvim-cmp)
-- [Comments](https://github.com/numToStr/Comment.nvim)
-- [Friendly Snippets](https://github.com/rafamadriz/friendly-snippets)
-- [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
-- [LSP Signature](https://github.com/ray-x/lsp_signature.nvim)
-- [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+- [Auto Pairs](https://github.com/windwp/nvim-autopairs)
 - [Onedark](https://github.com/navarasu/onedark.nvim)
+- [Neotree](https://github.com/nvim-neo-tree/neo-tree.nvim)
+- [Barbar Nvim](https://github.com/romgrk/barbar.nvim)
+- [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+- [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [Comments](https://github.com/numToStr/Comment.nvim)
+- [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [Friendly Snippets](https://github.com/rafamadriz/friendly-snippets)
+- [LSP Signature](https://github.com/ray-x/lsp_signature.nvim)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [Telescope UI](https://github.com/nvim-telescope/telescope-ui-select.nvim)
-- [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
 ## **LSP** Server 
 
@@ -25,8 +29,6 @@
 - html
 -	jdtls
 - sumenko_lua
-- json
-- jsonls
 - intelephense
 - phpactor
 
