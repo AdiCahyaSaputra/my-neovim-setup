@@ -8,7 +8,8 @@
 ## **List** plugin
 
 - [LSP Config](https://github.com/neovim/nvim-lspconfig)
-- [LSP Installer](https://github.com/williamboman/nvim-lsp-installer)
+- [LSP Kind](https://github.com/onsails/lspkind.nvim)
+- [Mason](https://github.com/williamboman/mason.nvim)
 - [Nvim CMP](https://github.com/hrsh7th/nvim-cmp)
 - [Auto Pairs](https://github.com/windwp/nvim-autopairs)
 - [Onedark](https://github.com/navarasu/onedark.nvim)

@@ -1,4 +1,4 @@
-require 'nvim-lsp-installer'.setup {}
+-- require 'nvim-lsp-installer'.setup {}
 local ok, nvim_lsp = pcall(require, 'lspconfig')
 if not ok then return end
 
@@ -51,9 +51,8 @@ nvim_lsp.jdtls.setup {
 	capabilities = capabilities
 }
 
-nvim_lsp.intelephense.setup {}
-
-nvim_lsp.phpactor.setup {
+nvim_lsp.intelephense.setup {
 	on_attach = on_attach,
 	capabilities = capabilities
 }
+

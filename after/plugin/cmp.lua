@@ -3,9 +3,19 @@ if not ok then return end
 
 -- Lua snip
 local luasnip = require 'luasnip'
+local lspkind = require 'lspkind'
 
 -- Cmp
 cmp.setup {
+	formatting = {
+		format = lspkind.cmp_format({
+			mode = 'symbol',
+			maxwidth = 50,
+			before = function(entry, vim_item)
+				return vim_item
+			end
+		})
+	},
 	snippet = {
 		expand = function(args)
 			luasnip.lsp_expand(args.body)

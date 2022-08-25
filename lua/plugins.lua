@@ -6,12 +6,14 @@ end
 
 vim.cmd([[packadd packer.nvim]])
 
-packer.startup(function()
+packer.startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	-- Lsp
+	-- use 'williamboman/nvim-lsp-installer' -- futher dev has moved to mason.nvim
+	use "williamboman/mason.nvim"
+	use "williamboman/mason-lspconfig.nvim"
 	use 'neovim/nvim-lspconfig'
-	use 'williamboman/nvim-lsp-installer'
 
 	-- Auto Complete
 	use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
@@ -78,5 +80,11 @@ packer.startup(function()
 
 	-- Lsp Signature
 	use 'ray-x/lsp_signature.nvim'
+	
+	-- Git sign
+	use 'lewis6991/gitsigns.nvim'
+
+	-- Lspkind
+  use 'onsails/lspkind.nvim'
 
 end)
