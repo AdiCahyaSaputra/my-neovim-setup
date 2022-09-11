@@ -19,7 +19,8 @@ local config = {
 	options = {
 		-- Disable sections and component separators
 		component_separators = '',
-		section_separators = ''
+		section_separators = '',
+		theme = 'onedark'
 	},
 	sections = {
 		-- these are to remove the defaults
@@ -123,7 +124,7 @@ ins_right {
 		}
 		return { fg = mode_color[vim.fn.mode()] }
 	end,
-	padding = { left = 1 },
+	padding = { right = 0 },
 }
 
 lualine.setup(config)

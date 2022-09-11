@@ -41,3 +41,9 @@ nmap('<S-c>', '<cmd>BufferClose<cr>')
 
 -- Telescope
 nmap('<space>ff', '<cmd>Telescope find_files<cr>')
+
+-- Semicolon
+nmap('<space>;', '<C-o>A;')
+
+-- Zenmode
+nmap('<space>z', '<cmd>ZenMode<cr>')

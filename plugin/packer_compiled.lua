@@ -208,6 +208,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["zen-mode.nvim"] = {
+    loaded = true,
+    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
+    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 

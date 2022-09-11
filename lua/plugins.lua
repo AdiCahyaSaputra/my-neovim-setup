@@ -87,4 +87,7 @@ packer.startup(function(use)
 	-- Lspkind
   use 'onsails/lspkind.nvim'
 
+  -- Zen Mode
+  use 'folke/zen-mode.nvim'
+
 end)
