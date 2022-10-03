@@ -31,6 +31,9 @@ packer.startup(function(use)
   -- Gruvbox
   use { "ellisonleao/gruvbox.nvim" }
 
+  -- Nord
+  use 'shaunsingh/nord.nvim'
+
   -- Neo tree
   use {
     "nvim-neo-tree/neo-tree.nvim",
