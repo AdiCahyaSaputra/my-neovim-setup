@@ -28,12 +28,6 @@ packer.startup(function(use)
   -- Onedark
   use 'navarasu/onedark.nvim'
 
-  -- Gruvbox
-  use { "ellisonleao/gruvbox.nvim" }
-
-  -- Nord
-  use 'shaunsingh/nord.nvim'
-
   -- Neo tree
   use {
     "nvim-neo-tree/neo-tree.nvim",
@@ -64,7 +58,6 @@ packer.startup(function(use)
   }
 
   use 'windwp/nvim-ts-autotag'
-  use 'p00f/nvim-ts-rainbow'
 
   -- Comment
   use 'numToStr/Comment.nvim'
@@ -93,7 +86,7 @@ packer.startup(function(use)
   -- Lspkind
   use 'onsails/lspkind.nvim'
 
-  -- Zen Mode
-  use 'folke/zen-mode.nvim'
+  -- Null Ls 
+  use 'jose-elias-alvarez/null-ls.nvim'
 
 end)

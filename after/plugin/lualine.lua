@@ -18,7 +18,7 @@ local colors = {
 local config = {
   options = {
     -- Disable sections and component separators
-    component_separators = '',
+    component_separators = { left = '»', right = '«'},
     section_separators = '',
     theme = 'onedark'
   },
@@ -52,12 +52,14 @@ local function ins_right(component)
 end
 
 ins_left {
-  function()
-    return '▊'
+  'mode',
+  fmt = function(str)
+    return str:sub(1,1)
   end,
   color = function()
     -- auto change color according to neovims mode
-    local mode_color = {
+    local mode_color_fg = {
+      n = colors.blue,
       i = colors.magenta,
       v = colors.red,
       V = colors.red,
@@ -68,9 +70,10 @@ ins_left {
       r = colors.cyan,
       rm = colors.cyan,
     }
-    return { fg = mode_color[vim.fn.mode()] }
+
+    return { fg = mode_color_fg[vim.fn.mode()], gui = 'bold' }
   end,
-  padding = { left = 0, right = 1 }, -- We don't need space before this
+  padding = { left = 1, right = 1 }, -- We don't need space before this
 }
 
 ins_left {
@@ -78,6 +81,14 @@ ins_left {
     return ''
   end,
   color = { fg = colors.red, gui = 'bold' }
+}
+
+ins_left {
+  'filename',
+  cond = function()
+    return vim.fn.empty(vim.fn.expand('%:t')) ~= 1
+  end,
+  color = { fg = colors.yellow },
 }
 
 ins_left {
@@ -103,28 +114,6 @@ ins_right {
   'branch',
   icon = '',
   color = { fg = colors.yellow, gui = 'bold' },
-}
-
-ins_right {
-  function()
-    return '▊'
-  end,
-  color = function()
-    -- auto change color according to neovims mode
-    local mode_color = {
-      i = colors.magenta,
-      v = colors.red,
-      V = colors.red,
-      s = colors.orange,
-      S = colors.orange,
-      R = colors.violet,
-      Rv = colors.violet,
-      r = colors.cyan,
-      rm = colors.cyan,
-    }
-    return { fg = mode_color[vim.fn.mode()] }
-  end,
-  padding = { right = 0 },
 }
 
 lualine.setup(config)
