@@ -22,12 +22,11 @@ nmap('<space>w', '<cmd>w<cr>')
 -- Lsp Diagnostic
 local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
-vim.keymap.set('n', '<space>dh', vim.diagnostic.goto_prev, opts)
-vim.keymap.set('n', '<space>dl', vim.diagnostic.goto_next, opts)
-vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
+vim.keymap.set('n', '<space>dh', '<cmd>Lspsaga diagnostic_jump_prev<CR>',opts)
+vim.keymap.set('n', '<space>dl', '<cmd>Lspsaga diagnostic_jump_next<CR>',opts)
 
 -- Lsp Formatting / Code Action
-nmap('<space>c', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+nmap('<space>c', '<cmd>Lspsaga code_action<cr>')
 nmap('<space>lf', '<cmd>lua vim.lsp.buf.formatting()<cr>')
 
 -- Neo tree

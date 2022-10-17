@@ -83,13 +83,13 @@ ins_left {
   color = { fg = colors.red, gui = 'bold' }
 }
 
-ins_left {
-  'filename',
-  cond = function()
-    return vim.fn.empty(vim.fn.expand('%:t')) ~= 1
-  end,
-  color = { fg = colors.yellow },
-}
+-- ins_left {
+--   'filename',
+--   cond = function()
+--     return vim.fn.empty(vim.fn.expand('%:t')) ~= 1
+--   end,
+--   color = { fg = colors.yellow },
+-- }
 
 ins_left {
   'diagnostics',
