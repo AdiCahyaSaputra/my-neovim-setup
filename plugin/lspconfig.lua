@@ -1,4 +1,3 @@
--- require 'nvim-lsp-installer'.setup {}
 local ok, nvim_lsp = pcall(require, 'lspconfig')
 if not ok then return end
 
@@ -64,22 +63,17 @@ nvim_lsp.intelephense.setup {
   capabilities = capabilities
 }
 
--- nvim_lsp.emmet_ls.setup {
---   on_attach = on_attach,
---   capabilities = capabilities
--- }
-
-nvim_lsp.eslint.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
-
 nvim_lsp.cssls.setup {
   on_attach = on_attach,
   capabilities = capabilities
 }
 
 nvim_lsp.phpactor.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+nvim_lsp.eslint.setup {
   on_attach = on_attach,
   capabilities = capabilities
 }
@@ -92,7 +86,7 @@ nvim_lsp.jsonls.setup {
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
   underline = true,
-  update_in_insert = false,
+  update_in_insert = true,
   virtual_text = { spacing = 4, prefix = "●" },
   severity_sort = true,
 }

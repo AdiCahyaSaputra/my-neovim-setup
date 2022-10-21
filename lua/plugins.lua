@@ -89,13 +89,7 @@ packer.startup(function(use)
   -- Lspkind
   use 'onsails/lspkind.nvim'
 
-  -- Null Ls 
+  -- Null Ls
   use 'jose-elias-alvarez/null-ls.nvim'
-
-  -- Regex Explainer
-  use 'bennypowers/nvim-regexplainer'
-
-  -- Base 16 Colorscheme
-  use 'RRethy/nvim-base16'
 
 end)

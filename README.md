@@ -7,9 +7,10 @@
 
 ## **List** plugin
 
-- [LSP Config](https://github.com/neovim/nvim-lspconfig)
-- [LSP Kind](https://github.com/onsails/lspkind.nvim)
 - [Mason](https://github.com/williamboman/mason.nvim)
+- [Mason LSP Config](https://github.com/williamboman/mason-lspconfig.nvim)
+- [LSP Config](https://github.com/neovim/nvim-lspconfig)
+- [LSP Saga](https://github.com/glepnir/lspsaga.nvim)
 - [Nvim CMP](https://github.com/hrsh7th/nvim-cmp)
 - [Auto Pairs](https://github.com/windwp/nvim-autopairs)
 - [Onedark](https://github.com/navarasu/onedark.nvim)
@@ -20,15 +21,22 @@
 - [Comments](https://github.com/numToStr/Comment.nvim)
 - [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [Friendly Snippets](https://github.com/rafamadriz/friendly-snippets)
-- [LSP Signature](https://github.com/ray-x/lsp_signature.nvim)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [Telescope UI](https://github.com/nvim-telescope/telescope-ui-select.nvim)
+- [LSP Signature](https://github.com/ray-x/lsp_signature.nvim)
+- [Git Sign](https://github.com/lewis6991/gitsigns.nvim)
+- [LSP Kind](https://github.com/onsails/lspkind.nvim)
+- [Null LS](https://github.com/jose-elias-alvarez/null-ls.nvim)
 
 ## **LSP** Server 
 
 - tsserver
 - html
 -	jdtls
+- emmet_ls
+- cssls
+- jsonls
+- eslint_d
 - sumenko_lua
 - intelephense
 - phpactor
@@ -54,8 +62,11 @@ buffer_next = 'Shift + l'
 buffer_close = 'Shift + c'
 
 code_action = 'Space + c'
+goto_definition = 'Space + d'
 format_code = 'Space + lf'
 trigger_completion = 'Ctrl + Space'
+
+args_assist = 'Alt + a'
 
 telescope = 'Space + ff' -- find file 
 
