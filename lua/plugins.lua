@@ -32,6 +32,9 @@ packer.startup(function(use)
   -- Onedark
   use 'navarasu/onedark.nvim'
   use 'olimorris/onedarkpro.nvim'
+  
+  -- Everblush
+  use 'Everblush/everblush.nvim'
 
   -- Double Trouble
   use 'muchzill4/doubletrouble'

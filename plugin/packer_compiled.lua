@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/doubletrouble",
     url = "https://github.com/muchzill4/doubletrouble"
   },
+  ["everblush.nvim"] = {
+    loaded = true,
+    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/everblush.nvim",
+    url = "https://github.com/Everblush/everblush.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/friendly-snippets",

@@ -8,7 +8,7 @@ ts.setup {
 
   highlight = {
     enable = true,
-    disable = { },
+    disable = { 'html' },
     additional_vim_regex_highlighting = false
   },
 
