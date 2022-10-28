@@ -1,12 +1,27 @@
-local ok, onedark = pcall(require, 'onedark')
+-- local ok, onedark = pcall(require, 'onedark')
+-- if not ok then return end
+--
+-- onedark.setup {
+--   style = 'deep',
+--   transparent = true,
+--   code_style = {
+--     comments = 'none'
+--   },
+-- }
+--
+-- onedark.load()
+
+local ok, onedarkpro = pcall(require, 'onedarkpro')
 if not ok then return end
 
-onedark.setup {
-  style = 'deep',
-  transparent = true,
-  code_style = {
-    comments = 'none'
-  },
+onedarkpro.setup {
+  dark_theme = "onedark",
+  options = {
+    transparency = true
+  }
 }
 
-onedark.load()
+vim.cmd("colorscheme onedarkpro")
+--
+-- vim.o.termguicolors = true
+-- vim.api.nvim_command "colorscheme doubletrouble"

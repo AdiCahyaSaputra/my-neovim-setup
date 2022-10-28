@@ -17,7 +17,7 @@ end
 
 vim.g.mapleader = ' ' -- Space
 imap('jk', '<Esc>')
-nmap('<space>w', '<cmd>w<cr>')
+nmap('<space>w', '<cmd>w!<cr>')
 
 -- Lsp Diagnostic
 local opts = { noremap = true, silent = true }
@@ -46,3 +46,7 @@ nmap('<space>;', '<C-o>A;')
 
 -- Zenmode
 nmap('<space>z', '<cmd>ZenMode<cr>')
+
+-- Highlight Str
+vmap('<space>h', ':<c-u>HSHighlight 4<CR>')
+vmap('hr', ':<c-u>HSRmHighlight<CR>')

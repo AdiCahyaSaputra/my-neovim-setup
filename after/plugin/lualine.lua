@@ -20,7 +20,7 @@ local config = {
     -- Disable sections and component separators
     component_separators = { left = '»', right = '«'},
     section_separators = '',
-    theme = 'onedark'
+    theme = 'onedarkpro'
   },
   sections = {
     -- these are to remove the defaults

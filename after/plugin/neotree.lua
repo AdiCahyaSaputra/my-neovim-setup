@@ -4,7 +4,7 @@ if not ok then return end
 neotree.setup {
   default_component_configs = {
     icon = {
-      folder_empty = '@'
+      folder_empty = '-'
     }
   }
 }
