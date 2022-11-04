@@ -11,6 +11,22 @@ onedark.setup {
 
 onedark.load()
 
+-- local ok, neosolarized = pcall(require, 'NeoSolarized')
+-- if not ok then return end
+--
+-- neosolarized.setup {
+--   style = "dark",
+--   transparent = true,
+--   enable_italics = false,
+--   styles = {
+--     comments = { italic = false },
+--     keywords = { italic = false },
+--     string = { italic = false },
+--   }
+-- }
+--
+-- vim.cmd [[colorscheme NeoSolarized]]
+
 -- local ok, onedarkpro = pcall(require, 'onedarkpro')
 -- if not ok then return end
 --

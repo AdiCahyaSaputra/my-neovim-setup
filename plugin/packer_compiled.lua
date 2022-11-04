@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["NeoSolarized.nvim"] = {
+    loaded = true,
+    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/NeoSolarized.nvim",
+    url = "https://github.com/Tsuzat/NeoSolarized.nvim"
+  },
   ["barbar.nvim"] = {
     loaded = true,
     path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/barbar.nvim",
@@ -113,16 +118,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
-  },
-  doubletrouble = {
-    loaded = true,
-    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/doubletrouble",
-    url = "https://github.com/muchzill4/doubletrouble"
-  },
-  ["everblush.nvim"] = {
-    loaded = true,
-    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/everblush.nvim",
-    url = "https://github.com/Everblush/everblush.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,

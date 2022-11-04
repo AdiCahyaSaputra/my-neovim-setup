@@ -32,12 +32,9 @@ packer.startup(function(use)
   -- Onedark
   use 'navarasu/onedark.nvim'
   use 'olimorris/onedarkpro.nvim'
-  
-  -- Everblush
-  use 'Everblush/everblush.nvim'
 
-  -- Double Trouble
-  use 'muchzill4/doubletrouble'
+  -- Neosolarized
+  use 'Tsuzat/NeoSolarized.nvim'
 
   -- Neo tree
   use {
@@ -103,7 +100,7 @@ packer.startup(function(use)
   -- Colorscheme creator
   use 'rktjmp/lush.nvim'
 
-  -- Highlight STR 
+  -- Highlight STR
   use 'Pocco81/HighStr.nvim'
 
 end)
