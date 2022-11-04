@@ -71,3 +71,9 @@ args_assist = 'Alt + a'
 telescope = 'Space + ff' -- find file 
 
 ```
+
+## Icons 
+[nerd fonts](https://www.nerdfonts.com/)
+
+**for android** install [termux-style](https://f-droid.org/en/packages/com.termux.styling/)
+and use Hack fonts

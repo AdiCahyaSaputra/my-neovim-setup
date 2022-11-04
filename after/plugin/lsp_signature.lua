@@ -4,7 +4,8 @@ if not ok then return end
 local config = {
 	close_timeout = 1000,
 	hint_prefix = "👾 ",
-	toggle_key = "<A-d>"
+	toggle_key = "<A-d>",
+  max_height = 2,
 }
 
 lsp_s.setup(config)
