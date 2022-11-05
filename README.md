@@ -62,7 +62,7 @@ buffer_next = 'Shift + l'
 buffer_close = 'Shift + c'
 
 code_action = 'Space + c'
-goto_definition = 'Space + d'
+goto_definition = 'gd'
 format_code = 'Space + lf'
 trigger_completion = 'Ctrl + Space'
 
