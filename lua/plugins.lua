@@ -100,7 +100,4 @@ packer.startup(function(use)
   -- Colorscheme creator
   use 'rktjmp/lush.nvim'
 
-  -- Highlight STR
-  use 'Pocco81/HighStr.nvim'
-
 end)

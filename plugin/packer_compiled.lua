@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
-  ["HighStr.nvim"] = {
-    loaded = true,
-    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/HighStr.nvim",
-    url = "https://github.com/Pocco81/HighStr.nvim"
-  },
   LuaSnip = {
     loaded = true,
     path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/LuaSnip",
