@@ -27,6 +27,7 @@
 - [Git Sign](https://github.com/lewis6991/gitsigns.nvim)
 - [LSP Kind](https://github.com/onsails/lspkind.nvim)
 - [Null LS](https://github.com/jose-elias-alvarez/null-ls.nvim)
+- [Impatient](https://github.com/lewis6991/impatient.nvim)
 
 ## **LSP** Server 
 
