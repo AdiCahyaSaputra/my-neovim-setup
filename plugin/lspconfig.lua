@@ -36,11 +36,6 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
--- nvim_lsp.emmet_ls.setup {
---   on_attach = on_attach,
---   capabilities = capabilities
--- }
-
 nvim_lsp.sumneko_lua.setup {
   on_attach = on_attach,
   capabilities = capabilities,
@@ -91,7 +86,7 @@ nvim_lsp.jsonls.setup {
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
   underline = false,
-  update_in_insert = true,
+  update_in_insert = false,
   virtual_text = { spacing = 4, prefix = "●" },
   severity_sort = true,
 }
@@ -107,7 +102,7 @@ vim.diagnostic.config({
   virtual_text = {
     prefix = '●'
   },
-  update_in_insert = true,
+  update_in_insert = false,
   float = {
     source = "always", -- Or "if_many"
   },

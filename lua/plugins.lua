@@ -100,4 +100,7 @@ packer.startup(function(use)
   -- Colorscheme creator
   use 'rktjmp/lush.nvim'
 
+  -- Impatient
+  use 'lewis6991/impatient.nvim'
+
 end)
