@@ -17,6 +17,7 @@ end
 
 vim.g.mapleader = ' ' -- Space
 imap('jk', '<Esc>')
+vmap('oo', '<Esc>')
 nmap('<space>w', '<cmd>w!<cr>')
 
 -- Lsp Diagnostic

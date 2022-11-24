@@ -6,5 +6,6 @@ null_ls.setup {
     null_ls.builtins.diagnostics.eslint_d,
     null_ls.builtins.diagnostics.jsonlint,
     null_ls.builtins.diagnostics.luacheck,
+    null_ls.builtins.formatting.blade_formatter
   }
 }
