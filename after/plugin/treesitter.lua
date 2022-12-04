@@ -9,7 +9,6 @@ ts.setup {
   highlight = {
     enable = true,
     disable = { 'html' },
-    additional_vim_regex_highlighting = false
   },
 
   autotag = {

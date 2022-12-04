@@ -40,13 +40,3 @@ nmap('<S-c>', '<cmd>BufferClose<cr>')
 
 -- Telescope
 nmap('<space>ff', '<cmd>Telescope find_files<cr>')
-
--- Semicolon
-nmap('<space>;', '<C-o>A;')
-
--- Zenmode
-nmap('<space>z', '<cmd>ZenMode<cr>')
-
--- Highlight Str
-vmap('<space>h', ':<c-u>HSHighlight 4<CR>')
-vmap('hr', ':<c-u>HSRmHighlight<CR>')

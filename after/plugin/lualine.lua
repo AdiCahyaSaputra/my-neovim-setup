@@ -20,7 +20,6 @@ local config = {
     -- Disable sections and component separators
     component_separators = { left = '»', right = '«'},
     section_separators = '',
-    theme = 'onedarkpro'
   },
   sections = {
     -- these are to remove the defaults
@@ -82,14 +81,6 @@ ins_left {
   end,
   color = { fg = colors.red, gui = 'bold' }
 }
-
--- ins_left {
---   'filename',
---   cond = function()
---     return vim.fn.empty(vim.fn.expand('%:t')) ~= 1
---   end,
---   color = { fg = colors.yellow },
--- }
 
 ins_left {
   'diagnostics',

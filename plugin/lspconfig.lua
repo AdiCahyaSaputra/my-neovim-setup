@@ -1,13 +1,15 @@
 local ok, nvim_lsp = pcall(require, 'lspconfig')
 if not ok then return end
 
+local tbuiltin = require('telescope.builtin')
+
 local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   -- Map
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
   vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+  vim.keymap.set('n', 'gd', "<cmd>lua require'telescope.builtin'.lsp_definitions()<CR>", bufopts)
   vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<CR>', bufopts)
   vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
   vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
@@ -85,23 +87,21 @@ nvim_lsp.jsonls.setup {
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
-  underline = false,
+  underline = true,
   update_in_insert = false,
-  virtual_text = { spacing = 4, prefix = "●" },
   severity_sort = true,
 }
 )
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
 vim.diagnostic.config({
-  virtual_text = {
-    prefix = '●'
-  },
+  virtual_text = false,
   update_in_insert = false,
   float = {
     source = "always", -- Or "if_many"

@@ -106,4 +106,7 @@ packer.startup(function(use)
   -- Impatient
   use 'lewis6991/impatient.nvim'
 
+  -- Code Snippet with carbon
+  use 'ellisonleao/carbon-now.nvim'
+
 end)

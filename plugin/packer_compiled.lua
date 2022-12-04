@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/barbar.nvim",
     url = "https://github.com/romgrk/barbar.nvim"
   },
+  ["carbon-now.nvim"] = {
+    loaded = true,
+    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/carbon-now.nvim",
+    url = "https://github.com/ellisonleao/carbon-now.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/cmp-buffer",
