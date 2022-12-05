@@ -38,7 +38,7 @@ onedark.load()
 -- }
 --
 -- vim.cmd("colorscheme onedarkpro")
---
+
 -- vim.o.termguicolors = true
 -- vim.api.nvim_command "colorscheme doubletrouble"
 --

@@ -16,9 +16,14 @@ function vmap(shortcut, command)
 end
 
 vim.g.mapleader = ' ' -- Space
+
 imap('jk', '<Esc>')
 vmap('oo', '<Esc>')
+
 nmap('<space>w', '<cmd>w!<cr>')
+
+nmap('n', "nzz<cmd>Beacon<cr>")
+nmap('N', "Nzz<cmd>Beacon<cr>")
 
 -- Lsp Diagnostic
 local opts = { noremap = true, silent = true }

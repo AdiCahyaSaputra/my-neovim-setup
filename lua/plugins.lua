@@ -97,16 +97,13 @@ packer.startup(function(use)
   -- Null Ls
   use 'jose-elias-alvarez/null-ls.nvim'
 
-  -- Colorscheme creator
-  use 'rktjmp/lush.nvim'
-
   -- Monark
   use 'doums/monark.nvim'
 
+  -- Highlight When Move 
+  use 'danilamihailov/beacon.nvim'
+
   -- Impatient
   use 'lewis6991/impatient.nvim'
-
-  -- Code Snippet with carbon
-  use 'ellisonleao/carbon-now.nvim'
 
 end)

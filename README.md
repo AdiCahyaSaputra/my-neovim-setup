@@ -29,6 +29,7 @@
 - [Null LS](https://github.com/jose-elias-alvarez/null-ls.nvim)
 - [Impatient](https://github.com/lewis6991/impatient.nvim)
 - [Monark](https://github.com/doums/monark.nvim)
+- [Beacon](https://github.com/danilamihailov/beacon.nvim)
 
 ## **LSP** Server 
 
@@ -52,6 +53,8 @@ leader = 'Space'
 
 normal_mode = 'jk' -- i'm actually get into normal mode when type jk in this readme file 
 write = 'Space + w'
+
+normal_mode_on_visual = 'oo'
 
 comments = 'gcc' -- on normal mode 
 comments_visual = 'gc'
