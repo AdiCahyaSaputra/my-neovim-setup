@@ -12,6 +12,7 @@ vim.o.tabstop = 2
 vim.o.softtabstop = 2
 vim.o.showmode = false
 vim.opt.autoindent = true
+vim.opt.cursorline = true
 vim.opt.smartindent = true
 vim.opt.hlsearch = true
 vim.opt.showcmd = true
