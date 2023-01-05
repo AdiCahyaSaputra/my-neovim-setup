@@ -12,38 +12,38 @@ end
 
 vim.opt.runtimepath:prepend(lazypath)
 
-local ok, lazy = pcall(require, 'lazy')
+local ok, lazy = pcall(require, "lazy")
 if not ok then return end
 
 lazy.setup({
-  { 'navarasu/onedark.nvim', enabled = false },
+  { "navarasu/onedark.nvim", enabled = false },
   {
-    'VonHeikemen/lsp-zero.nvim',
+    "VonHeikemen/lsp-zero.nvim",
     dependencies = {
-      'neovim/nvim-lspconfig',
-      'williamboman/mason.nvim',
-      'williamboman/mason-lspconfig.nvim',
+      "neovim/nvim-lspconfig",
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
       "onsails/lspkind.nvim",
-      'hrsh7th/cmp-buffer',
-      'hrsh7th/cmp-path',
-      'saadparwaiz1/cmp_luasnip',
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-nvim-lua',
-      'L3MON4D3/LuaSnip',
-      'rafamadriz/friendly-snippets',
-      'hrsh7th/cmp-nvim-lsp-signature-help',
-      'hrsh7th/nvim-cmp',
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "saadparwaiz1/cmp_luasnip",
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-nvim-lua",
+      "L3MON4D3/LuaSnip",
+      "rafamadriz/friendly-snippets",
+      "hrsh7th/cmp-nvim-lsp-signature-help",
+      "hrsh7th/nvim-cmp",
     }
   },
-  { 'glepnir/lspsaga.nvim', branch = 'main', event = "BufEnter" },
+  { "glepnir/lspsaga.nvim", branch = "main", event = "BufEnter" },
   {
-    'nvim-lualine/lualine.nvim',
+    "nvim-lualine/lualine.nvim",
     dependencies = {
-      'kyazdani42/nvim-web-devicons'
+      "kyazdani42/nvim-web-devicons"
     }
   },
 
-  'romgrk/barbar.nvim',
+  "romgrk/barbar.nvim",
 
   { "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
@@ -54,7 +54,7 @@ lazy.setup({
   },
   { "lukas-reineke/indent-blankline.nvim", event = "BufEnter" },
 
-  'nvim-treesitter/nvim-treesitter',
+  "nvim-treesitter/nvim-treesitter",
   "windwp/nvim-ts-autotag",
 
   { "windwp/nvim-autopairs", config = true, event = "InsertEnter" },
@@ -65,7 +65,7 @@ lazy.setup({
     }
   },
 
-  'nvim-telescope/telescope-ui-select.nvim',
+  "nvim-telescope/telescope-ui-select.nvim",
 
   { "numToStr/Comment.nvim", config = true, event = "BufEnter" },
   { "folke/tokyonight.nvim", lazy = false, priority = 1000 },

@@ -22,16 +22,16 @@ lsp.set_preferences {
 
 lsp.on_attach(function(client, bufnr)
 
-  -- local file_name = vim.fn.expand('%:t')
-  -- local tfile_name = {}
-  --
-  -- for str in string.gmatch(file_name, "[^.]+") do
-  --   table.insert(tfile_name, str)
-  -- end
-  --
-  -- if tfile_name[2] == 'blade' then
-  --   vim.cmd("TSBufDisable highlight") -- Disable Treesitter Highlight in blade
-  -- end
+  local file_name = vim.fn.expand('%:t')
+  local tfile_name = {}
+
+  for str in string.gmatch(file_name, "[^.]+") do
+    table.insert(tfile_name, str)
+  end
+
+  if tfile_name[2] == 'blade' then
+    vim.cmd("TSBufDisable highlight") -- Disable Treesitter Highlight in blade
+  end
 
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 

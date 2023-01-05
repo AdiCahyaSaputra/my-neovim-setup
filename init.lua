@@ -1,4 +1,5 @@
-require('keybinds')
-require('options')
-require('plugins')
-require('theme')
+if vim.g.vscode then
+  require('vscode')
+else
+  require('adics')
+end
