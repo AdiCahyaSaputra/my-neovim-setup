@@ -71,5 +71,7 @@ lazy.setup({
   { "folke/tokyonight.nvim", lazy = false, priority = 1000 },
   { "phaazon/hop.nvim", branch = "v2", config = true, event = "BufEnter" },
   { "lewis6991/gitsigns.nvim", config = true, event = "BufEnter" },
-  { "iamcco/markdown-preview.nvim", ft = "markdown" }
+  { "iamcco/markdown-preview.nvim", ft = "markdown" },
+
+  "nvim-telescope/telescope-file-browser.nvim"
 })
