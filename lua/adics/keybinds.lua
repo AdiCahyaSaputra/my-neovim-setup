@@ -15,9 +15,9 @@ bind('n', '<A-h>', '<C-w>h')
 bind('n', '<A-Up>', '<cmd>vertical resize +3<cr>')
 bind('n', '<A-Down>', '<cmd>vertical resize -3<cr>')
 
-bind('n', 'H', '<cmd>BufferPrevious<cr>')
-bind('n', 'L', '<cmd>BufferNext<cr>')
-bind('n', 'C', '<cmd>BufferClose<cr>')
+bind('n', 'H', '<cmd>bp<cr>')
+bind('n', 'L', '<cmd>bn<cr>')
+bind('n', 'C', '<cmd>bd<cr>')
 
 bind('', '<leader>al', '<cmd>HopLineStart<cr>', { noremap = true, silent = true })
 bind('', '<leader>aw', '<cmd>HopWord<cr>', { noremap = true, silent = true })

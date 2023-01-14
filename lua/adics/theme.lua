@@ -11,16 +11,25 @@
 --
 -- onedark.load()
 
-local ok, tokyonight = pcall(require, 'tokyonight')
+-- local ok, tokyonight = pcall(require, 'tokyonight')
+-- if not ok then return end
+--
+-- tokyonight.setup {
+--   style = "night",
+--   styles = {
+--     comments = { italic = false },
+--     keywords = { italic = false }
+--   },
+--   lualine_bold = true
+-- }
+--
+-- vim.cmd("colorscheme tokyonight")
+
+local ok, gt = pcall(require, 'github-theme')
 if not ok then return end
 
-tokyonight.setup {
-  style = "night",
-  styles = {
-    comments = { italic = false },
-    keywords = { italic = false }
-  },
-  lualine_bold = true
+gt.setup {
+  theme_style = "dark_default",
+  comment_style = "none",
+  keyword_style = "none"
 }
-
-vim.cmd("colorscheme tokyonight")
