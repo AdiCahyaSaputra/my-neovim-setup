@@ -9,13 +9,15 @@ neotree.setup {
     },
     git_status = {
       symbols = {
-        deleted = "!",
-        renamed = "*",
-        untracked = "?",
-        ignored = "",
+        added = "A",
+        deleted = "D",
+        modified = "M",
+        renamed = "R",
+        untracked = "U",
+        ignored = "I",
         unstaged = "",
         staged = "",
-        conflict = "-"
+        conflict = ""
       }
     }
   },

@@ -81,5 +81,8 @@ lazy.setup({
   {
     "karb94/neoscroll.nvim",
     event = "BufEnter",
-  }
+    enabled = false
+  },
+
+  "goolord/alpha-nvim"
 })

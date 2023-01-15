@@ -3,8 +3,22 @@ vim.g.mapleader = " "
 local bind = vim.keymap.set
 
 bind('n', '<leader>w', '<cmd>w<cr>')
-bind('n', '<leader>e', '<cmd>NeoTreeFocusToggle<cr>')
-bind('n', '<leader>o', '<cmd>NeoTreeFocus<cr>')
+
+bind('n', '<leader>e', function() 
+  local ft = vim.bo.filetype
+  if ft == 'alpha' then 
+    vim.cmd('bd')
+  end
+  vim.cmd('NeoTreeFocusToggle')
+end)
+
+bind('n', '<leader>o', function() 
+  local ft = vim.bo.filetype
+  if ft == 'alpha' then 
+    vim.cmd('bd')
+  end
+  vim.cmd('NeoTreeFocus')
+end)
 
 bind('n', '<A-j>', '<C-d>zz')
 bind('n', '<A-k>', '<C-u>zz')
