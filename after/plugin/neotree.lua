@@ -6,6 +6,20 @@ neotree.setup {
   default_component_configs = {
     icon = {
       folder_empty = '-'
+    },
+    git_status = {
+      symbols = {
+        deleted = "!",
+        renamed = "*",
+        untracked = "?",
+        ignored = "",
+        unstaged = "",
+        staged = "",
+        conflict = "-"
+      }
     }
+  },
+  window = {
+    width = 30
   }
 }

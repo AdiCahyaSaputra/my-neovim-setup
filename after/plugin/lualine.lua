@@ -17,7 +17,7 @@ local colors = {
 
 local config = {
   options = {
-    theme = 'tokyonight',
+    theme = 'github_dark',
     -- Disable sections and component separators
     component_separators = '',
     section_separators = '',

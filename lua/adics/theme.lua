@@ -31,5 +31,6 @@ if not ok then return end
 gt.setup {
   theme_style = "dark_default",
   comment_style = "none",
-  keyword_style = "none"
+  keyword_style = "none",
+  dark_sidebar = false
 }

@@ -46,10 +46,11 @@ vim.g.mapleader = " "
 
 ## Plugins
 - [onedark.nvim](https://github.com/navarasu/onedark.nvim)
+- [github-nvim-theme.nvim](https://github.com/projekt0n/github-nvim-theme)
 - [lsp-zero.nvim](https://github.com/VonHeikemen/lsp-zero.nvim)
 - [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
-- [barbar.nvim](https://github.com/romgrk/barbar.nvim)
+- [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
 - [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
 - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [nvim-ts-autotag.nvim](https://github.com/windwp/nvim-ts-autotag)
@@ -61,3 +62,16 @@ vim.g.mapleader = " "
 - [hop.nvim](https://github.com/phaazon/hop.nvim)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
+- [neoscroll.nvim](https://github.com/karb94/neoscroll.nvim)
+
+## Windows Note's
+For treesitter error, you may need to read [this](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support)
+
+1. Install Zig for compiler because mingw is 32bit
+```bash
+choco install zig
+```
+2. Add this to `./after/plugin/treesitter.lua`
+```lua
+require'nvim-treesitter.install'.compilers = { "zig" }
+```

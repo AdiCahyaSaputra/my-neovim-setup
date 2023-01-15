@@ -36,7 +36,11 @@ lazy.setup({
       "hrsh7th/nvim-cmp",
     }
   },
-  { "glepnir/lspsaga.nvim", branch = "main", event = "BufEnter" },
+  { 
+    "glepnir/lspsaga.nvim", 
+    branch = "main", 
+    event = "BufRead",
+  },
   {
     "nvim-lualine/lualine.nvim",
     dependencies = {
@@ -74,5 +78,8 @@ lazy.setup({
   { "lewis6991/gitsigns.nvim", config = true, event = "BufEnter" },
   { "iamcco/markdown-preview.nvim", ft = "markdown" },
 
-  "nvim-telescope/telescope-file-browser.nvim"
+  {
+    "karb94/neoscroll.nvim",
+    event = "BufEnter",
+  }
 })
