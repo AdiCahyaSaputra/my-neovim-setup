@@ -63,6 +63,7 @@ vim.g.mapleader = " "
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
 - [neoscroll.nvim](https://github.com/karb94/neoscroll.nvim)
+- [alpha.nvim](https://github.com/goolord/alpha-nvim)
 
 ## Windows Note's
 For treesitter error, you may need to read [this](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support)
