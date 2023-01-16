@@ -23,6 +23,9 @@ end)
 bind('n', '<A-j>', '<C-d>zz')
 bind('n', '<A-k>', '<C-u>zz')
 
+bind('s', '<Tab>', "<cmd>lua require'luasnip'.jump(1)<cr>")
+bind('s', '<S-Tab>', "<cmd>lua require'luasnip'.jump(-1)<cr>")
+
 bind('n', '<A-l>', '<C-w>l')
 bind('n', '<A-h>', '<C-w>h')
 
