@@ -4,16 +4,14 @@ if not ok then return end
 lspsaga.setup {
   ui = {
     border = "rounded",
-    expand = '',
-    collapse = '',
-    preview = '] ',
-    code_action = '! ',
-    diagnostic = '; ',
-    incoming = ' ',
-    outgoing = ' ',
+    title = false,
     colors = {
       normal_bg = "",
       title_bg = ""
     }
+  },
+  diagnostic = {
+    show_code_action = false,
+    show_source = false
   }
 }
