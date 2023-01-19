@@ -11,27 +11,18 @@ lsp.ensure_installed({
   'sumneko_lua'
 })
 
-lsp.set_preferences {
-  sign_icon = {
-    error = 'E',
-    warn = 'W',
-    hint = 'H',
-    info = 'I',
-  }
-}
-
 lsp.on_attach(function(client, bufnr)
-
-  local file_name = vim.fn.expand('%:t')
-  local tfile_name = {}
-
-  for str in string.gmatch(file_name, "[^.]+") do
-    table.insert(tfile_name, str)
-  end
-
-  if tfile_name[2] == 'blade' then
-    vim.cmd("TSBufDisable highlight") -- Disable Treesitter Highlight in blade
-  end
+  
+  -- local file_name = vim.fn.expand('%:t')
+  -- local tfile_name = {}
+  --
+  -- for str in string.gmatch(file_name, "[^.]+") do
+  --   table.insert(tfile_name, str)
+  -- end
+  --
+  -- if tfile_name[2] == 'blade' then
+  --   vim.cmd("TSBufDisable highlight") -- Disable Treesitter Highlight in blade
+  -- end
 
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
@@ -39,11 +30,11 @@ lsp.on_attach(function(client, bufnr)
   local bind = vim.keymap.set
 
   bind('n', 'gd', "<cmd>lua require'telescope.builtin'.lsp_definitions()<CR>", bufopt)
-  bind('n', 'K', '<cmd>Lspsaga hover_doc<cr>', bufopt)
+  bind('n', 'K', vim.lsp.buf.hover, bufopt)
   bind('n', '<leader>ca', '<cmd>Lspsaga code_action<cr>', bufopt)
   bind('n', '<leader>lf', function() vim.lsp.buf.format({ async = true }) end, bufopt)
-  bind('n', '<leader>dl', '<cmd>Lspsaga diagnostic_jump_next<cr>')
-  bind('n', '<leader>dh', '<cmd>Lspsaga diagnostic_jump_prev<cr>')
+  bind('n', '<leader>dh', vim.diagnostic.goto_prev, bufopt)
+  bind('n', '<leader>dl', vim.diagnostic.goto_next, bufopt)
 
   -- if client.server_capabilities.documentFormattingProvider then
   --   vim.api.nvim_create_autocmd("BufWritePre", {
@@ -66,9 +57,9 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 lsp.setup_nvim_cmp({
   sources = {
     { name = 'path' },
-    { name = 'nvim_lsp', keyword_length = 3 },
-    { name = 'buffer', keyword_length = 3 },
-    { name = 'luasnip', keyword_length = 2 },
+    { name = 'nvim_lsp' },
+    { name = 'buffer' },
+    { name = 'luasnip' },
     { name = 'nvim_lsp_signature_help' },
   },
   mapping = cmp_mappings,
@@ -81,9 +72,18 @@ lsp.setup_nvim_cmp({
   }
 })
 
+lsp.set_preferences {
+  sign_icons = {
+    error = 'E',
+    warn = 'W',
+    hint = 'H',
+    info = 'I',
+  }
+}
+
 lsp.setup()
 
 vim.diagnostic.config({
   virtual_text = true,
-  signs = false
+  signs = true
 })
