@@ -19,8 +19,8 @@ local config = {
   options = {
     theme = 'github_dark',
     -- Disable sections and component separators
-    component_separators = '',
-    section_separators = '',
+    component_separators = { left = '»', right = '«' },
+    section_separators = { left = '', right = '' },
     disabled_filetypes = { 'netrw', 'carbon.explorer' }
   },
   sections = {
@@ -78,21 +78,15 @@ ins_left {
 
 ins_left {
   function()
-    return ''
+    return '♥'
   end,
   color = { fg = colors.red, gui = 'bold' }
 }
 
 ins_left {
-  'diagnostics',
-  sources = { 'nvim_lsp' },
-  symbols = { error = ' ', warn = ' ', info = ' ' },
-}
-
-ins_left {
   -- Lsp server name .
   function()
-    local msg = 'LSP Off'
+    local msg = 'lsp'
     local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
     local clients = vim.lsp.get_active_clients()
     if next(clients) == nil then
@@ -106,8 +100,23 @@ ins_left {
     end
     return msg
   end,
-  icon = ':',
+  icon = '',
   color = { fg = '#ffffff', gui = 'bold' },
+  separator = ''
+}
+
+ins_left {
+  function()
+    return '%='
+  end,
+  separator = ''
+}
+
+ins_left {
+  'diagnostics',
+  sources = { 'nvim_lsp' },
+  symbols = { error = ' ', warn = ' ', info = ' ' },
+  separator = ''
 }
 
 ins_right {
@@ -119,7 +128,7 @@ ins_right {
 
 ins_right {
   'branch',
-  icon = '',
+  icon = '',
   color = { fg = colors.yellow, gui = 'bold' },
 }
 
