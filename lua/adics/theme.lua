@@ -32,5 +32,6 @@ gt.setup {
   theme_style = "dark_default",
   comment_style = "none",
   keyword_style = "none",
-  dark_sidebar = false
+  dark_sidebar = false,
+  colors = { error = '#ff0000' }
 }

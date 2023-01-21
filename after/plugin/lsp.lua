@@ -13,17 +13,6 @@ lsp.ensure_installed({
 
 lsp.on_attach(function(client, bufnr)
   
-  -- local file_name = vim.fn.expand('%:t')
-  -- local tfile_name = {}
-  --
-  -- for str in string.gmatch(file_name, "[^.]+") do
-  --   table.insert(tfile_name, str)
-  -- end
-  --
-  -- if tfile_name[2] == 'blade' then
-  --   vim.cmd("TSBufDisable highlight") -- Disable Treesitter Highlight in blade
-  -- end
-
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   local bufopt = { noremap = true, silent = true, buffer = bufnr }
@@ -36,15 +25,9 @@ lsp.on_attach(function(client, bufnr)
   bind('n', '<leader>dh', vim.diagnostic.goto_prev, bufopt)
   bind('n', '<leader>dl', vim.diagnostic.goto_next, bufopt)
 
-  -- if client.server_capabilities.documentFormattingProvider then
-  --   vim.api.nvim_create_autocmd("BufWritePre", {
-  --     group = vim.api.nvim_create_augroup("Format", { clear = true }),
-  --     buffer = bufnr,
-  --     callback = function()
-  --       vim.lsp.buf.format({ async = true })
-  --     end
-  --   })
-  -- end
+  -- Lspsaga Diagnostic
+  -- bind('n', '<leader>dl', '<cmd>Lspsaga diagnostic_jump_next<cr>', bufopt)
+  -- bind('n', '<leader>dh', '<cmd>Lspsaga diagnostic_jump_prev<cr>', bufopt)
 
 end)
 
@@ -74,10 +57,10 @@ lsp.setup_nvim_cmp({
 
 lsp.set_preferences {
   sign_icons = {
-    error = 'E',
-    warn = 'W',
-    hint = 'H',
-    info = 'I',
+    error = 'E',
+    warn = 'W',
+    hint = 'H',
+    info = 'I'
   }
 }
 
@@ -85,5 +68,5 @@ lsp.setup()
 
 vim.diagnostic.config({
   virtual_text = true,
-  signs = true
+  signs = true,
 })

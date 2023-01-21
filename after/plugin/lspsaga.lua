@@ -8,10 +8,13 @@ lspsaga.setup {
     colors = {
       normal_bg = "",
       title_bg = ""
-    }
+    },
   },
   diagnostic = {
     show_code_action = false,
     show_source = false
+  },
+  lightbulb = {
+    enable = false
   }
 }
