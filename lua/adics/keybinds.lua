@@ -36,7 +36,9 @@ bind('n', 'H', '<cmd>bp<cr>')
 bind('n', 'L', '<cmd>bn<cr>')
 bind('n', 'C', '<cmd>bd<cr>')
 
-bind('', '<leader>al', '<cmd>HopLineStart<cr>', { noremap = true, silent = true })
+bind('', 'f', '<cmd>HopChar1CurrentLine<cr>', { noremap = true, silent = true })
+bind('', 'F', '<cmd>HopChar2CurrentLine<cr>', { noremap = true, silent = true })
+bind('', '<leader>al', '<cmd>HopChar2<cr>', { noremap = true, silent = true })
 bind('', '<leader>aw', '<cmd>HopWord<cr>', { noremap = true, silent = true })
 bind('', '<leader>aa', '<cmd>HopChar1<cr>', { noremap = true, silent = true })
 
