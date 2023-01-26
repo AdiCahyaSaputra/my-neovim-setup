@@ -84,5 +84,6 @@ lazy.setup({
     enabled = false
   },
 
-  "goolord/alpha-nvim"
+  "goolord/alpha-nvim",
+  "David-Kunz/markid"
 })

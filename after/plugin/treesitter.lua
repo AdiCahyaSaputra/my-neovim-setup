@@ -16,4 +16,9 @@ ts.setup {
   autotag = {
     enable = true
   },
+
+  markid = {
+    enable = true,
+    colors = require("markid").colors.bright
+  }
 }
