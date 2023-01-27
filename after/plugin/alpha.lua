@@ -17,6 +17,8 @@ db.section.header.val = custom_header
 db.section.buttons.val = {
   db.button("Quit?", "Eyo Bro Come Look At This", ":wqa<cr>"),
   db.button("SPC ff ]", "[ Find File", ":Telescope find_files<cr>"),
+  db.button("SPC fs ]", "[ Git Status", ":Telescope git_status<cr>"),
+  db.button("SPC fb ]", "[ Git Branch", ":Telescope git_branches<cr>"),
 }
 
 alpha.setup(db.config)
