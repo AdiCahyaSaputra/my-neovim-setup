@@ -86,5 +86,9 @@ lazy.setup({
 
   "goolord/alpha-nvim",
   "David-Kunz/markid",
-  { "AstroNvim/astrotheme"}
+  "nvim-treesitter/nvim-treesitter-textobjects",
+  {
+    "kylechui/nvim-surround",
+    config = true
+  }
 })

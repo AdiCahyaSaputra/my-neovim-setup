@@ -20,5 +20,13 @@ ts.setup {
   markid = {
     enable = false,
     colors = require("markid").colors.bright
+  },
+  textobjects = {
+    select = {
+      enable = true
+    },
+    swap = {
+      enable = true
+    }
   }
 }
