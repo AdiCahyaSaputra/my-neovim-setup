@@ -20,7 +20,8 @@
 --     comments = { italic = false },
 --     keywords = { italic = false }
 --   },
---   lualine_bold = true
+--   lualine_bold = true,
+--   transparent = true
 -- }
 --
 -- vim.cmd("colorscheme tokyonight")
@@ -33,5 +34,12 @@ gt.setup {
   comment_style = "none",
   keyword_style = "none",
   dark_sidebar = false,
-  colors = { error = '#ff0000' }
+  colors = { error = '#ff0000' },
+  transparent = true
 }
+
+-- local ok, at = pcall(require, "astrotheme")
+-- if not ok then return end
+--
+-- at.setup()
+-- vim.cmd("colorscheme astrodark")

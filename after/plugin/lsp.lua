@@ -7,7 +7,7 @@ lsp.ensure_installed({
   'html',
   'cssls',
   'tsserver',
-  'intelephense',
+  -- 'intelephense',
   'sumneko_lua'
 })
 
@@ -87,6 +87,6 @@ lsp.set_preferences {
 lsp.setup()
 
 vim.diagnostic.config({
-  virtual_text = true,
+  virtual_text = false,
   signs = true,
 })
