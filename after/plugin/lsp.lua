@@ -72,6 +72,10 @@ lsp.setup_nvim_cmp({
       maxwidth = 50,
       ellipsis_char = "..."
     })
+  },
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
   }
 })
 
