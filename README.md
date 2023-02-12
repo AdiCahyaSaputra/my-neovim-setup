@@ -1,8 +1,8 @@
 # Simple Neovim Setup
 Fully written in lua, aesthetic ui, fuzzy finder, lsp, formatter, speed motion and more...
 
-![IMG_20230118_065535](https://user-images.githubusercontent.com/77385046/213455716-d1ee4cec-fd16-47b5-ba6d-a7da838a5668.jpg)
-![IMG_20230118_065625](https://user-images.githubusercontent.com/77385046/213455963-a41be59f-cda2-4a4a-9060-ee1e3cf1f2e5.jpg)
+![Ubuntu 12_02_2023 18_35_26](https://user-images.githubusercontent.com/77385046/218308716-9f2d75c9-9284-4f20-9616-9ef2fbefaa11.png)
+![Ubuntu 12_02_2023 18_38_15](https://user-images.githubusercontent.com/77385046/218308735-f3e9498a-0dd6-409c-9b66-15dbed89d50e.png)
 
 ## Plugin Manager
 [lazy.nvim](https://github.com/folke/lazy.nvim)
