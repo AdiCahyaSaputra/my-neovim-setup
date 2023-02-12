@@ -23,3 +23,5 @@ vim.opt.scrolloff = 10
 vim.opt.smarttab = true
 vim.opt.breakindent = true
 vim.opt.backspace = { 'start', 'eol', 'indent' }
+
+-- vim.opt.termguicolors = true

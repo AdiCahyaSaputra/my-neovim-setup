@@ -2,8 +2,8 @@
 -- if not ok then return end
 --
 -- onedark.setup {
---   style = 'deep',
---   transparent = true,
+--   style = 'warmer',
+--   transparent = false,
 --   code_style = {
 --     comments = 'none'
 --   }
@@ -33,7 +33,7 @@ gt.setup {
   theme_style = "dark_default",
   comment_style = "none",
   keyword_style = "none",
-  dark_sidebar = false,
+  dark_sidebar = true,
   colors = { error = '#ff0000' },
   transparent = true
 }

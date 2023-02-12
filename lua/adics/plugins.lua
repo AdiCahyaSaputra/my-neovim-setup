@@ -16,8 +16,8 @@ local ok, lazy = pcall(require, "lazy")
 if not ok then return end
 
 lazy.setup({
-  { "navarasu/onedark.nvim"},
-  {"projekt0n/github-nvim-theme", lazy = false, priority = 1000  },
+  { "navarasu/onedark.nvim" },
+  { "projekt0n/github-nvim-theme", lazy = false, priority = 1000 },
   {
     "VonHeikemen/lsp-zero.nvim",
     dependencies = {
@@ -37,8 +37,8 @@ lazy.setup({
     }
   },
   {
-    "glepnir/lspsaga.nvim", 
-    branch = "main", 
+    "glepnir/lspsaga.nvim",
+    branch = "main",
     event = "BufRead",
   },
   {
@@ -73,7 +73,7 @@ lazy.setup({
   "nvim-telescope/telescope-ui-select.nvim",
 
   { "numToStr/Comment.nvim", config = true, event = "BufEnter" },
-  { "folke/tokyonight.nvim"},
+  { "folke/tokyonight.nvim" },
   { "phaazon/hop.nvim", branch = "v2", config = true, event = "BufEnter" },
   { "lewis6991/gitsigns.nvim", config = true, event = "BufEnter" },
   { "iamcco/markdown-preview.nvim", ft = "markdown" },
@@ -90,5 +90,5 @@ lazy.setup({
   {
     "kylechui/nvim-surround",
     config = true
-  }
+  },
 })
