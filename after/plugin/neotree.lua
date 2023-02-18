@@ -22,6 +22,6 @@ neotree.setup {
     }
   },
   window = {
-    width = 20
+    width = 25
   }
 }
