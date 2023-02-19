@@ -17,7 +17,7 @@ local colors = {
 
 local config = {
   options = {
-    theme = 'github_dark_default',
+    theme = "tokyonight",
     -- Disable sections and component separators
     component_separators = { left = '»', right = '«' },
     section_separators = { left = '', right = '' },
@@ -153,7 +153,7 @@ ins_right {
 
     return { fg = mode_color_fg[vim.fn.mode()], gui = 'bold' }
   end,
-  padding = { left = 1 }, -- We don't need space before this
+  padding = { left = 1, right = 0 }, -- We don't need space before this
 }
 
 lualine.setup(config)

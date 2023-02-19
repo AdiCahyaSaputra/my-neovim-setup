@@ -8,8 +8,8 @@ lsp.ensure_installed({
   'cssls',
   'tsserver',
   'intelephense',
-  'phpactor',
-  'sumneko_lua'
+  -- 'phpactor',
+  'lua_ls'
 })
 
 lsp.on_attach(function(client, bufnr)

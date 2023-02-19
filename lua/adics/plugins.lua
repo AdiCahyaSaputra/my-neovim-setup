@@ -18,6 +18,8 @@ if not ok then return end
 lazy.setup({
   { "navarasu/onedark.nvim" },
   { "projekt0n/github-nvim-theme", lazy = false, priority = 1000 },
+  { "catppuccin/nvim" },
+  { "folke/tokyonight.nvim" },
   {
     "VonHeikemen/lsp-zero.nvim",
     dependencies = {
@@ -73,7 +75,6 @@ lazy.setup({
   "nvim-telescope/telescope-ui-select.nvim",
 
   { "numToStr/Comment.nvim", config = true, event = "BufEnter" },
-  { "folke/tokyonight.nvim" },
   { "phaazon/hop.nvim", branch = "v2", config = true, event = "BufEnter" },
   { "lewis6991/gitsigns.nvim", config = true, event = "BufEnter" },
   { "iamcco/markdown-preview.nvim", ft = "markdown" },

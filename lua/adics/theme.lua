@@ -18,7 +18,9 @@
 --   style = "night",
 --   styles = {
 --     comments = { italic = false },
---     keywords = { italic = false }
+--     keywords = { italic = false },
+--     sidebars = "dark",
+--     float = "dark",
 --   },
 --   lualine_bold = true,
 --   transparent = true
@@ -30,7 +32,7 @@ local ok, gt = pcall(require, 'github-theme')
 if not ok then return end
 
 gt.setup {
-  theme_style = "dark_default",
+  theme_style = "dark",
   comment_style = "none",
   keyword_style = "none",
   dark_sidebar = true,
@@ -38,8 +40,22 @@ gt.setup {
   transparent = true
 }
 
--- local ok, at = pcall(require, "astrotheme")
+-- local ok, catppuccin = pcall(require, 'catppuccin')
 -- if not ok then return end
 --
--- at.setup()
--- vim.cmd("colorscheme astrodark")
+-- catppuccin.setup {
+--   flavour = "mocha",
+--   no_italic = true,
+--   transparent_background = true,
+--   styles = {
+--     comments = {},
+--     conditionals = {}
+--   },
+--   integrations = {
+--     neotree = true,
+--     hop = true,
+--     lsp_saga = true
+--   }
+-- }
+--
+-- vim.cmd.colorscheme "catppuccin"
