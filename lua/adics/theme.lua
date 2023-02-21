@@ -39,23 +39,3 @@ gt.setup {
   colors = { error = '#ff0000' },
   transparent = true
 }
-
--- local ok, catppuccin = pcall(require, 'catppuccin')
--- if not ok then return end
---
--- catppuccin.setup {
---   flavour = "mocha",
---   no_italic = true,
---   transparent_background = true,
---   styles = {
---     comments = {},
---     conditionals = {}
---   },
---   integrations = {
---     neotree = true,
---     hop = true,
---     lsp_saga = true
---   }
--- }
---
--- vim.cmd.colorscheme "catppuccin"

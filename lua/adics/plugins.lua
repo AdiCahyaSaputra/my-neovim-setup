@@ -18,7 +18,6 @@ if not ok then return end
 lazy.setup({
   { "navarasu/onedark.nvim" },
   { "projekt0n/github-nvim-theme", lazy = false, priority = 1000 },
-  { "catppuccin/nvim" },
   { "folke/tokyonight.nvim" },
   {
     "VonHeikemen/lsp-zero.nvim",

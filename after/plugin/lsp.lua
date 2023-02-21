@@ -9,7 +9,7 @@ lsp.ensure_installed({
   'tsserver',
   'intelephense',
   -- 'phpactor',
-  'lua_ls'
+  -- 'lua_ls'
 })
 
 lsp.on_attach(function(client, bufnr)
