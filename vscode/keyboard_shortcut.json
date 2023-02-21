@@ -1,0 +1,66 @@
+[
+  {
+    "key": "alt+j",
+    "command": "vim.remap",
+    "args": {
+      "after": ["<C-d>", "z", "z"]
+    }
+  },
+  {
+    "key": "alt+k",
+    "command": "vim.remap",
+    "args": {
+      "after": ["<C-u>", "z", "z"]
+    }
+  },
+  {
+    "key": "alt+a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus && !editorFocus"
+  },
+  {
+    "key": "alt+f",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus && !editorFocus"
+  },
+  {
+    "key": "shift+k",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+f8",
+    "command": "testing.toggleTestingPeekHistory",
+    "when": "testing.isPeekVisible"
+  },
+  {
+    "key": "alt+h",
+    "command": "-testing.toggleTestingPeekHistory",
+    "when": "testing.isPeekVisible"
+  },
+  {
+    "key": "alt+l",
+    "command": "editor.action.marker.next",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+f8",
+    "command": "-editor.action.marker.next",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+h",
+    "command": "editor.action.marker.prev",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+alt+f8",
+    "command": "-editor.action.marker.prev",
+    "when": "editorFocus"
+  },
+  {
+    "key": "space+f",
+    "command": "editor.action.fixAll"
+  }
+]
+

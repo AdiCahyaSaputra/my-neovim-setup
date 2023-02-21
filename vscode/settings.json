@@ -1,0 +1,43 @@
+{
+  "workbench.colorTheme": "onedark.nvim",
+  "vim.easymotion": true,
+  "vim.leader": "<space>",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "w"],
+      "commands": [":w"]
+    },
+    {
+      "before": ["H"],
+      "commands": [":bprev"]
+    },
+    {
+      "before": ["L"],
+      "commands": [":bnext"]
+    },
+    {
+      "before": ["C"],
+      "commands": [":bd"]
+    }
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.minimap.enabled": false,
+  "editor.bracketPairColorization.enabled": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "diffEditor.codeLens": true,
+  "editor.accessibilitySupport": "off",
+  "workbench.iconTheme": "material-icon-theme"
+}
+
