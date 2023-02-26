@@ -1,10 +1,10 @@
 # Simple Neovim Setup
 Fully written in lua, aesthetic ui, fuzzy finder, lsp, formatter, speed motion and more...
 
-![Ubuntu 19_02_2023 20_36_46](https://user-images.githubusercontent.com/77385046/219951855-29a80cd3-6a9b-4710-9378-6638153c81d3.png)
-![Ubuntu 19_02_2023 20_36_15](https://user-images.githubusercontent.com/77385046/219951870-2110e45c-c5c4-4932-8f9a-27310d44eec0.png)
-![Ubuntu 19_02_2023 20_37_05](https://user-images.githubusercontent.com/77385046/219951883-9b05e53b-798e-45b3-bb62-0bf95ddfbf3c.png)
-![Ubuntu 19_02_2023 20_37_41](https://user-images.githubusercontent.com/77385046/219951892-f1ff285b-1d51-4049-affc-95271ac270fc.png)
+![Ubuntu 26_02_2023 10_14_13](https://user-images.githubusercontent.com/77385046/221390410-39dcd502-8035-4043-a7ff-eef3350403e1.png)
+![Ubuntu 26_02_2023 10_14_38](https://user-images.githubusercontent.com/77385046/221390413-ab973eac-910d-426b-b8a2-b4de3d9ea2bf.png)
+![Ubuntu 26_02_2023 10_14_44](https://user-images.githubusercontent.com/77385046/221390418-c2e57812-4fee-4843-8eec-3908b715de9b.png)
+![Ubuntu 26_02_2023 10_14_53](https://user-images.githubusercontent.com/77385046/221390420-37ae72c2-41d9-4beb-8b47-11881f5040b7.png)
 
 ## Plugin Manager
 [lazy.nvim](https://github.com/folke/lazy.nvim)
