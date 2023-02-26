@@ -16,9 +16,9 @@ local ok, lazy = pcall(require, "lazy")
 if not ok then return end
 
 lazy.setup({
-  { "navarasu/onedark.nvim" },
+  { "navarasu/onedark.nvim", enabled = false },
   { "projekt0n/github-nvim-theme", lazy = false, priority = 1000 },
-  { "folke/tokyonight.nvim" },
+  { "folke/tokyonight.nvim", enabled = false },
   {
     "VonHeikemen/lsp-zero.nvim",
     dependencies = {
@@ -85,7 +85,7 @@ lazy.setup({
   },
 
   "goolord/alpha-nvim",
-  "David-Kunz/markid",
+  { "David-Kunz/markid", enabled = false },
   "nvim-treesitter/nvim-treesitter-textobjects",
   {
     "kylechui/nvim-surround",

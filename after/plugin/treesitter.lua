@@ -17,10 +17,6 @@ ts.setup {
     enable = true
   },
 
-  markid = {
-    enable = false,
-    colors = require("markid").colors.bright
-  },
   textobjects = {
     select = {
       enable = true
