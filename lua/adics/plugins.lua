@@ -37,6 +37,7 @@ lazy.setup({
       "hrsh7th/nvim-cmp",
     }
   },
+  { 'akinsho/toggleterm.nvim', version = "*", config = true },
   {
     "glepnir/lspsaga.nvim",
     branch = "main",
