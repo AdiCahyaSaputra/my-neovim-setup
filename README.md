@@ -25,6 +25,10 @@ vim.g.mapleader = " "
 
 "<A-Up>" -- Resize vsplit window to +3 (normal mode)
 "<A-Down>" -- Switch vsplit window to -3 (normal mode)
+
+"<A-t>" -- Toggle Term (normal, terminal mode)
+"<space>;" -- Escape (terminal mode)
+"<space>g" -- Lazygit (normal mode)
 ```
 
 ## Keybinds Buffer

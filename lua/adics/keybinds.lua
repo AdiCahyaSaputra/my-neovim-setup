@@ -50,10 +50,10 @@ bind('i', 'jk', '<Esc>')
 
 function _G.set_toggleterm_keybind()
   local opts = { buffer = 0 }
-  bind('t', '<Esc>', [[<C-\><C-n>]], opts)
+  bind('t', '<space>;', [[<C-\><C-n>]], opts)
   bind('t', '<A-t>', '<cmd>ToggleTerm<cr>', opts)
 end
 
 vim.cmd('autocmd! TermOpen term://*toggleterm* lua set_toggleterm_keybind()')
 
-bind('n', '<A-t>', '<cmd>ToggleTerm direction=float<cr>')
+bind('n', '<A-t>', '<cmd>ToggleTerm direction=float<cr>', { noremap = true, silent = true })
