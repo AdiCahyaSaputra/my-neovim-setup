@@ -11,6 +11,47 @@ Fully written in lua, aesthetic ui, fuzzy finder, lsp, formatter, speed motion a
 
 Startup Time ~200
 
+## Installation Guide
+### window (don't forget to backup your config first)
+```bash
+$ git clone https://github.com/AdiCahyaSaputra/my-neovim-setup ~/AppData/Local/nvim 
+```
+
+### Windows Note's
+For treesitter error, you may need to read [this](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support)
+
+1. Install Zig for compiler because mingw is 32bit
+```bash
+choco install zig
+```
+2. then uncomment this on `nvim/lua/config/treesitter.lua` file
+```lua
+require("nvim-treesitter.install").prefer_git = false
+require'nvim-treesitter.install'.compilers = { 'zig' }
+```
+
+### MacOS or Linux (or wsl)
+```bash
+$ git clone https://github.com/AdiCahyaSaputra/my-neovim-setup ~/.config/nvim 
+```
+
+## LSP 
+for open Mason UI
+```
+:Mason
+```
+example for install tsserver and intelephense
+```
+:MasonInstall typescript-language-server intelephense
+```
+you don't need to setup the server manually because `lsp-zero` do this automatically
+
+## Treesitter (syntax highlight) 
+example for install ts and php syntax highlight
+```
+:TSInstall tsx ts php
+```
+
 ## Keybinds General
 ```lua
 vim.g.mapleader = " "
@@ -56,7 +97,6 @@ vim.g.mapleader = " "
 ```
 
 ## Plugins
-- [onedark.nvim](https://github.com/navarasu/onedark.nvim)
 - [github-nvim-theme.nvim](https://github.com/projekt0n/github-nvim-theme)
 - [lsp-zero.nvim](https://github.com/VonHeikemen/lsp-zero.nvim)
 - [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)
@@ -69,21 +109,7 @@ vim.g.mapleader = " "
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - [telescope-ui-select.nvim](https://github.com/nvim-telescope/telescope-ui-select.nvim)
 - [Comment.nvim](https://github.com/numToStr/Comment.nvim)
-- [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 - [hop.nvim](https://github.com/phaazon/hop.nvim)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
-- [neoscroll.nvim](https://github.com/karb94/neoscroll.nvim)
 - [alpha.nvim](https://github.com/goolord/alpha-nvim)
-
-## Windows Note's
-For treesitter error, you may need to read [this](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support)
-
-1. Install Zig for compiler because mingw is 32bit
-```bash
-choco install zig
-```
-2. Add this to `./after/plugin/treesitter.lua`
-```lua
-require'nvim-treesitter.install'.compilers = { "zig" }
-```
