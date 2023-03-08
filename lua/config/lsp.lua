@@ -13,7 +13,6 @@ lsp.ensure_installed({
 })
 
 lsp.on_attach(function(client, bufnr)
-
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   local bufopt = { noremap = true, silent = true, buffer = bufnr }
@@ -32,7 +31,6 @@ lsp.on_attach(function(client, bufnr)
   -- Lspsaga Diagnostic
   bind('n', '<leader>dl', '<cmd>Lspsaga diagnostic_jump_next<cr>', bufopt)
   bind('n', '<leader>dh', '<cmd>Lspsaga diagnostic_jump_prev<cr>', bufopt)
-
 end)
 
 
@@ -53,8 +51,8 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<S-Tab>'] = cmp.mapping(function(fallback)
     if cmp.visible() then
       cmp.select_prev_item()
-    elseif luasnip.jumpable(-1) then
-      luasnip.jump(-1)
+    elseif luasnip.jumpable( -1) then
+      luasnip.jump( -1)
     else
       fallback()
     end

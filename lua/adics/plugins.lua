@@ -16,9 +16,9 @@ local ok, lazy = pcall(require, "lazy")
 if not ok then return end
 
 lazy.setup({
-  { "navarasu/onedark.nvim", enabled = false },
-  { "projekt0n/github-nvim-theme", lazy = false, priority = 1000 },
-  { "folke/tokyonight.nvim", enabled = false },
+  { "navarasu/onedark.nvim",       enabled = false },
+  { "projekt0n/github-nvim-theme", lazy = false,   priority = 1000 },
+  { "folke/tokyonight.nvim",       enabled = false },
   {
     "VonHeikemen/lsp-zero.nvim",
     dependencies = {
@@ -35,13 +35,20 @@ lazy.setup({
       "rafamadriz/friendly-snippets",
       "hrsh7th/cmp-nvim-lsp-signature-help",
       "hrsh7th/nvim-cmp",
-    }
+    },
+    event = "BufRead",
+    config = function()
+      require("config.lsp")
+    end
   },
-  { 'akinsho/toggleterm.nvim', version = "*", config = true },
+  { 'akinsho/toggleterm.nvim', version = "*",        config = true },
   {
     "glepnir/lspsaga.nvim",
     branch = "main",
     event = "BufRead",
+    config = function()
+      require('config.lspsaga')
+    end
   },
   {
     "nvim-lualine/lualine.nvim",
@@ -57,14 +64,23 @@ lazy.setup({
     dependencies = {
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
-    }
+    },
   },
-  { "lukas-reineke/indent-blankline.nvim", event = "BufEnter" },
+  { "lukas-reineke/indent-blankline.nvim",
+    event = "BufEnter",
+    config = function()
+      require('config.indentbl')
+    end
+  },
 
-  "nvim-treesitter/nvim-treesitter",
-  "windwp/nvim-ts-autotag",
-
-  { "windwp/nvim-autopairs", config = true, event = "InsertEnter" },
+  { "nvim-treesitter/nvim-treesitter",
+    event = "BufRead",
+    config = function()
+      require('config.treesitter')
+    end
+  },
+  { "windwp/nvim-ts-autotag",  event = "InsertEnter" },
+  { "windwp/nvim-autopairs",   config = true,        event = "InsertEnter" },
   {
     "nvim-telescope/telescope.nvim",
     dependencies = {
@@ -72,12 +88,11 @@ lazy.setup({
     }
   },
 
-  "nvim-telescope/telescope-ui-select.nvim",
-
-  { "numToStr/Comment.nvim", config = true, event = "BufEnter" },
-  { "phaazon/hop.nvim", branch = "v2", config = true, event = "BufEnter" },
-  { "lewis6991/gitsigns.nvim", config = true, event = "BufEnter" },
-  { "iamcco/markdown-preview.nvim", ft = "markdown" },
+  { "nvim-telescope/telescope-ui-select.nvim", event = "BufEnter" },
+  { "numToStr/Comment.nvim",                   config = true,     event = "BufEnter" },
+  { "phaazon/hop.nvim",                        branch = "v2",     config = true,     event = "BufEnter" },
+  { "lewis6991/gitsigns.nvim",                 config = true,     event = "BufEnter" },
+  { "iamcco/markdown-preview.nvim",            ft = "markdown" },
 
   {
     "karb94/neoscroll.nvim",
@@ -86,10 +101,11 @@ lazy.setup({
   },
 
   "goolord/alpha-nvim",
-  { "David-Kunz/markid", enabled = false },
-  "nvim-treesitter/nvim-treesitter-textobjects",
+  { "David-Kunz/markid",                           enabled = false },
+  { "nvim-treesitter/nvim-treesitter-textobjects", event = "BufEnter" },
   {
     "kylechui/nvim-surround",
-    config = true
+    config = true,
+    event = "BufEnter"
   },
 })

@@ -9,6 +9,8 @@ Fully written in lua, aesthetic ui, fuzzy finder, lsp, formatter, speed motion a
 ## Plugin Manager
 [lazy.nvim](https://github.com/folke/lazy.nvim)
 
+Startup Time ~200
+
 ## Keybinds General
 ```lua
 vim.g.mapleader = " "
