@@ -17,7 +17,6 @@ local colors = {
 
 local config = {
   options = {
-    theme = "github_dark_default",
     -- Disable sections and component separators
     component_separators = { left = '»', right = '«' },
     section_separators = { left = '', right = '' },

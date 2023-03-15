@@ -28,14 +28,28 @@
 --
 -- vim.cmd("colorscheme tokyonight")
 
-local ok, gt = pcall(require, 'github-theme')
+-- local ok, gt = pcall(require, 'github-theme')
+-- if not ok then return end
+--
+-- gt.setup {
+--   theme_style = "dark",
+--   comment_style = "none",
+--   keyword_style = "none",
+--   dark_sidebar = true,
+--   colors = { error = '#ff0000' },
+--   transparent = true
+-- }
+
+local ok, nf = pcall(require, 'nightfox')
 if not ok then return end
 
-gt.setup {
-  theme_style = "dark",
-  comment_style = "none",
-  keyword_style = "none",
-  dark_sidebar = true,
-  colors = { error = '#ff0000' },
-  transparent = true
+nf.setup {
+  options = {
+    transparent = true,
+    inverse = {
+      search = true
+    }
+  }
 }
+
+vim.cmd("colorscheme carbonfox")
