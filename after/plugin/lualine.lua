@@ -18,6 +18,7 @@ local colors = {
 local config = {
   options = {
     -- Disable sections and component separators
+    theme = "ayu",
     component_separators = { left = '»', right = '«' },
     section_separators = { left = '', right = '' },
     disabled_filetypes = { 'netrw', 'carbon.explorer' }
@@ -129,12 +130,11 @@ ins_right {
   'branch',
   icon = '',
   color = { fg = colors.yellow, gui = 'bold' },
+  separator = ""
 }
 
 ins_right {
-  function()
-    return '▊'
-  end,
+  'filename',
   color = function()
     -- auto change color according to neovims mode
     local mode_color_fg = {
@@ -148,11 +148,13 @@ ins_right {
       Rv = colors.violet,
       r = colors.cyan,
       rm = colors.cyan,
+      c = colors.fg
     }
 
-    return { fg = mode_color_fg[vim.fn.mode()], gui = 'bold' }
+    return { bg = mode_color_fg[vim.fn.mode()], gui = 'bold', fg = colors.bg }
   end,
-  padding = { left = 1, right = 0 }, -- We don't need space before this
+  padding = { left = 1, right = 1 }, -- We don't need space before this
+  separator = ""
 }
 
 lualine.setup(config)

@@ -49,6 +49,11 @@ nf.setup {
     inverse = {
       search = true
     }
+  },
+  groups = {
+    carbonfox = {
+      LineNr = { fg = "palette.red" },
+    }
   }
 }
 

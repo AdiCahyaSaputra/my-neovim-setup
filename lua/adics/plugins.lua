@@ -67,8 +67,6 @@ lazy.setup({
     }
   },
 
-  "akinsho/bufferline.nvim",
-
   { "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
     dependencies = {
