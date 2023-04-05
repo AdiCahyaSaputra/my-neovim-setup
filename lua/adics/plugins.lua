@@ -16,10 +16,10 @@ local ok, lazy = pcall(require, "lazy")
 if not ok then return end
 
 lazy.setup({
-  { "navarasu/onedark.nvim",       enabled = false },
-  { "EdenEast/nightfox.nvim", lazy = false,   priority = 1000 },
+  { "navarasu/onedark.nvim",      enabled = false },
+  { "EdenEast/nightfox.nvim",     lazy = false,   priority = 1000 },
   { "projekt0n/github-nvim-theme" },
-  { "folke/tokyonight.nvim",       enabled = false },
+  { "folke/tokyonight.nvim",      enabled = false },
   {
     "VonHeikemen/lsp-zero.nvim",
     dependencies = {
@@ -43,15 +43,16 @@ lazy.setup({
     end
   },
 
-  { "Exafunction/codeium.vim",
-    config = function ()
+  {
+    "Exafunction/codeium.vim",
+    config = function()
       require("config.codeium")
     end,
     event = "VeryLazy",
     enabled = false
   },
 
-  { 'akinsho/toggleterm.nvim', version = "*",        config = true },
+  { 'akinsho/toggleterm.nvim', version = "*",     config = true },
   {
     "glepnir/lspsaga.nvim",
     branch = "main",
@@ -67,28 +68,31 @@ lazy.setup({
     }
   },
 
-  { "nvim-neo-tree/neo-tree.nvim",
+  {
+    "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
     },
   },
-  { "lukas-reineke/indent-blankline.nvim",
+  {
+    "lukas-reineke/indent-blankline.nvim",
     event = "VeryLazy",
     config = function()
       require('config.indentbl')
     end
   },
 
-  { "nvim-treesitter/nvim-treesitter",
+  {
+    "nvim-treesitter/nvim-treesitter",
     event = "VeryLazy",
     config = function()
       require('config.treesitter')
     end
   },
   { "windwp/nvim-ts-autotag",  event = "VeryLazy" },
-  { "windwp/nvim-autopairs",   config = true,        event = "VeryLazy" },
+  { "windwp/nvim-autopairs",   config = true,     event = "VeryLazy" },
   {
     "nvim-telescope/telescope.nvim",
     dependencies = {
@@ -116,4 +120,5 @@ lazy.setup({
     config = true,
     event = "VeryLazy"
   },
+  "TimUntersberger/neofs"
 })
