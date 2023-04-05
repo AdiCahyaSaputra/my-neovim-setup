@@ -1,10 +1,10 @@
 # Simple Neovim Setup
 Fully written in lua, aesthetic ui, fuzzy finder, lsp, formatter, speed motion and more...
 
-![Ubuntu 26_02_2023 10_14_13](https://user-images.githubusercontent.com/77385046/221390410-39dcd502-8035-4043-a7ff-eef3350403e1.png)
-![Ubuntu 26_02_2023 10_14_38](https://user-images.githubusercontent.com/77385046/221390413-ab973eac-910d-426b-b8a2-b4de3d9ea2bf.png)
-![Ubuntu 26_02_2023 10_14_44](https://user-images.githubusercontent.com/77385046/221390418-c2e57812-4fee-4843-8eec-3908b715de9b.png)
-![Ubuntu 26_02_2023 10_14_53](https://user-images.githubusercontent.com/77385046/221390420-37ae72c2-41d9-4beb-8b47-11881f5040b7.png)
+![Ubuntu 15_03_2023 18_40_13](https://user-images.githubusercontent.com/77385046/225299024-95c29d1d-2d0c-46c8-9bae-ae2f1a0f3e0b.png)
+![Ubuntu 15_03_2023 18_40_38](https://user-images.githubusercontent.com/77385046/225299090-fa4361ec-5541-4dca-9d07-59d4eddb1513.png)
+![Ubuntu 15_03_2023 18_40_45](https://user-images.githubusercontent.com/77385046/225299148-4bd55616-63d5-4ff1-864f-53deb004874a.png)
+![Ubuntu 15_03_2023 18_40_51](https://user-images.githubusercontent.com/77385046/225299149-68665491-f673-4099-8728-74799a95dda4.png)
 
 ## Plugin Manager
 [lazy.nvim](https://github.com/folke/lazy.nvim)
@@ -51,6 +51,9 @@ example for install ts and php syntax highlight
 ```
 :TSInstall tsx ts php
 ```
+
+## Theme
+you can change the theme whatever you want. Edit file `./lua/adics/theme.lua` and paste your config here
 
 ## Keybinds General
 ```lua
