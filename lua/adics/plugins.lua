@@ -18,7 +18,7 @@ if not ok then return end
 lazy.setup({
   { "navarasu/onedark.nvim",      enabled = false },
   { "EdenEast/nightfox.nvim",     lazy = false,   priority = 1000 },
-  { "projekt0n/github-nvim-theme" },
+  { "projekt0n/github-nvim-theme", enabled = false },
   { "folke/tokyonight.nvim",      enabled = false },
   {
     "VonHeikemen/lsp-zero.nvim",
@@ -69,14 +69,6 @@ lazy.setup({
   },
 
   {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v2.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-    },
-  },
-  {
     "lukas-reineke/indent-blankline.nvim",
     event = "VeryLazy",
     config = function()
@@ -120,5 +112,6 @@ lazy.setup({
     config = true,
     event = "VeryLazy"
   },
-  "TimUntersberger/neofs"
+  -- "TimUntersberger/neofs"
+  "AdiCahyaSaputra/neofs"
 })

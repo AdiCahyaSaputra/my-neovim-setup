@@ -1,10 +1,11 @@
 # Simple Neovim Setup
 Fully written in lua, aesthetic ui, fuzzy finder, lsp, formatter, speed motion and more...
 
-![Ubuntu 15_03_2023 18_40_13](https://user-images.githubusercontent.com/77385046/225299024-95c29d1d-2d0c-46c8-9bae-ae2f1a0f3e0b.png)
-![Ubuntu 15_03_2023 18_40_38](https://user-images.githubusercontent.com/77385046/225299090-fa4361ec-5541-4dca-9d07-59d4eddb1513.png)
-![Ubuntu 15_03_2023 18_40_45](https://user-images.githubusercontent.com/77385046/225299148-4bd55616-63d5-4ff1-864f-53deb004874a.png)
-![Ubuntu 15_03_2023 18_40_51](https://user-images.githubusercontent.com/77385046/225299149-68665491-f673-4099-8728-74799a95dda4.png)
+![Ubuntu 06_04_2023 14_26_10](https://user-images.githubusercontent.com/77385046/230305956-c6da1664-919b-40ec-b3a9-766908268730.png)
+![Ubuntu 06_04_2023 14_27_54](https://user-images.githubusercontent.com/77385046/230305987-a9fb6777-9fba-47ab-80d9-1a4f4d66eec3.png)
+![Ubuntu 06_04_2023 14_28_11](https://user-images.githubusercontent.com/77385046/230306005-79087ca4-ba11-4ec4-a5eb-be8be10d46f7.png)
+![Ubuntu 06_04_2023 14_28_25](https://user-images.githubusercontent.com/77385046/230306015-27200725-a706-4d7e-b2a7-9d418c21bfa3.png)
+![Ubuntu 06_04_2023 14_31_59](https://user-images.githubusercontent.com/77385046/230306414-9ecf80e7-0b12-43ba-996f-7b67bf99fcdd.png)
 
 ## Plugin Manager
 [lazy.nvim](https://github.com/folke/lazy.nvim)
@@ -60,8 +61,11 @@ you can change the theme whatever you want. Edit file `./lua/adics/theme.lua` an
 vim.g.mapleader = " "
 
 "<leader>w" -- Save file (normal mode)
-"<leader>e" -- Toggle neotree (normal mode)
-"<leader>o" -- Focus neotree (normal mode)
+"<leader>e" -- Toggle neofs (normal mode)
+"<A-f>" -- create_file neofs (normal mode)
+"<A-d>" -- delete neofs (normal mode)
+"d" -- create_directory neofs (normal mode)
+"h" -- jump to prev dir neofs (normal mode)
 
 "<A-j>" -- Scroll down (normal mode)
 "<A-k>" -- Scroll up (normal mode)
@@ -100,13 +104,13 @@ vim.g.mapleader = " "
 ```
 
 ## Plugins
-- [github-nvim-theme.nvim](https://github.com/projekt0n/github-nvim-theme)
+- [nightfox](https://github.com/EdenEast/nightfox.nvim)
 - [lsp-zero.nvim](https://github.com/VonHeikemen/lsp-zero.nvim)
+- [toggle-term](https://github.com/akinsho/toggleterm.nvim)
 - [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
-- [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
-- [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
 - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [nvim-ts-autotag.nvim](https://github.com/windwp/nvim-ts-autotag)
 - [nvim-autopairs.nvim](https://github.com/windwp/nvim-autopairs)
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
@@ -116,3 +120,6 @@ vim.g.mapleader = " "
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
 - [alpha.nvim](https://github.com/goolord/alpha-nvim)
+- [treesitter-text-object](https://github.com/nvim-treesitter/nvim-treesitter-textobjects)
+- [surround](https://github.com/kylechui/nvim-surround)
+- [neofs](https://github.com/AdiCahyaSaputra/neofs)

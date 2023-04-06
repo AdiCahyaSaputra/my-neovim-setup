@@ -124,6 +124,7 @@ ins_right {
   fmt = string.lower,
   icons_enabled = true, -- I think icons are cool but Eviline doesn't have them. sigh
   color = { fg = colors.blue, gui = 'bold' },
+  separator = ""
 }
 
 ins_right {
