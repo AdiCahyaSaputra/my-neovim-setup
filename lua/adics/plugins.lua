@@ -16,10 +16,10 @@ local ok, lazy = pcall(require, "lazy")
 if not ok then return end
 
 lazy.setup({
-  { "navarasu/onedark.nvim",      enabled = false },
-  { "EdenEast/nightfox.nvim",     lazy = false,   priority = 1000 },
+  { "navarasu/onedark.nvim",       enabled = false },
+  { "EdenEast/nightfox.nvim",      lazy = false,   priority = 1000 },
   { "projekt0n/github-nvim-theme", enabled = false },
-  { "folke/tokyonight.nvim",      enabled = false },
+  { "folke/tokyonight.nvim",       enabled = false },
   {
     "VonHeikemen/lsp-zero.nvim",
     dependencies = {
@@ -103,6 +103,32 @@ lazy.setup({
     event = "BufEnter",
     enabled = false
   },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+    }
+  },
+
+  {
+    "ghillb/cybu.nvim",
+    branch = "main",                            -- timely updates
+    -- branch = "v1.x", -- won't receive breaking changes
+    dependencies = { "nvim-lua/plenary.nvim" }, -- optional for icon support
+    config = function()
+      local ok, cybu = pcall(require, "cybu")
+      if not ok then
+        return
+      end
+      cybu.setup()
+      vim.keymap.set("n", "H", "<Plug>(CybuPrev)")
+      vim.keymap.set("n", "L", "<Plug>(CybuNext)")
+      vim.keymap.set({ "n", "v" }, "<c-s-tab>", "<plug>(CybuLastusedPrev)")
+      vim.keymap.set({ "n", "v" }, "<c-tab>", "<plug>(CybuLastusedNext)")
+    end,
+  },
 
   "goolord/alpha-nvim",
   { "David-Kunz/markid",                           enabled = false },
@@ -113,5 +139,5 @@ lazy.setup({
     event = "VeryLazy"
   },
   -- "TimUntersberger/neofs"
-  "AdiCahyaSaputra/neofs"
+  -- "AdiCahyaSaputra/neofs"
 })

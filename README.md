@@ -61,11 +61,8 @@ you can change the theme whatever you want. Edit file `./lua/adics/theme.lua` an
 vim.g.mapleader = " "
 
 "<leader>w" -- Save file (normal mode)
-"<leader>e" -- Toggle neofs (normal mode)
-"<A-f>" -- create_file neofs (normal mode)
-"<A-d>" -- delete neofs (normal mode)
-"d" -- create_directory neofs (normal mode)
-"h" -- jump to prev dir neofs (normal mode)
+"<leader>e" -- Toggle neotree (normal mode)
+"<leader>o" -- Toggle neotree focus (normal mode)
 
 "<A-j>" -- Scroll down (normal mode)
 "<A-k>" -- Scroll up (normal mode)
@@ -118,8 +115,9 @@ vim.g.mapleader = " "
 - [Comment.nvim](https://github.com/numToStr/Comment.nvim)
 - [hop.nvim](https://github.com/phaazon/hop.nvim)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+- [neotree](https://github.com/nvim-neo-tree/neo-tree.nvim)
+- [cybu](https://github.com/ghillb/cybu.nvim)
 - [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
 - [alpha.nvim](https://github.com/goolord/alpha-nvim)
 - [treesitter-text-object](https://github.com/nvim-treesitter/nvim-treesitter-textobjects)
 - [surround](https://github.com/kylechui/nvim-surround)
-- [neofs](https://github.com/AdiCahyaSaputra/neofs)

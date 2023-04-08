@@ -53,6 +53,10 @@ nf.setup {
   groups = {
     carbonfox = {
       LineNr = { fg = "palette.red" },
+      OnYank = { fg = "#000000", bg = "#ffffff" },
+      CybuFocus = { fg = "palette.red", gui = "bold" },
+      CybuAdjacent = { fg = "#94a3b8" },
+      CybuBorder = { fg = "palette.red" },
     }
   }
 }

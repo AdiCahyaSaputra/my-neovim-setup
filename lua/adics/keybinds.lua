@@ -7,8 +7,29 @@ bind('n', '<leader>w', '<cmd>w<cr>')
 bind('n', '<A-j>', '<C-d>zz')
 bind('n', '<A-k>', '<C-u>zz')
 
-bind('n', '<leader>ff',
-'<cmd>lua require"telescope.builtin".find_files(require("telescope.themes").get_dropdown({ previewer = false, hidden = true, file_ignore_patterns = {".git", "vendor", "node_modules"} }))<cr>')
+bind('n', '<leader>e', function() 
+  local ft = vim.bo.filetype
+  if ft == 'alpha' then 
+    vim.cmd('bd')
+  end
+  vim.cmd('NeoTreeFocusToggle')
+end)
+
+bind('n', '<leader>o', function() 
+  local ft = vim.bo.filetype
+  if ft == 'alpha' then 
+    vim.cmd('bd')
+  end
+  vim.cmd('NeoTreeFocus')
+end)
+
+bind(
+  'n',
+  '<leader>ff',
+  '<cmd>lua require"telescope.builtin".find_files(require("telescope.themes").get_dropdown({ previewer = false, prompt_prefix = " O ", hidden = true, file_ignore_patterns = {".git", "vendor", "node_modules"} }))<cr>',
+  { noremap = true, silent = true }
+)
+
 bind('n', '<leader>fb', '<cmd>Telescope git_branches<cr>')
 bind('n', '<leader>fs', '<cmd>Telescope git_status<cr>')
 

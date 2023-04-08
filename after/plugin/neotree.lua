@@ -21,6 +21,7 @@ neotree.setup {
       }
     }
   },
+  popup_border_style = "rounded",
   window = {
     width = 25
   }
