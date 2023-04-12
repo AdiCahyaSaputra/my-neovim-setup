@@ -57,6 +57,7 @@ nf.setup {
       CybuFocus = { fg = "palette.red", gui = "bold" },
       CybuAdjacent = { fg = "#94a3b8" },
       CybuBorder = { fg = "palette.red" },
+      ['@punctuation.bracket'] = { guifg = 'palette.red' }
     }
   }
 }

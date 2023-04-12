@@ -7,17 +7,17 @@ bind('n', '<leader>w', '<cmd>w<cr>')
 bind('n', '<A-j>', '<C-d>zz')
 bind('n', '<A-k>', '<C-u>zz')
 
-bind('n', '<leader>e', function() 
+bind('n', '<leader>e', function()
   local ft = vim.bo.filetype
-  if ft == 'alpha' then 
+  if ft == 'alpha' then
     vim.cmd('bd')
   end
   vim.cmd('NeoTreeFocusToggle')
 end)
 
-bind('n', '<leader>o', function() 
+bind('n', '<leader>o', function()
   local ft = vim.bo.filetype
-  if ft == 'alpha' then 
+  if ft == 'alpha' then
     vim.cmd('bd')
   end
   vim.cmd('NeoTreeFocus')
