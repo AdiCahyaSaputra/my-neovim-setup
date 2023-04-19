@@ -34,6 +34,13 @@ end)
 local cmp = require('cmp')
 local luasnip = require("luasnip")
 
+cmp.setup({
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  }
+})
+
 local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-Space>'] = cmp.mapping.complete(),
   ['<Tab>'] = cmp.mapping(function(fallback)
