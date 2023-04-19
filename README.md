@@ -116,7 +116,7 @@ vim.g.mapleader = " "
 - [hop.nvim](https://github.com/phaazon/hop.nvim)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [neotree](https://github.com/nvim-neo-tree/neo-tree.nvim)
-- [cybu](https://github.com/ghillb/cybu.nvim)
+- [barbar](https://github.com/romgrk/barbar.nvim)
 - [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
 - [alpha.nvim](https://github.com/goolord/alpha-nvim)
 - [treesitter-text-object](https://github.com/nvim-treesitter/nvim-treesitter-textobjects)

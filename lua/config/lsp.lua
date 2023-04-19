@@ -20,13 +20,10 @@ lsp.on_attach(function(client, bufnr)
 
   bind('n', 'gd', "<cmd>lua require'telescope.builtin'.lsp_definitions()<CR>", bufopt)
 
-  -- bind('n', 'K', vim.lsp.buf.hover, bufopt)
   bind('n', 'K', '<cmd>Lspsaga hover_doc<cr>', bufopt)
 
-  bind('n', '<leader>ca', '<cmd>Lspsaga code_action<cr>', bufopt)
+  bind('n', '<leader>ca', vim.lsp.buf.code_action, bufopt)
   bind('n', '<leader>lf', function() vim.lsp.buf.format({ async = true }) end, bufopt)
-  -- bind('n', '<leader>dh', vim.diagnostic.goto_prev, bufopt)
-  -- bind('n', '<leader>dl', vim.diagnostic.goto_next, bufopt)
 
   -- Lspsaga Diagnostic
   bind('n', '<leader>dl', '<cmd>Lspsaga diagnostic_jump_next<cr>', bufopt)
@@ -51,8 +48,8 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<S-Tab>'] = cmp.mapping(function(fallback)
     if cmp.visible() then
       cmp.select_prev_item()
-    elseif luasnip.jumpable( -1) then
-      luasnip.jump( -1)
+    elseif luasnip.jumpable(-1) then
+      luasnip.jump(-1)
     else
       fallback()
     end
@@ -93,6 +90,9 @@ lsp.set_preferences {
 lsp.setup()
 
 vim.diagnostic.config({
-  virtual_text = false,
+  virtual_text = {
+    prefix = '[',
+    suffix = ']',
+  },
   signs = true,
 })

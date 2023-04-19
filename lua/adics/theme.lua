@@ -1,8 +1,12 @@
+if vim.fn.has("termguicolors") then
+  vim.opt.termguicolors = true
+end
+
 -- local ok, onedark = pcall(require, 'onedark')
 -- if not ok then return end
 --
 -- onedark.setup {
---   style = 'warmer',
+--   style = 'deep',
 --   transparent = false,
 --   code_style = {
 --     comments = 'none'
@@ -54,12 +58,20 @@ nf.setup {
     carbonfox = {
       LineNr = { fg = "palette.red" },
       OnYank = { fg = "#000000", bg = "#ffffff" },
-      CybuFocus = { fg = "palette.red", gui = "bold" },
-      CybuAdjacent = { fg = "#94a3b8" },
-      CybuBorder = { fg = "palette.red" },
-      ['@punctuation.bracket'] = { guifg = 'palette.red' }
+      BufferCurrent = { bg = "#000000" },
+      BufferCurrentIndex = { bg = "#000000" },
+      BufferCurrentMod = { bg = "#000000" },
+      BufferCurrentSign = { bg = "#000000" }
     }
   }
 }
 
 vim.cmd("colorscheme carbonfox")
+
+-- local ok, boo = pcall(require, 'boo-colorscheme')
+-- if not ok then return end
+--
+-- boo.use({
+--   italic = false,
+--   theme = 'crimson_moonlight'
+-- })

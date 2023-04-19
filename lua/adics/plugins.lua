@@ -16,10 +16,11 @@ local ok, lazy = pcall(require, "lazy")
 if not ok then return end
 
 lazy.setup({
-  { "navarasu/onedark.nvim",       enabled = false },
-  { "EdenEast/nightfox.nvim",      lazy = false,   priority = 1000 },
-  { "projekt0n/github-nvim-theme", enabled = false },
-  { "folke/tokyonight.nvim",       enabled = false },
+  { "navarasu/onedark.nvim",          enabled = false },
+  { "rockerBOO/boo-colorscheme-nvim", enabled = false },
+  { "projekt0n/github-nvim-theme",    enabled = false },
+  { "folke/tokyonight.nvim",          enabled = false },
+  { "EdenEast/nightfox.nvim",         lazy = false,   priority = 1000 },
   {
     "VonHeikemen/lsp-zero.nvim",
     dependencies = {
@@ -111,23 +112,10 @@ lazy.setup({
       "MunifTanjim/nui.nvim",
     }
   },
-
-  {
-    "ghillb/cybu.nvim",
-    branch = "main",                            -- timely updates
-    -- branch = "v1.x", -- won't receive breaking changes
-    dependencies = { "nvim-lua/plenary.nvim" }, -- optional for icon support
-    config = function()
-      local ok, cybu = pcall(require, "cybu")
-      if not ok then
-        return
-      end
-      cybu.setup()
-      vim.keymap.set("n", "H", "<Plug>(CybuPrev)")
-      vim.keymap.set("n", "L", "<Plug>(CybuNext)")
-      vim.keymap.set({ "n", "v" }, "<c-s-tab>", "<plug>(CybuLastusedPrev)")
-      vim.keymap.set({ "n", "v" }, "<c-tab>", "<plug>(CybuLastusedNext)")
-    end,
+  {'romgrk/barbar.nvim',
+    init = function() vim.g.barbar_auto_setup = false end,
+    config = true,
+    event = "BufEnter"
   },
 
   "goolord/alpha-nvim",
@@ -138,6 +126,4 @@ lazy.setup({
     config = true,
     event = "VeryLazy"
   },
-  -- "TimUntersberger/neofs"
-  -- "AdiCahyaSaputra/neofs"
 })

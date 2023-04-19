@@ -7,6 +7,9 @@ bind('n', '<leader>w', '<cmd>w<cr>')
 bind('n', '<A-j>', '<C-d>zz')
 bind('n', '<A-k>', '<C-u>zz')
 
+bind('v', '<A-j>', '<C-d>')
+bind('v', '<A-k>', '<C-u>')
+
 bind('n', '<leader>e', function()
   local ft = vim.bo.filetype
   if ft == 'alpha' then
