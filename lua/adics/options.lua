@@ -25,3 +25,4 @@ vim.opt.breakindent = true
 vim.opt.backspace = { 'start', 'eol', 'indent' }
 
 vim.opt.background = 'dark'
+vim.opt.clipboard = 'unnamedplus' -- Required dependecies. In my wayland is 'wl-clipboard' or in ubuntu is 'xclip'
