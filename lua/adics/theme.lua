@@ -44,29 +44,29 @@ end
 --   transparent = true
 -- }
 
-local ok, nf = pcall(require, 'nightfox')
-if not ok then return end
-
-nf.setup {
-  options = {
-    transparent = true,
-    inverse = {
-      search = true
-    }
-  },
-  groups = {
-    carbonfox = {
-      LineNr = { fg = "palette.red" },
-      OnYank = { fg = "#000000", bg = "#ffffff" },
-      BufferCurrent = { bg = "#000000" },
-      BufferCurrentIndex = { bg = "#000000" },
-      BufferCurrentMod = { bg = "#000000" },
-      BufferCurrentSign = { bg = "#000000" }
-    }
-  }
-}
-
-vim.cmd("colorscheme carbonfox")
+-- local ok, nf = pcall(require, 'nightfox')
+-- if not ok then return end
+--
+-- nf.setup {
+--   options = {
+--     transparent = true,
+--     inverse = {
+--       search = true
+--     }
+--   },
+--   groups = {
+--     carbonfox = {
+--       LineNr = { fg = "palette.red" },
+--       OnYank = { fg = "#000000", bg = "#ffffff" },
+--       BufferCurrent = { bg = "#000000" },
+--       BufferCurrentIndex = { bg = "#000000" },
+--       BufferCurrentMod = { bg = "#000000" },
+--       BufferCurrentSign = { bg = "#000000" }
+--     }
+--   }
+-- }
+--
+-- vim.cmd("colorscheme carbonfox")
 
 -- local ok, boo = pcall(require, 'boo-colorscheme')
 -- if not ok then return end
@@ -75,3 +75,15 @@ vim.cmd("colorscheme carbonfox")
 --   italic = false,
 --   theme = 'crimson_moonlight'
 -- })
+
+local ok, cp = pcall(require, 'catppuccin')
+if not ok then return end
+
+cp.setup {
+  flavour = 'mocha',
+  transparent_background = true,
+  term_colors = true,
+  no_italic = true,
+}
+
+vim.cmd("colorscheme catppuccin")

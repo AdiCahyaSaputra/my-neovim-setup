@@ -20,7 +20,8 @@ lazy.setup({
   { "rockerBOO/boo-colorscheme-nvim", enabled = false },
   { "projekt0n/github-nvim-theme",    enabled = false },
   { "folke/tokyonight.nvim",          enabled = false },
-  { "EdenEast/nightfox.nvim",         lazy = false,   priority = 1000 },
+  { "EdenEast/nightfox.nvim",         enabled = false },
+  { "catppuccin/nvim",                lazy = false,   priority = 1000, name = "catppuccin" },
   {
     "VonHeikemen/lsp-zero.nvim",
     dependencies = {
@@ -112,7 +113,8 @@ lazy.setup({
       "MunifTanjim/nui.nvim",
     }
   },
-  {'romgrk/barbar.nvim',
+  {
+    'romgrk/barbar.nvim',
     init = function() vim.g.barbar_auto_setup = false end,
     config = true,
     event = "BufEnter"

@@ -9,6 +9,7 @@ lspsaga.setup {
       normal_bg = "",
       title_bg = ""
     },
+    kind = require("catppuccin.groups.integrations.lsp_saga").custom_kind()
   },
   diagnostic = {
     show_code_action = false,

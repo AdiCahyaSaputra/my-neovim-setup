@@ -3,15 +3,6 @@ if not ok then return end
 
 lsp.preset('recommended')
 
-lsp.ensure_installed({
-  'html',
-  'cssls',
-  'tsserver',
-  'intelephense',
-  -- 'phpactor',
-  -- 'lua_ls'
-})
-
 lsp.on_attach(function(client, bufnr)
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
@@ -60,13 +51,18 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
     else
       fallback()
     end
-  end, { "i", "s" })
+  end, { "i", "s" }),
+  ['<CR>'] = cmp.mapping.confirm({
+    behavior = cmp.ConfirmBehavior.Replace,
+    select = true
+  })
 })
+
 
 lsp.setup_nvim_cmp({
   sources = {
-    { name = 'path' },
     { name = 'nvim_lsp' },
+    { name = 'path' },
     { name = 'buffer' },
     { name = 'luasnip' },
     { name = 'nvim_lsp_signature_help' },
@@ -79,20 +75,9 @@ lsp.setup_nvim_cmp({
       ellipsis_char = "..."
     })
   },
-  window = {
-    completion = cmp.config.window.bordered(),
-    documentation = cmp.config.window.bordered(),
-  }
 })
 
-lsp.set_preferences {
-  sign_icons = {
-    error = 'E',
-    warn = 'W',
-    hint = 'H',
-    info = 'I'
-  }
-}
+require("luasnip.loaders.from_vscode").lazy_load()
 
 lsp.setup()
 
@@ -101,5 +86,5 @@ vim.diagnostic.config({
     prefix = '[',
     suffix = ']',
   },
-  signs = true,
+  signs = false,
 })
