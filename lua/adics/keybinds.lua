@@ -45,9 +45,9 @@ bind('n', '<A-h>', '<C-w>h')
 bind('n', '<A-Up>', '<cmd>vertical resize +3<cr>')
 bind('n', '<A-Down>', '<cmd>vertical resize -3<cr>')
 
-bind('n', 'H', '<cmd>BufferPrevious<cr>')
-bind('n', 'L', '<cmd>BufferNext<cr>')
-bind('n', 'C', '<cmd>BufferClose<cr>')
+bind('n', 'H', '<cmd>BufferLineCyclePrev<cr>')
+bind('n', 'L', '<cmd>BufferLineCycleNext<cr>')
+bind('n', 'C', '<cmd>bd<cr>')
 
 bind('', 'f', '<cmd>HopChar1CurrentLine<cr>', { noremap = true, silent = true })
 bind('', 'F', '<cmd>HopChar2CurrentLine<cr>', { noremap = true, silent = true })
