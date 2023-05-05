@@ -1,10 +1,10 @@
 # Simple Neovim Setup
 Fully written in lua, aesthetic ui, fuzzy finder, lsp, formatter, speed motion and more...
 
-![20230503_06h59m28s_grim](https://user-images.githubusercontent.com/77385046/235809989-05585743-9c5a-4bad-97f3-ea293d892094.png)
-![20230503_06h59m43s_grim](https://user-images.githubusercontent.com/77385046/235809997-4a3dd3c1-0e85-4d41-b5e7-e75aeb389e8f.png)
-![20230503_06h59m54s_grim](https://user-images.githubusercontent.com/77385046/235810002-501c7754-08cf-4412-9311-b82a39bac083.png)
-![20230503_07h00m07s_grim](https://user-images.githubusercontent.com/77385046/235810009-5f1defec-da51-467a-beab-5e0804fa7668.png)
+![20230505_14h25m29s_grim](https://user-images.githubusercontent.com/77385046/236399445-c5048855-c8eb-46a2-96ab-ccd3d34ac403.png)
+![20230505_14h23m48s_grim](https://user-images.githubusercontent.com/77385046/236399422-c699b682-ed0b-45e7-9162-397e254fc2c3.png)
+![20230505_14h24m31s_grim](https://user-images.githubusercontent.com/77385046/236399427-816615b5-aa28-4207-870b-eebf34d69ab8.png)
+![20230505_14h25m12s_grim](https://user-images.githubusercontent.com/77385046/236399434-af44aafc-e34a-4b03-ac62-65f26991262e.png)
 
 ## Plugin Manager
 [lazy.nvim](https://github.com/folke/lazy.nvim)
