@@ -84,6 +84,13 @@ cp.setup {
   transparent_background = true,
   term_colors = true,
   no_italic = true,
+  highlight_overrides = {
+    all = function(colors)
+      return {
+        LineNr = { fg = '#ffccaf' }
+      }
+    end
+  }
 }
 
 vim.cmd("colorscheme catppuccin")
