@@ -1,17 +1,18 @@
 # Simple Neovim Setup
 Fully written in lua, aesthetic ui, fuzzy finder, lsp, formatter, speed motion and more...
 
-![20230505_14h25m29s_grim](https://user-images.githubusercontent.com/77385046/236399445-c5048855-c8eb-46a2-96ab-ccd3d34ac403.png)
-![20230505_14h23m48s_grim](https://user-images.githubusercontent.com/77385046/236399422-c699b682-ed0b-45e7-9162-397e254fc2c3.png)
-![20230505_14h24m31s_grim](https://user-images.githubusercontent.com/77385046/236399427-816615b5-aa28-4207-870b-eebf34d69ab8.png)
-![20230505_14h25m12s_grim](https://user-images.githubusercontent.com/77385046/236399434-af44aafc-e34a-4b03-ac62-65f26991262e.png)
+![20230507_09h38m32s_grim](https://user-images.githubusercontent.com/77385046/236655054-7764f247-23ed-4ee2-8354-e21c40c68376.png)
+![20230507_09h54m48s_grim](https://user-images.githubusercontent.com/77385046/236655215-ada4a379-5060-47e5-b2b6-65b1e47264d9.png)
+![20230507_09h55m02s_grim](https://user-images.githubusercontent.com/77385046/236655218-03024816-b597-45df-9761-8032e2e86819.png)
+![20230507_09h55m10s_grim](https://user-images.githubusercontent.com/77385046/236655220-8d2630ea-1d4b-4a80-a9a0-778d33855680.png)
 
-## Plugin Manager
+### Plugin Manager
 [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 Startup Time ~200
 
 ## Installation Guide
+
 ### window (don't forget to backup your config first)
 ```bash
 $ git clone https://github.com/AdiCahyaSaputra/my-neovim-setup ~/AppData/Local/nvim 
@@ -33,6 +34,11 @@ require'nvim-treesitter.install'.compilers = { 'zig' }
 ### MacOS or Linux (or wsl)
 ```bash
 $ git clone https://github.com/AdiCahyaSaputra/my-neovim-setup ~/.config/nvim 
+```
+
+### Run nvim
+```
+$ nvim
 ```
 
 ## LSP 
@@ -100,7 +106,7 @@ vim.g.mapleader = " "
 ```
 
 ## Plugins
-- [nightfox](https://github.com/EdenEast/nightfox.nvim)
+- [catppuccin](https://github.com/catppuccin/nvim)
 - [lsp-zero.nvim](https://github.com/VonHeikemen/lsp-zero.nvim)
 - [toggle-term](https://github.com/akinsho/toggleterm.nvim)
 - [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)
@@ -115,7 +121,7 @@ vim.g.mapleader = " "
 - [hop.nvim](https://github.com/phaazon/hop.nvim)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [neotree](https://github.com/nvim-neo-tree/neo-tree.nvim)
-- [barbar](https://github.com/romgrk/barbar.nvim)
+- [bufferline](https://github.com/akinsho/bufferline.nvim)
 - [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
 - [alpha.nvim](https://github.com/goolord/alpha-nvim)
 - [treesitter-text-object](https://github.com/nvim-treesitter/nvim-treesitter-textobjects)
