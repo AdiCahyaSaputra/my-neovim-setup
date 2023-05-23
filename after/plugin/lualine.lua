@@ -18,7 +18,7 @@ local colors = {
 local config = {
   options = {
     -- Disable sections and component separators
-    theme = "palenight",
+    theme = "ayu",
     component_separators = { left = '»', right = '«' },
     section_separators = { left = '', right = '' },
     disabled_filetypes = { 'netrw', 'carbon.explorer' }

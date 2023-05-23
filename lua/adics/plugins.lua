@@ -21,7 +21,15 @@ lazy.setup({
   { "projekt0n/github-nvim-theme",    enabled = false },
   { "folke/tokyonight.nvim",          enabled = false },
   { "EdenEast/nightfox.nvim",         enabled = false },
-  { "catppuccin/nvim",                lazy = false,   priority = 1000, name = "catppuccin" },
+  { "catppuccin/nvim",                enabled = false },
+  { "Tsuzat/NeoSolarized.nvim",       lazy = false,   priority = 1000 },
+  {
+    'norcalli/nvim-colorizer.lua',
+    config = function()
+      require "colorizer".setup()
+    end,
+    enabled = false
+  },
   {
     "VonHeikemen/lsp-zero.nvim",
     dependencies = {
@@ -137,7 +145,7 @@ lazy.setup({
           max_name_length = 14,
           max_prefix_length = 13,
           tab_size = 20,
-          separator_style = {" » ", ' » '},
+          separator_style = { " » ", ' » ' },
           indicator = {
             style = 'none'
           },

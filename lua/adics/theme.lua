@@ -76,21 +76,43 @@ end
 --   theme = 'crimson_moonlight'
 -- })
 
-local ok, cp = pcall(require, 'catppuccin')
+-- local ok, cp = pcall(require, 'catppuccin')
+-- if not ok then return end
+--
+-- cp.setup {
+--   flavour = 'mocha',
+--   transparent_background = true,
+--   term_colors = true,
+--   no_italic = true,
+--   highlight_overrides = {
+--     all = function(colors)
+--       return {
+--         LineNr = { fg = '#ffccaf' }
+--       }
+--     end
+--   }
+-- }
+--
+-- vim.cmd("colorscheme catppuccin")
+
+local ok, neosolarized = pcall(require, 'NeoSolarized')
 if not ok then return end
 
-cp.setup {
-  flavour = 'mocha',
-  transparent_background = true,
-  term_colors = true,
-  no_italic = true,
-  highlight_overrides = {
-    all = function(colors)
-      return {
-        LineNr = { fg = '#ffccaf' }
-      }
-    end
-  }
+neosolarized.setup {
+  style = "dark",         -- "dark" or "light"
+  transparent = true,     -- true/false; Enable this to disable setting the background color
+  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
+  enable_italics = false, -- Italics for different hightlight groups (eg. Statement, Condition, Comment, Include, etc.)
+  styles = {
+    -- Style to be applied to different syntax groups
+    comments = { italic = false },
+    keywords = { italic = false },
+    functions = { italic = false },
+    variables = { italic = false },
+    string = { italic = false },
+    underline = true,  -- true/false; for global underline
+    undercurl = false, -- true/false; for global undercurl
+  },
 }
 
-vim.cmd("colorscheme catppuccin")
+vim.cmd [[colorscheme NeoSolarized]]
