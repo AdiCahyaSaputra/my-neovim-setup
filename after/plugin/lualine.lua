@@ -78,9 +78,9 @@ ins_left {
 
 ins_left {
   function()
-    return '♥'
+    return ''
   end,
-  color = { fg = colors.red, gui = 'bold' }
+  color = { fg = colors.red, gui = 'bold' },
 }
 
 ins_left {
