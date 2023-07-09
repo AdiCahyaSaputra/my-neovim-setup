@@ -1,10 +1,11 @@
 # Simple Neovim Setup
 Fully written in lua, aesthetic ui, fuzzy finder, lsp, formatter, speed motion and more...
 
-![20230523_09h08m22s_grim](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/d97b7490-a520-4bb8-9910-9b1ba6c71bba)
-![20230523_09h08m13s_grim](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/6ede4a30-cf95-46ab-be9f-c0b9195dda2b)
-![20230523_09h08m44s_grim](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/154be054-d0f6-4bcc-94e0-ffbc5574c061)
-![20230523_09h08m56s_grim](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/5e704b9a-a187-437a-9c80-ad667435dfe0)
+![Screenshot from 2023-07-09 18-05-31](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/5d19e9d0-7546-4faa-a1b1-91370dc1a93d)
+![Screenshot from 2023-07-09 18-05-43](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/13c20046-8661-4913-8ea8-ca78d6ad719c)
+![Screenshot from 2023-07-09 18-06-10](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/61a59083-6af8-4609-b3b9-c5d77ab0f203)
+![Screenshot from 2023-07-09 18-06-14](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/036b5065-6d0c-484d-916f-0b9ca88683d0)
+![Screenshot from 2023-07-09 18-06-27](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/861837d0-cacb-4a2e-9422-395e20574b91)
 
 ### Plugin Manager
 [lazy.nvim](https://github.com/folke/lazy.nvim)
@@ -106,7 +107,7 @@ vim.g.mapleader = " "
 ```
 
 ## Plugins
-- [neosolarized](https://github.com/Tsuzat/NeoSolarized.nvim)
+- [onedarkpro](https://github.com/olimorris/onedarkpro.nvim)
 - [lsp-zero.nvim](https://github.com/VonHeikemen/lsp-zero.nvim)
 - [toggle-term](https://github.com/akinsho/toggleterm.nvim)
 - [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)

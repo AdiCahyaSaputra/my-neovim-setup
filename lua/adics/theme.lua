@@ -15,6 +15,21 @@ end
 --
 -- onedark.load()
 
+local ok, onedarkpro = pcall(require, 'onedarkpro')
+if not ok then return end
+
+onedarkpro.setup {
+  highlights = {
+    VertSplit = { fg = '#000000' },
+    WinSeparator = { fg = '#000000' }
+  },
+  options = {
+    cursorline = false
+  }
+}
+
+vim.cmd("colorscheme onedark_dark")
+
 -- local ok, tokyonight = pcall(require, 'tokyonight')
 -- if not ok then return end
 --
@@ -27,7 +42,7 @@ end
 --     float = "dark",
 --   },
 --   lualine_bold = true,
---   transparent = true
+--   transparent = false
 -- }
 --
 -- vim.cmd("colorscheme tokyonight")
@@ -73,7 +88,7 @@ end
 --
 -- boo.use({
 --   italic = false,
---   theme = 'crimson_moonlight'
+--   theme = 'crimson_moonlight',
 -- })
 
 -- local ok, cp = pcall(require, 'catppuccin')
@@ -95,24 +110,31 @@ end
 --
 -- vim.cmd("colorscheme catppuccin")
 
-local ok, neosolarized = pcall(require, 'NeoSolarized')
-if not ok then return end
+-- local ok, neosolarized = pcall(require, 'NeoSolarized')
+-- if not ok then return end
+--
+-- neosolarized.setup {
+--   style = "dark",         -- "dark" or "light"
+--   transparent = true,     -- true/false; Enable this to disable setting the background color
+--   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
+--   enable_italics = false, -- Italics for different hightlight groups (eg. Statement, Condition, Comment, Include, etc.)
+--   styles = {
+--     -- Style to be applied to different syntax groups
+--     comments = { italic = false },
+--     keywords = { italic = false },
+--     functions = { italic = false },
+--     variables = { italic = false },
+--     string = { italic = false },
+--     underline = true,  -- true/false; for global underline
+--     undercurl = false, -- true/false; for global undercurl
+--   },
+-- }
+--
+-- vim.cmd [[colorscheme NeoSolarized]]
 
-neosolarized.setup {
-  style = "dark",         -- "dark" or "light"
-  transparent = true,     -- true/false; Enable this to disable setting the background color
-  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
-  enable_italics = false, -- Italics for different hightlight groups (eg. Statement, Condition, Comment, Include, etc.)
-  styles = {
-    -- Style to be applied to different syntax groups
-    comments = { italic = false },
-    keywords = { italic = false },
-    functions = { italic = false },
-    variables = { italic = false },
-    string = { italic = false },
-    underline = true,  -- true/false; for global underline
-    undercurl = false, -- true/false; for global undercurl
-  },
-}
-
-vim.cmd [[colorscheme NeoSolarized]]
+-- local ok, noirbuddy = pcall(require, 'noirbuddy')
+-- if not ok then return end
+--
+-- noirbuddy.setup {
+--   preset = 'minimal'
+-- }

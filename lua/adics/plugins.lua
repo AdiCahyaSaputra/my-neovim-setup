@@ -13,22 +13,36 @@ end
 vim.opt.runtimepath:prepend(lazypath)
 
 local ok, lazy = pcall(require, "lazy")
-if not ok then return end
+if not ok then
+  return
+end
 
 lazy.setup({
-  { "navarasu/onedark.nvim",          enabled = false },
-  { "rockerBOO/boo-colorscheme-nvim", enabled = false },
-  { "projekt0n/github-nvim-theme",    enabled = false },
-  { "folke/tokyonight.nvim",          enabled = false },
-  { "EdenEast/nightfox.nvim",         enabled = false },
-  { "catppuccin/nvim",                enabled = false },
-  { "Tsuzat/NeoSolarized.nvim",       lazy = false,   priority = 1000 },
+  { "navarasu/onedark.nvim",       enabled = false },
+  { "projekt0n/github-nvim-theme", enabled = false },
+  { "folke/tokyonight.nvim",       enabled = false },
+  { "EdenEast/nightfox.nvim",      enabled = false },
   {
-    'norcalli/nvim-colorizer.lua',
+    "jesseleite/nvim-noirbuddy",
+    dependencies = {
+      "tjdevries/colorbuddy.nvim", branch = "dev"
+    },
+    enabled = false,
+  },
+  { "catppuccin/nvim",                enabled = false },
+  { "Tsuzat/NeoSolarized.nvim",       enabled = false },
+  { "rockerBOO/boo-colorscheme-nvim", enabled = false },
+  {
+    "olimorris/onedarkpro.nvim",
+    lazy = false,
+    priority = 1000
+  },
+  {
+    "norcalli/nvim-colorizer.lua",
     config = function()
-      require "colorizer".setup()
+      require("colorizer").setup()
     end,
-    enabled = false
+    enabled = false,
   },
   {
     "VonHeikemen/lsp-zero.nvim",
@@ -50,7 +64,27 @@ lazy.setup({
     event = "VeryLazy",
     config = function()
       require("config.lsp")
-    end
+    end,
+  },
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    enabled = false,
+  },
+
+  {
+    "jay-babu/mason-null-ls.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    dependencies = {
+      "williamboman/mason.nvim",
+      "jose-elias-alvarez/null-ls.nvim",
+    },
+    config = function()
+      require("config.null_ls") -- require your null-ls config here (example below)
+    end,
+    enabled = false,
+  },
+  {
+    "andweeb/presence.nvim",
   },
 
   {
@@ -59,39 +93,39 @@ lazy.setup({
       require("config.codeium")
     end,
     event = "VeryLazy",
-    enabled = false
+    enabled = false,
   },
 
-  { 'akinsho/toggleterm.nvim', version = "*",     config = true },
+  { "akinsho/toggleterm.nvim", version = "*",     config = true },
   {
     "glepnir/lspsaga.nvim",
     branch = "main",
     event = "VeryLazy",
     config = function()
-      require('config.lspsaga')
-    end
+      require("config.lspsaga")
+    end,
   },
   {
     "nvim-lualine/lualine.nvim",
     dependencies = {
-      "kyazdani42/nvim-web-devicons"
-    }
+      "kyazdani42/nvim-web-devicons",
+    },
   },
 
   {
     "lukas-reineke/indent-blankline.nvim",
     event = "VeryLazy",
     config = function()
-      require('config.indentbl')
-    end
+      require("config.indentbl")
+    end,
   },
 
   {
     "nvim-treesitter/nvim-treesitter",
     event = "VeryLazy",
     config = function()
-      require('config.treesitter')
-    end
+      require("config.treesitter")
+    end,
   },
   { "windwp/nvim-ts-autotag",  event = "VeryLazy" },
   { "windwp/nvim-autopairs",   config = true,     event = "VeryLazy" },
@@ -99,7 +133,7 @@ lazy.setup({
     "nvim-telescope/telescope.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
-    }
+    },
   },
 
   { "nvim-telescope/telescope-ui-select.nvim", event = "VeryLazy" },
@@ -111,7 +145,7 @@ lazy.setup({
   {
     "karb94/neoscroll.nvim",
     event = "BufEnter",
-    enabled = false
+    enabled = false,
   },
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -119,39 +153,43 @@ lazy.setup({
     dependencies = {
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
-    }
+    },
   },
   {
-    'romgrk/barbar.nvim',
-    init = function() vim.g.barbar_auto_setup = false end,
+    "romgrk/barbar.nvim",
+    init = function()
+      vim.g.barbar_auto_setup = false
+    end,
     config = true,
     event = "BufEnter",
-    enabled = false
+    enabled = false,
   },
 
   {
-    'akinsho/bufferline.nvim',
+    "akinsho/bufferline.nvim",
     config = function()
-      local ok, bufferline = pcall(require, 'bufferline')
-      if not ok then return end
+      local ok, bufferline = pcall(require, "bufferline")
+      if not ok then
+        return
+      end
 
-      bufferline.setup {
+      bufferline.setup({
         options = {
           offsets = {
             { filetype = "NvimTree", text = "", padding = 1 },
-            { filetype = "neo-tree", text = "", padding = 1 },
+            { filetype = "neo-tree", text = "File Tree", padding = 1 },
             { filetype = "Outline",  text = "", padding = 1 },
           },
           max_name_length = 14,
           max_prefix_length = 13,
           tab_size = 20,
-          separator_style = { " » ", ' » ' },
-          indicator = {
-            style = 'none'
-          },
-          style_preset = bufferline.style_preset.no_italic
+          separator_style = { " » ", " » " },
+          -- indicator = {
+          --   style = "none",
+          -- },
+          style_preset = bufferline.style_preset.no_italic,
         },
-      }
+      })
     end,
     event = "BufEnter",
   },
@@ -162,6 +200,6 @@ lazy.setup({
   {
     "kylechui/nvim-surround",
     config = true,
-    event = "VeryLazy"
+    event = "VeryLazy",
   },
 })

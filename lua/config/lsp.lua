@@ -9,6 +9,9 @@ lsp.on_attach(function(client, bufnr)
   local bufopt = { noremap = true, silent = true, buffer = bufnr }
   local bind = vim.keymap.set
 
+  -- Use null ls for formatting
+  -- client.server_capabilities.documentFormattingProvider = false
+
   bind('n', 'gd', "<cmd>lua require'telescope.builtin'.lsp_definitions()<CR>", bufopt)
 
   bind('n', 'K', '<cmd>Lspsaga hover_doc<cr>', bufopt)
