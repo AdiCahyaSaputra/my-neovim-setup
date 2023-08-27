@@ -39,8 +39,10 @@ bind('n', '<leader>fs', '<cmd>Telescope git_status<cr>')
 bind('s', '<Tab>', "<cmd>lua require'luasnip'.jump(1)<cr>")
 bind('s', '<S-Tab>', "<cmd>lua require'luasnip'.jump(-1)<cr>")
 
-bind('n', '<A-l>', '<C-w>l')
-bind('n', '<A-h>', '<C-w>h')
+bind('n', '<C-l>', '<C-w>l')
+bind('n', '<C-h>', '<C-w>h')
+bind('n', '<C-j>', '<C-w>j')
+bind('n', '<C-k>', '<C-w>k')
 
 bind('n', '<A-Up>', '<cmd>vertical resize +3<cr>')
 bind('n', '<A-Down>', '<cmd>vertical resize -3<cr>')

@@ -5,7 +5,7 @@ vim.opt.fileencoding = 'utf-8'
 vim.opt.signcolumn = 'yes'
 
 vim.o.wrap = false
-vim.o.relativenumber = true
+vim.o.relativenumber = false
 vim.o.number = true
 vim.o.shiftwidth = 2
 vim.o.tabstop = 2

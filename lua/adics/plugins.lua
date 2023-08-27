@@ -20,8 +20,11 @@ end
 lazy.setup({
   { "navarasu/onedark.nvim",       enabled = false },
   { "projekt0n/github-nvim-theme", enabled = false },
-  { "folke/tokyonight.nvim",       enabled = false },
-  { "EdenEast/nightfox.nvim",      enabled = false },
+  {
+    "folke/tokyonight.nvim",
+    enabled = false,
+  },
+  { "EdenEast/nightfox.nvim",         enabled = false },
   {
     "jesseleite/nvim-noirbuddy",
     dependencies = {
@@ -176,9 +179,9 @@ lazy.setup({
       bufferline.setup({
         options = {
           offsets = {
-            { filetype = "NvimTree", text = "", padding = 1 },
+            { filetype = "NvimTree", text = "",          padding = 1 },
             { filetype = "neo-tree", text = "File Tree", padding = 1 },
-            { filetype = "Outline",  text = "", padding = 1 },
+            { filetype = "Outline",  text = "",          padding = 1 },
           },
           max_name_length = 14,
           max_prefix_length = 13,

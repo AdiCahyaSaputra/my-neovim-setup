@@ -1,6 +1,8 @@
-if vim.fn.has("termguicolors") then
-  vim.opt.termguicolors = true
-end
+-- if vim.fn.has("termguicolors") then
+--   vim.opt.termguicolors = true
+-- end
+
+vim.opt.termguicolors = false
 
 -- local ok, onedark = pcall(require, 'onedark')
 -- if not ok then return end
@@ -24,7 +26,9 @@ onedarkpro.setup {
     WinSeparator = { fg = '#000000' }
   },
   options = {
-    cursorline = false
+    cursorline = true,
+    terminal_colors = true,
+    transparency = false
   }
 }
 
@@ -34,7 +38,7 @@ vim.cmd("colorscheme onedark_dark")
 -- if not ok then return end
 --
 -- tokyonight.setup {
---   style = "night",
+--   style = "storm",
 --   styles = {
 --     comments = { italic = false },
 --     keywords = { italic = false },
