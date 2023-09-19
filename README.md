@@ -1,4 +1,5 @@
 # Simple Neovim Setup
+
 Fully written in lua, aesthetic ui, fuzzy finder, lsp, formatter, speed motion and more...
 
 ![Screenshot from 2023-07-09 18-05-31](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/5d19e9d0-7546-4faa-a1b1-91370dc1a93d)
@@ -8,6 +9,7 @@ Fully written in lua, aesthetic ui, fuzzy finder, lsp, formatter, speed motion a
 ![Screenshot from 2023-07-09 18-06-27](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/861837d0-cacb-4a2e-9422-395e20574b91)
 
 ### Plugin Manager
+
 [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 Startup Time ~200
@@ -15,54 +17,70 @@ Startup Time ~200
 ## Installation Guide
 
 ### window (don't forget to backup your config first)
+
 ```bash
-$ git clone https://github.com/AdiCahyaSaputra/my-neovim-setup ~/AppData/Local/nvim 
+$ git clone https://github.com/AdiCahyaSaputra/my-neovim-setup ~/AppData/Local/nvim
 ```
 
 ### Windows Note's
+
 For treesitter error, you may need to read [this](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support)
 
 1. Install Zig for compiler because mingw is 32bit
+
 ```bash
 choco install zig
 ```
+
 2. then uncomment this on `nvim/lua/config/treesitter.lua` file
+
 ```lua
 require("nvim-treesitter.install").prefer_git = false
 require'nvim-treesitter.install'.compilers = { 'zig' }
 ```
 
 ### MacOS or Linux (or wsl)
+
 ```bash
-$ git clone https://github.com/AdiCahyaSaputra/my-neovim-setup ~/.config/nvim 
+$ git clone https://github.com/AdiCahyaSaputra/my-neovim-setup ~/.config/nvim
 ```
 
 ### Run nvim
+
 ```
 $ nvim
 ```
 
-## LSP 
+## LSP
+
 for open Mason UI
+
 ```
 :Mason
 ```
+
 example for install tsserver and intelephense
+
 ```
 :MasonInstall typescript-language-server intelephense
 ```
+
 you don't need to setup the server manually because `lsp-zero` do this automatically
 
-## Treesitter (syntax highlight) 
+## Treesitter (syntax highlight)
+
 example for install ts and php syntax highlight
+
 ```
 :TSInstall tsx ts php
 ```
 
 ## Theme
+
 you can change the theme whatever you want. Edit file `./lua/adics/theme.lua` and paste your config here
 
 ## Keybinds General
+
 ```lua
 vim.g.mapleader = " "
 
@@ -85,6 +103,7 @@ vim.g.mapleader = " "
 ```
 
 ## Keybinds Buffer
+
 ```lua
 "H" -- Prev Buffer (normal mode)
 "L" -- Next Buffer (normal mode)
@@ -107,6 +126,7 @@ vim.g.mapleader = " "
 ```
 
 ## Plugins
+
 - [onedarkpro](https://github.com/olimorris/onedarkpro.nvim)
 - [lsp-zero.nvim](https://github.com/VonHeikemen/lsp-zero.nvim)
 - [toggle-term](https://github.com/akinsho/toggleterm.nvim)

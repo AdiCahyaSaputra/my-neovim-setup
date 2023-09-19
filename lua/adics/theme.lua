@@ -17,22 +17,38 @@ vim.opt.termguicolors = false
 --
 -- onedark.load()
 
-local ok, onedarkpro = pcall(require, 'onedarkpro')
+-- local ok, onedarkpro = pcall(require, 'onedarkpro')
+-- if not ok then return end
+--
+-- onedarkpro.setup {
+--   options = {
+--     cursorline = true,
+--     terminal_colors = true,
+--     transparency = false
+--   }
+-- }
+--
+-- vim.cmd("colorscheme onedark_dark")
+
+local ok, tokyodark = pcall(require, "tokyodark")
 if not ok then return end
 
-onedarkpro.setup {
-  highlights = {
-    VertSplit = { fg = '#000000' },
-    WinSeparator = { fg = '#000000' }
+tokyodark.setup({
+  transparent_background = true,                                         -- set background to transparent
+  gamma = 1.00,                                                          -- adjust the brightness of the theme
+  styles = {
+    comments = { italic = false },                                       -- style for comments
+    keywords = { italic = false },                                       -- style for keywords
+    identifiers = { italic = false },                                    -- style for identifiers
+    functions = {},                                                      -- style for functions
+    variables = {},                                                      -- style for variables
   },
-  options = {
-    cursorline = true,
-    terminal_colors = true,
-    transparency = false
-  }
-}
+  custom_highlights = {} or function(highlights, palette) return {} end, -- extend highlights
+  custom_palette = {} or function(palette) return {} end,                -- extend palette
+  terminal_colors = true,                                                -- enable terminal colors
+})
 
-vim.cmd("colorscheme onedark_dark")
+vim.cmd [[colorscheme tokyodark]]
 
 -- local ok, tokyonight = pcall(require, 'tokyonight')
 -- if not ok then return end
@@ -142,3 +158,47 @@ vim.cmd("colorscheme onedark_dark")
 -- noirbuddy.setup {
 --   preset = 'minimal'
 -- }
+--
+-- require 'nordic'.setup {
+--   -- This callback can be used to override the colors used in the palette.
+--   on_palette = function(palette) return palette end,
+--   -- Enable bold keywords.
+--   bold_keywords = true,
+--   -- Enable italic comments.
+--   italic_comments = false,
+--   -- Enable general editor background transparency.
+--   transparent_bg = false,
+--   -- Enable brighter float border.
+--   bright_border = false,
+--   -- Reduce the overall amount of blue in the theme (diverges from base Nord).
+--   reduced_blue = true,
+--   -- Swap the dark background with the normal one.
+--   swap_backgrounds = false,
+--   -- Override the styling of any highlight group.
+--   override = {},
+--   -- Cursorline options.  Also includes visual/selection.
+--   cursorline = {
+--     -- Bold font in cursorline.
+--     bold = false,
+--     -- Bold cursorline number.
+--     bold_number = true,
+--     -- Avialable styles: 'dark', 'light'.
+--     theme = 'dark',
+--     -- Blending the cursorline bg with the buffer bg.
+--     blend = 0.7,
+--   },
+--   noice = {
+--     -- Available styles: `classic`, `flat`.
+--     style = 'flat',
+--   },
+--   telescope = {
+--     -- Available styles: `classic`, `flat`.
+--     style = 'classic',
+--   },
+--   ts_context = {
+--     -- Enables dark background for treesitter-context window
+--     dark_background = true,
+--   }
+-- }
+--
+-- vim.cmd.colorscheme 'nordic'

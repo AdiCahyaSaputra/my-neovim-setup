@@ -15,7 +15,12 @@ bind('n', '<leader>e', function()
   if ft == 'alpha' then
     vim.cmd('bd')
   end
-  vim.cmd('NeoTreeFocusToggle')
+
+  if ft == 'netrw' then
+    vim.cmd('bw')
+  else
+    vim.cmd('Exp')
+  end
 end)
 
 bind('n', '<leader>o', function()
@@ -23,7 +28,7 @@ bind('n', '<leader>o', function()
   if ft == 'alpha' then
     vim.cmd('bd')
   end
-  vim.cmd('NeoTreeFocus')
+  vim.cmd('Exp')
 end)
 
 bind(
@@ -39,13 +44,18 @@ bind('n', '<leader>fs', '<cmd>Telescope git_status<cr>')
 bind('s', '<Tab>', "<cmd>lua require'luasnip'.jump(1)<cr>")
 bind('s', '<S-Tab>', "<cmd>lua require'luasnip'.jump(-1)<cr>")
 
+bind('n', 'ss', ':split<Return><C-w>w')
+bind('n', 'sv', ':vsplit<Return><C-w>w')
+
 bind('n', '<C-l>', '<C-w>l')
 bind('n', '<C-h>', '<C-w>h')
 bind('n', '<C-j>', '<C-w>j')
 bind('n', '<C-k>', '<C-w>k')
 
-bind('n', '<A-Up>', '<cmd>vertical resize +3<cr>')
-bind('n', '<A-Down>', '<cmd>vertical resize -3<cr>')
+bind('n', '<C-left>', '<C-w><')
+bind('n', '<C-right>', '<C-w>>')
+bind('n', '<C-up>', '<C-w>+')
+bind('n', '<C-down>', '<C-w>-')
 
 bind('n', 'H', '<cmd>BufferLineCyclePrev<cr>')
 bind('n', 'L', '<cmd>BufferLineCycleNext<cr>')

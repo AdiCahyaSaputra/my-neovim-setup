@@ -10,7 +10,8 @@ lsp.on_attach(function(client, bufnr)
   local bind = vim.keymap.set
 
   -- Use null ls for formatting
-  -- client.server_capabilities.documentFormattingProvider = false
+  client.server_capabilities.documentFormattingProvider = true
+  client.server_capabilities.documentRangeFormattingProvider = true
 
   bind('n', 'gd', "<cmd>lua require'telescope.builtin'.lsp_definitions()<CR>", bufopt)
 
@@ -18,6 +19,8 @@ lsp.on_attach(function(client, bufnr)
 
   bind('n', '<leader>ca', vim.lsp.buf.code_action, bufopt)
   bind('n', '<leader>lf', function() vim.lsp.buf.format({ async = true }) end, bufopt)
+  bind('n', '<space>pf', "<cmd>silent !prettier . --write --cache<cr>",
+    { silent = true })
 
   -- Lspsaga Diagnostic
   bind('n', '<leader>dl', '<cmd>Lspsaga diagnostic_jump_next<cr>', bufopt)
@@ -32,7 +35,10 @@ cmp.setup({
   window = {
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
-  }
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-Space>'] = cmp.mapping.complete(),
+  }),
 })
 
 local cmp_mappings = lsp.defaults.cmp_mappings({

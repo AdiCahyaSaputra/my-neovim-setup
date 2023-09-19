@@ -35,8 +35,10 @@ lazy.setup({
   { "catppuccin/nvim",                enabled = false },
   { "Tsuzat/NeoSolarized.nvim",       enabled = false },
   { "rockerBOO/boo-colorscheme-nvim", enabled = false },
+  { "AlexvZyl/nordic.nvim",           enabled = true },
+  { "olimorris/onedarkpro.nvim",      enabled = true },
   {
-    "olimorris/onedarkpro.nvim",
+    "tiagovla/tokyodark.nvim",
     lazy = false,
     priority = 1000
   },
@@ -71,7 +73,7 @@ lazy.setup({
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
-    enabled = false,
+    enabled = true,
   },
 
   {
@@ -84,7 +86,7 @@ lazy.setup({
     config = function()
       require("config.null_ls") -- require your null-ls config here (example below)
     end,
-    enabled = false,
+    enabled = true,
   },
   {
     "andweeb/presence.nvim",
@@ -130,6 +132,10 @@ lazy.setup({
       require("config.treesitter")
     end,
   },
+  {
+    "nvim-telescope/telescope-file-browser.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+  },
   { "windwp/nvim-ts-autotag",  event = "VeryLazy" },
   { "windwp/nvim-autopairs",   config = true,     event = "VeryLazy" },
   {
@@ -152,20 +158,12 @@ lazy.setup({
   },
   {
     "nvim-neo-tree/neo-tree.nvim",
-    branch = "v2.x",
+    branch = "v3.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
     },
-  },
-  {
-    "romgrk/barbar.nvim",
-    init = function()
-      vim.g.barbar_auto_setup = false
-    end,
-    config = true,
-    event = "BufEnter",
-    enabled = false,
+    enabled = false
   },
 
   {
@@ -195,6 +193,7 @@ lazy.setup({
       })
     end,
     event = "BufEnter",
+    enabled = true
   },
 
   "goolord/alpha-nvim",
@@ -205,4 +204,66 @@ lazy.setup({
     config = true,
     event = "VeryLazy",
   },
+
+  {
+    "MunifTanjim/prettier.nvim",
+    config = function()
+      require('prettier').setup {
+        cli_options = {
+          arrow_parens = "always",
+          bracket_spacing = true,
+          bracket_same_line = false,
+          embedded_language_formatting = "auto",
+          end_of_line = "lf",
+          html_whitespace_sensitivity = "css",
+          -- jsx_bracket_same_line = false,
+          jsx_single_quote = false,
+          print_width = 80,
+          prose_wrap = "preserve",
+          quote_props = "as-needed",
+          semi = true,
+          single_attribute_per_line = false,
+          single_quote = false,
+          tab_width = 2,
+          trailing_comma = "es5",
+          use_tabs = false,
+          vue_indent_script_and_style = false,
+        },
+      }
+    end,
+    event = "BufEnter"
+  },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = true,
+    event = "BufEnter"
+  },
+  {
+    "elentok/format-on-save.nvim",
+    config = function()
+      require('config.formatter')
+    end,
+    enabled = false
+  },
+  {
+    "levouh/tint.nvim",
+    config = function()
+      require("tint").setup({
+        tint = -30,       -- Darken colors, use a positive value to brighten
+        saturation = 0.6, -- Saturation to preserve
+        -- transforms = require("tint").transforms.SATURATE_TINT, -- Showing default behavior, but value here can be predefined set of transforms
+        -- tint_background_colors = true,                        -- Tint background portions of highlight groups
+        highlight_ignore_patterns = { "WinSeparator", "Status.*" }, -- Highlight group patterns to ignore, see `string.find`
+        -- window_ignore_function = function(winid)
+        --   local bufid = vim.api.nvim_win_get_buf(winid)
+        --   local buftype = vim.api.nvim_buf_get_option(bufid, "buftype")
+        --   local floating = vim.api.nvim_win_get_config(winid).relative ~= ""
+        --
+        --   -- Do not tint `terminal` or floating windows, tint everything else
+        --   return buftype == "terminal" or floating
+        -- end
+      })
+    end
+  }
 })
