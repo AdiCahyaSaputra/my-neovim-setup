@@ -28,20 +28,17 @@ lazy.setup({
   {
     "jesseleite/nvim-noirbuddy",
     dependencies = {
-      "tjdevries/colorbuddy.nvim", branch = "dev"
+      "tjdevries/colorbuddy.nvim",
+      branch = "dev",
     },
     enabled = false,
   },
+  { "Tsuzat/NeoSolarized.nvim",       lazy = false,   priority = 1000 },
   { "catppuccin/nvim",                enabled = false },
-  { "Tsuzat/NeoSolarized.nvim",       enabled = false },
   { "rockerBOO/boo-colorscheme-nvim", enabled = false },
   { "AlexvZyl/nordic.nvim",           enabled = true },
-  { "olimorris/onedarkpro.nvim",      enabled = true },
-  {
-    "tiagovla/tokyodark.nvim",
-    lazy = false,
-    priority = 1000
-  },
+  { "tiagovla/tokyodark.nvim",        enabled = true },
+  { "olimorris/onedarkpro.nvim",      enabled = false },
   {
     "norcalli/nvim-colorizer.lua",
     config = function()
@@ -73,21 +70,12 @@ lazy.setup({
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
-    enabled = true,
-  },
-
-  {
-    "jay-babu/mason-null-ls.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    dependencies = {
-      "williamboman/mason.nvim",
-      "jose-elias-alvarez/null-ls.nvim",
-    },
     config = function()
-      require("config.null_ls") -- require your null-ls config here (example below)
+      require("config.null_ls")
     end,
     enabled = true,
   },
+
   {
     "andweeb/presence.nvim",
   },
@@ -134,7 +122,7 @@ lazy.setup({
   },
   {
     "nvim-telescope/telescope-file-browser.nvim",
-    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
   },
   { "windwp/nvim-ts-autotag",  event = "VeryLazy" },
   { "windwp/nvim-autopairs",   config = true,     event = "VeryLazy" },
@@ -163,7 +151,7 @@ lazy.setup({
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
     },
-    enabled = false
+    enabled = false,
   },
 
   {
@@ -193,7 +181,7 @@ lazy.setup({
       })
     end,
     event = "BufEnter",
-    enabled = true
+    enabled = true,
   },
 
   "goolord/alpha-nvim",
@@ -206,51 +194,16 @@ lazy.setup({
   },
 
   {
-    "MunifTanjim/prettier.nvim",
-    config = function()
-      require('prettier').setup {
-        cli_options = {
-          arrow_parens = "always",
-          bracket_spacing = true,
-          bracket_same_line = false,
-          embedded_language_formatting = "auto",
-          end_of_line = "lf",
-          html_whitespace_sensitivity = "css",
-          -- jsx_bracket_same_line = false,
-          jsx_single_quote = false,
-          print_width = 80,
-          prose_wrap = "preserve",
-          quote_props = "as-needed",
-          semi = true,
-          single_attribute_per_line = false,
-          single_quote = false,
-          tab_width = 2,
-          trailing_comma = "es5",
-          use_tabs = false,
-          vue_indent_script_and_style = false,
-        },
-      }
-    end,
-    event = "BufEnter"
-  },
-  {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = true,
-    event = "BufEnter"
-  },
-  {
-    "elentok/format-on-save.nvim",
-    config = function()
-      require('config.formatter')
-    end,
-    enabled = false
+    event = "BufEnter",
   },
   {
     "levouh/tint.nvim",
     config = function()
       require("tint").setup({
-        tint = -30,       -- Darken colors, use a positive value to brighten
+        tint = -30,   -- Darken colors, use a positive value to brighten
         saturation = 0.6, -- Saturation to preserve
         -- transforms = require("tint").transforms.SATURATE_TINT, -- Showing default behavior, but value here can be predefined set of transforms
         -- tint_background_colors = true,                        -- Tint background portions of highlight groups
@@ -264,6 +217,7 @@ lazy.setup({
         --   return buftype == "terminal" or floating
         -- end
       })
-    end
-  }
+    end,
+    enabled = false,
+  },
 })

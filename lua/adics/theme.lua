@@ -17,38 +17,46 @@ vim.opt.termguicolors = false
 --
 -- onedark.load()
 
--- local ok, onedarkpro = pcall(require, 'onedarkpro')
--- if not ok then return end
+-- local ok, onedarkpro = pcall(require, "onedarkpro")
+-- if not ok then
+--   return
+-- end
 --
--- onedarkpro.setup {
+-- onedarkpro.setup({
 --   options = {
 --     cursorline = true,
 --     terminal_colors = true,
---     transparency = false
---   }
--- }
+--     transparency = false,
+--   },
+-- })
 --
 -- vim.cmd("colorscheme onedark_dark")
 
-local ok, tokyodark = pcall(require, "tokyodark")
-if not ok then return end
-
-tokyodark.setup({
-  transparent_background = true,                                         -- set background to transparent
-  gamma = 1.00,                                                          -- adjust the brightness of the theme
-  styles = {
-    comments = { italic = false },                                       -- style for comments
-    keywords = { italic = false },                                       -- style for keywords
-    identifiers = { italic = false },                                    -- style for identifiers
-    functions = {},                                                      -- style for functions
-    variables = {},                                                      -- style for variables
-  },
-  custom_highlights = {} or function(highlights, palette) return {} end, -- extend highlights
-  custom_palette = {} or function(palette) return {} end,                -- extend palette
-  terminal_colors = true,                                                -- enable terminal colors
-})
-
-vim.cmd [[colorscheme tokyodark]]
+-- local ok, tokyodark = pcall(require, "tokyodark")
+-- if not ok then
+--   return
+-- end
+--
+-- tokyodark.setup({
+--   transparent_background = true,    -- set background to transparent
+--   gamma = 1.00,                     -- adjust the brightness of the theme
+--   styles = {
+--     comments = { italic = false },  -- style for comments
+--     keywords = { italic = false },  -- style for keywords
+--     identifiers = { italic = false }, -- style for identifiers
+--     functions = {},                 -- style for functions
+--     variables = {},                 -- style for variables
+--   },
+--   custom_highlights = {} or function(highlights, palette)
+--     return {}
+--   end, -- extend highlights
+--   custom_palette = {} or function(palette)
+--     return {}
+--   end,                   -- extend palette
+--   terminal_colors = true, -- enable terminal colors
+-- })
+--
+-- vim.cmd([[colorscheme tokyodark]])
 
 -- local ok, tokyonight = pcall(require, 'tokyonight')
 -- if not ok then return end
@@ -130,27 +138,29 @@ vim.cmd [[colorscheme tokyodark]]
 --
 -- vim.cmd("colorscheme catppuccin")
 
--- local ok, neosolarized = pcall(require, 'NeoSolarized')
--- if not ok then return end
---
--- neosolarized.setup {
---   style = "dark",         -- "dark" or "light"
---   transparent = true,     -- true/false; Enable this to disable setting the background color
---   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
---   enable_italics = false, -- Italics for different hightlight groups (eg. Statement, Condition, Comment, Include, etc.)
---   styles = {
---     -- Style to be applied to different syntax groups
---     comments = { italic = false },
---     keywords = { italic = false },
---     functions = { italic = false },
---     variables = { italic = false },
---     string = { italic = false },
---     underline = true,  -- true/false; for global underline
---     undercurl = false, -- true/false; for global undercurl
---   },
--- }
---
--- vim.cmd [[colorscheme NeoSolarized]]
+local ok, neosolarized = pcall(require, "NeoSolarized")
+if not ok then
+  return
+end
+
+neosolarized.setup({
+  style = "dark",        -- "dark" or "light"
+  transparent = true,    -- true/false; Enable this to disable setting the background color
+  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
+  enable_italics = false, -- Italics for different hightlight groups (eg. Statement, Condition, Comment, Include, etc.)
+  styles = {
+    -- Style to be applied to different syntax groups
+    comments = { italic = false },
+    keywords = { italic = false },
+    functions = { italic = false },
+    variables = { italic = false },
+    string = { italic = false },
+    underline = true, -- true/false; for global underline
+    undercurl = false, -- true/false; for global undercurl
+  },
+})
+
+vim.cmd([[colorscheme NeoSolarized]])
 
 -- local ok, noirbuddy = pcall(require, 'noirbuddy')
 -- if not ok then return end

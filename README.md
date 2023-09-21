@@ -2,11 +2,10 @@
 
 Fully written in lua, aesthetic ui, fuzzy finder, lsp, formatter, speed motion and more...
 
-![Screenshot from 2023-07-09 18-05-31](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/5d19e9d0-7546-4faa-a1b1-91370dc1a93d)
-![Screenshot from 2023-07-09 18-05-43](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/13c20046-8661-4913-8ea8-ca78d6ad719c)
-![Screenshot from 2023-07-09 18-06-10](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/61a59083-6af8-4609-b3b9-c5d77ab0f203)
-![Screenshot from 2023-07-09 18-06-14](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/036b5065-6d0c-484d-916f-0b9ca88683d0)
-![Screenshot from 2023-07-09 18-06-27](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/861837d0-cacb-4a2e-9422-395e20574b91)
+![Hyper 21_09_2023 15_04_27](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/3194105e-a181-4e7f-8f04-f12ad1b3183a)
+![Hyper 21_09_2023 15_04_38](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/5e4e61d6-e3cb-4ecf-97a4-f760c8e46558)
+![Hyper 21_09_2023 15_06_47](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/c7141244-710f-4d05-8965-aa471b852a8f)
+![Hyper 21_09_2023 15_06_58](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/32a57f1a-cbfe-4ebb-9c0f-e5f3e2dc1721)
 
 ### Plugin Manager
 
