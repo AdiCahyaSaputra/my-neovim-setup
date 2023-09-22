@@ -1,10 +1,12 @@
-local ok, lsp = pcall(require, 'lsp-zero')
-if not ok then return end
+local ok, lsp = pcall(require, "lsp-zero")
+if not ok then
+  return
+end
 
-lsp.preset('recommended')
+lsp.preset("recommended")
 
 lsp.on_attach(function(client, bufnr)
-  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+  vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
   local bufopt = { noremap = true, silent = true, buffer = bufnr }
   local bind = vim.keymap.set
@@ -13,22 +15,22 @@ lsp.on_attach(function(client, bufnr)
   client.server_capabilities.documentFormattingProvider = true
   client.server_capabilities.documentRangeFormattingProvider = true
 
-  bind('n', 'gd', "<cmd>lua require'telescope.builtin'.lsp_definitions()<CR>", bufopt)
+  bind("n", "gd", "<cmd>lua require'telescope.builtin'.lsp_definitions()<CR>", bufopt)
 
-  bind('n', 'K', '<cmd>Lspsaga hover_doc<cr>', bufopt)
+  bind("n", "K", "<cmd>Lspsaga hover_doc<cr>", bufopt)
 
-  bind('n', '<leader>ca', vim.lsp.buf.code_action, bufopt)
-  bind('n', '<leader>lf', function() vim.lsp.buf.format({ async = true }) end, bufopt)
-  bind('n', '<space>pf', "<cmd>silent !prettier . --write --cache<cr>",
-    { silent = true })
+  bind("n", "<leader>ca", vim.lsp.buf.code_action, bufopt)
+  bind("n", "<leader>lf", function()
+    vim.lsp.buf.format({ async = true })
+  end, bufopt)
+  bind("n", "<space>pf", "<cmd>silent !prettier . --write --cache<cr>", { silent = true })
 
   -- Lspsaga Diagnostic
-  bind('n', '<leader>dl', '<cmd>Lspsaga diagnostic_jump_next<cr>', bufopt)
-  bind('n', '<leader>dh', '<cmd>Lspsaga diagnostic_jump_prev<cr>', bufopt)
+  bind("n", "<leader>dl", "<cmd>Lspsaga diagnostic_jump_next<cr>", bufopt)
+  bind("n", "<leader>dh", "<cmd>Lspsaga diagnostic_jump_prev<cr>", bufopt)
 end)
 
-
-local cmp = require('cmp')
+local cmp = require("cmp")
 local luasnip = require("luasnip")
 
 cmp.setup({
@@ -37,13 +39,13 @@ cmp.setup({
     documentation = cmp.config.window.bordered(),
   },
   mapping = cmp.mapping.preset.insert({
-    ['<C-Space>'] = cmp.mapping.complete(),
+    ["<C-Space>"] = cmp.mapping.complete(),
   }),
 })
 
 local cmp_mappings = lsp.defaults.cmp_mappings({
-  ['<C-Space>'] = cmp.mapping.complete(),
-  ['<Tab>'] = cmp.mapping(function(fallback)
+  ["<C-Space>"] = cmp.mapping.complete(),
+  ["<Tab>"] = cmp.mapping(function(fallback)
     if cmp.visible() then
       cmp.select_next_item()
     elseif luasnip.expand_or_jumpable() then
@@ -52,7 +54,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
       fallback()
     end
   end, { "i", "s" }),
-  ['<S-Tab>'] = cmp.mapping(function(fallback)
+  ["<S-Tab>"] = cmp.mapping(function(fallback)
     if cmp.visible() then
       cmp.select_prev_item()
     elseif luasnip.jumpable(-1) then
@@ -61,28 +63,27 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
       fallback()
     end
   end, { "i", "s" }),
-  ['<CR>'] = cmp.mapping.confirm({
+  ["<CR>"] = cmp.mapping.confirm({
     behavior = cmp.ConfirmBehavior.Replace,
-    select = true
-  })
+    select = true,
+  }),
 })
-
 
 lsp.setup_nvim_cmp({
   sources = {
-    { name = 'nvim_lsp' },
-    { name = 'path' },
-    { name = 'buffer' },
-    { name = 'luasnip' },
-    { name = 'nvim_lsp_signature_help' },
+    { name = "nvim_lsp" },
+    { name = "path" },
+    { name = "buffer" },
+    { name = "luasnip" },
+    { name = "nvim_lsp_signature_help" },
   },
   mapping = cmp_mappings,
   formatting = {
     format = require("lspkind").cmp_format({
       mode = "symbol_text",
       maxwidth = 50,
-      ellipsis_char = "..."
-    })
+      ellipsis_char = "...",
+    }),
   },
 })
 
@@ -92,8 +93,8 @@ lsp.setup()
 
 vim.diagnostic.config({
   virtual_text = {
-    prefix = '[',
-    suffix = ']',
+    prefix = "[",
+    suffix = "]",
   },
   signs = false,
 })
