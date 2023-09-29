@@ -1,8 +1,8 @@
-vim.scriptencoding = 'utf-8'
-vim.opt.encoding = 'utf-8'
-vim.opt.fileencoding = 'utf-8'
+vim.scriptencoding = "utf-8"
+vim.opt.encoding = "utf-8"
+vim.opt.fileencoding = "utf-8"
 
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 
 vim.o.wrap = false
 vim.o.relativenumber = false
@@ -12,7 +12,7 @@ vim.o.tabstop = 2
 vim.o.softtabstop = 2
 vim.o.showmode = false
 vim.opt.autoindent = true
-vim.opt.cursorline = false
+vim.opt.cursorline = true
 vim.opt.smartindent = true
 vim.opt.hlsearch = true
 vim.opt.showcmd = true
@@ -22,9 +22,9 @@ vim.opt.expandtab = true
 vim.opt.scrolloff = 10
 vim.opt.smarttab = true
 vim.opt.breakindent = true
-vim.opt.backspace = { 'start', 'eol', 'indent' }
+vim.opt.backspace = { "start", "eol", "indent" }
 
-vim.opt.background = 'dark'
-vim.opt.clipboard = 'unnamedplus' -- Required dependecies. In my wayland is 'wl-clipboard' or in ubuntu is 'xclip'
+vim.opt.background = "dark"
+vim.opt.clipboard = "unnamedplus" -- Required dependecies. In my wayland is 'wl-clipboard' or in ubuntu is 'xclip'
 
 vim.opt.mouse = ""

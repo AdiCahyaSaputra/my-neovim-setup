@@ -36,8 +36,8 @@ lazy.setup({
   { "Tsuzat/NeoSolarized.nvim",       lazy = false,   priority = 1000 },
   { "catppuccin/nvim",                enabled = false },
   { "rockerBOO/boo-colorscheme-nvim", enabled = false },
-  { "AlexvZyl/nordic.nvim",           enabled = true },
-  { "tiagovla/tokyodark.nvim",        enabled = true },
+  { "AlexvZyl/nordic.nvim",           enabled = false },
+  { "tiagovla/tokyodark.nvim",        enabled = false },
   { "olimorris/onedarkpro.nvim",      enabled = false },
   {
     "norcalli/nvim-colorizer.lua",
@@ -74,10 +74,12 @@ lazy.setup({
       require("config.null_ls")
     end,
     enabled = true,
+    event = "VeryLazy",
   },
 
   {
     "andweeb/presence.nvim",
+    event = "BufEnter",
   },
 
   {
@@ -152,6 +154,7 @@ lazy.setup({
       "MunifTanjim/nui.nvim",
     },
     enabled = true,
+    event = "VeryLazy",
   },
 
   {
@@ -180,7 +183,7 @@ lazy.setup({
         },
       })
     end,
-    event = "BufEnter",
+    event = "VeryLazy",
     enabled = true,
   },
 
@@ -197,7 +200,7 @@ lazy.setup({
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = true,
-    event = "BufEnter",
+    event = "VeryLazy",
   },
   {
     "levouh/tint.nvim",

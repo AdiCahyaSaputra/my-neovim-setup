@@ -20,7 +20,7 @@ bind("n", "<leader>e", function()
   if ft == "neo-tree" then
     vim.cmd("Neotree close")
   else
-    vim.cmd("Neotree float")
+    vim.cmd("Neotree toggle")
   end
 end)
 
@@ -29,7 +29,7 @@ bind("n", "<leader>o", function()
   if ft == "alpha" then
     vim.cmd("bd")
   end
-  vim.cmd("Exp")
+  vim.cmd("Neotree focus")
 end)
 
 bind(
