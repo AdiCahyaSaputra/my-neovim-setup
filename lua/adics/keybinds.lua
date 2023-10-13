@@ -11,32 +11,32 @@ bind("v", "<A-j>", "<C-d>")
 bind("v", "<A-k>", "<C-u>")
 
 bind("n", "<leader>e", function()
-  local ft = vim.bo.filetype
+	local ft = vim.bo.filetype
 
-  if ft == "alpha" then
-    vim.cmd("bd")
-  end
+	if ft == "alpha" then
+		vim.cmd("bd")
+	end
 
-  if ft == "neo-tree" then
-    vim.cmd("Neotree close")
-  else
-    vim.cmd("Neotree toggle")
-  end
+	if ft == "neo-tree" then
+		vim.cmd("Neotree close")
+	else
+		vim.cmd("Neotree toggle")
+	end
 end)
 
 bind("n", "<leader>o", function()
-  local ft = vim.bo.filetype
-  if ft == "alpha" then
-    vim.cmd("bd")
-  end
-  vim.cmd("Neotree focus")
+	local ft = vim.bo.filetype
+	if ft == "alpha" then
+		vim.cmd("bd")
+	end
+	vim.cmd("Neotree focus")
 end)
 
 bind(
-  "n",
-  "<leader>ff",
-  '<cmd>lua require"telescope.builtin".find_files(require("telescope.themes").get_dropdown({ previewer = false, prompt_prefix = " O ", hidden = true, file_ignore_patterns = {".git", "vendor", "node_modules"} }))<cr>',
-  { noremap = true, silent = true }
+	"n",
+	"<leader>ff",
+	'<cmd>lua require"telescope.builtin".find_files(require("telescope.themes").get_dropdown({ previewer = false, prompt_prefix = " O ", hidden = true, file_ignore_patterns = {".git", "vendor", "node_modules"} }))<cr>',
+	{ noremap = true, silent = true }
 )
 
 bind("n", "<leader>fb", "<cmd>Telescope git_branches<cr>")
@@ -71,11 +71,13 @@ bind("", "<leader>aa", "<cmd>HopChar1<cr>", { noremap = true, silent = true })
 bind("i", "jk", "<Esc>")
 
 function _G.set_toggleterm_keybind()
-  local opts = { buffer = 0 }
-  bind("t", "<space>;", [[<C-\><C-n>]], opts)
-  bind("t", "<A-t>", "<cmd>ToggleTerm<cr>", opts)
+	local opts = { buffer = 0 }
+	bind("t", "<space>;", [[<C-\><C-n>]], opts)
+	bind("t", "<A-t>", "<cmd>ToggleTerm<cr>", opts)
 end
 
 vim.cmd("autocmd! TermOpen term://*toggleterm* lua set_toggleterm_keybind()")
 
 bind("n", "<A-t>", "<cmd>ToggleTerm direction=float<cr>", { noremap = true, silent = true })
+
+bind("n", "<leader>x", "<cmd>TroubleToggle workspace_diagnostics<cr>", { noremap = true })
