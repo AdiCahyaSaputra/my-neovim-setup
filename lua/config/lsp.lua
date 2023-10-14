@@ -21,7 +21,6 @@ lsp.on_attach(function(client, bufnr)
   bind("n", "<leader>lf", function()
     vim.lsp.buf.format({ async = true })
   end, bufopt)
-  bind("n", "<space>pf", "<cmd>silent !prettier . --write --cache<cr>", { silent = true })
 
   -- Lspsaga Diagnostic
   bind("n", "<leader>dl", "<cmd>Lspsaga diagnostic_jump_next<cr>", bufopt)
@@ -32,6 +31,13 @@ local cmp = require("cmp")
 local luasnip = require("luasnip")
 
 cmp.setup({
+  sources = {
+    { name = "nvim_lsp" },
+    { name = "path" },
+    { name = "buffer" },
+    { name = "luasnip" },
+    { name = "nvim_lsp_signature_help" },
+  },
   window = {
     -- completion = cmp.config.window.bordered(),
     -- documentation = cmp.config.window.bordered(),
@@ -61,9 +67,22 @@ cmp.setup({
       select = true,
     }),
   }),
+  formatting = {
+    format = require("lspkind").cmp_format({
+      mode = "symbol_text",
+      maxwidth = 50,
+      ellipsis_char = "...",
+    }),
+  },
 })
 
 require("luasnip.loaders.from_vscode").lazy_load()
+require("mason").setup({})
+require("mason-lspconfig").setup({
+  handlers = {
+    lsp.default_setup,
+  },
+})
 
 lsp.setup()
 
