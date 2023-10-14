@@ -31,6 +31,11 @@ local cmp = require("cmp")
 local luasnip = require("luasnip")
 
 cmp.setup({
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
   sources = {
     { name = "nvim_lsp" },
     { name = "path" },
@@ -63,7 +68,6 @@ cmp.setup({
       end
     end, { "i", "s" }),
     ["<CR>"] = cmp.mapping.confirm({
-      behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     }),
   }),
@@ -77,6 +81,7 @@ cmp.setup({
 })
 
 require("luasnip.loaders.from_vscode").lazy_load()
+
 require("mason").setup({})
 require("mason-lspconfig").setup({
   handlers = {

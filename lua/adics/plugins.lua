@@ -113,6 +113,7 @@ lazy.setup({
 		config = function()
 			require("config.indentbl")
 		end,
+		enabled = false,
 	},
 
 	{
