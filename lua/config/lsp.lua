@@ -30,6 +30,8 @@ end)
 local cmp = require("cmp")
 local luasnip = require("luasnip")
 
+luasnip.filetype_extend("blade", { "html" })
+
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -93,8 +95,8 @@ lsp.setup()
 
 vim.diagnostic.config({
   virtual_text = {
-    prefix = "[",
-    suffix = "]",
+    spacing = 4,
+    prefix = "\u{ea71}",
   },
-  signs = false,
+  signs = true,
 })

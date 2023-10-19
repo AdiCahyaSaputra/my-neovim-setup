@@ -231,4 +231,11 @@ lazy.setup({
 		end,
 		event = "VeryLazy",
 	},
+	{
+		"code-biscuits/nvim-biscuits",
+		config = function()
+			require("config.biscuits")
+		end,
+		event = "VeryLazy",
+	},
 })

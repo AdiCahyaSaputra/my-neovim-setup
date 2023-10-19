@@ -1,8 +1,8 @@
--- if vim.fn.has("termguicolors") then
---   vim.opt.termguicolors = true
--- end
+if vim.fn.has("termguicolors") then
+	vim.opt.termguicolors = true
+end
 
-vim.opt.termguicolors = false
+-- vim.opt.termguicolors = true
 
 -- local ok, onedark = pcall(require, 'onedark')
 -- if not ok then return end
@@ -140,24 +140,24 @@ vim.opt.termguicolors = false
 
 local ok, neosolarized = pcall(require, "NeoSolarized")
 if not ok then
-  return
+	return
 end
 
 neosolarized.setup({
-  style = "dark",        -- "dark" or "light"
-  transparent = true,    -- true/false; Enable this to disable setting the background color
-  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
-  enable_italics = false, -- Italics for different hightlight groups (eg. Statement, Condition, Comment, Include, etc.)
-  styles = {
-    -- Style to be applied to different syntax groups
-    comments = { italic = false },
-    keywords = { italic = false },
-    functions = { italic = false },
-    variables = { italic = false },
-    string = { italic = false },
-    underline = true, -- true/false; for global underline
-    undercurl = false, -- true/false; for global undercurl
-  },
+	style = "dark", -- "dark" or "light"
+	transparent = true, -- true/false; Enable this to disable setting the background color
+	terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
+	enable_italics = false, -- Italics for different hightlight groups (eg. Statement, Condition, Comment, Include, etc.)
+	styles = {
+		-- Style to be applied to different syntax groups
+		comments = { italic = false },
+		keywords = { italic = false },
+		functions = { italic = false },
+		variables = { italic = false },
+		string = { italic = false },
+		underline = true, -- true/false; for global underline
+		undercurl = false, -- true/false; for global undercurl
+	},
 })
 
 vim.cmd([[colorscheme NeoSolarized]])
