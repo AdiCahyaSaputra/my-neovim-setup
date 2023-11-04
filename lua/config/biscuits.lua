@@ -4,8 +4,8 @@ if not ok then
 end
 
 biscuits.setup({
-	on_events = { "InsertLeave" },
-	cursor_line_only = false,
+	-- on_events = { "InsertLeave", "CursorHoldI" },
+	cursor_line_only = true,
 	default_config = {
 		prefix_string = " » ",
 	},

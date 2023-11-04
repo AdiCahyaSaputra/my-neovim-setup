@@ -75,10 +75,11 @@ cmp.setup({
   }),
   formatting = {
     format = require("lspkind").cmp_format({
-      mode = "symbol_text",
+      mode = "symbol",
       maxwidth = 50,
       ellipsis_char = "...",
     }),
+    fields = { "kind", "abbr", "menu" },
   },
 })
 
@@ -96,7 +97,7 @@ lsp.setup()
 vim.diagnostic.config({
   virtual_text = {
     spacing = 4,
-    prefix = "\u{ea71}",
+    prefix = " \u{ea71} ",
   },
-  signs = true,
+  signs = false,
 })

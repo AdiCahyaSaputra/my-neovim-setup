@@ -138,6 +138,7 @@ ins_right({
 
 ins_right({
   "filename",
+  path = 1,
   color = function()
     -- auto change color according to neovims mode
     local mode_color_fg = {
