@@ -82,4 +82,4 @@ bind("n", "<A-t>", "<cmd>ToggleTerm direction=float<cr>", { noremap = true, sile
 
 bind("n", "<leader>x", "<cmd>TroubleToggle workspace_diagnostics<cr>", { noremap = true })
 
-bind("n", "<C-l>", "<cmd>noh<cr>", { silent = true, noremap = true })
+bind("n", "<C-x>", "<cmd>noh<cr>", { silent = true, noremap = true })
