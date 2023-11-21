@@ -1,0 +1,655 @@
+{
+  "CodeIgniter Database INSERT": {
+    "prefix": "db_insert",
+    "body": [
+      "\\$this->db->insert('${1:table}', \\$${2:data});$0"
+    ],
+    "description": "CodeIgniter Database INSERT"
+  },
+  "CodeIgniter Database REPLACE": {
+    "prefix": "db_replace",
+    "body": [
+      "\\$this->db->replace('${1:table}', \\$${2:data});$0"
+    ],
+    "description": "CodeIgniter Database REPLACE"
+  },
+  "CodeIgniter Database UPDATE": {
+    "prefix": "db_update",
+    "body": [
+      "\\$this->db->update('${1:table}', array('${2:id}' => \\$${3:id}));$0"
+    ],
+    "description": "CodeIgniter Database UPDATE"
+  },
+  "CodeIgniter Database DELETE": {
+    "prefix": "db_delete",
+    "body": [
+      "\\$this->db->delete('${1:table}', array('${2:id}' => \\$${3:id}));$0"
+    ],
+    "description": "CodeIgniter Database DELETE"
+  },
+  "CodeIgniter Database TRUNCATE": {
+    "prefix": "db_truncate",
+    "body": [
+      "\\$this->db->truncate('${1:table}');$0"
+    ],
+    "description": "CodeIgniter Database TRUNCATE"
+  },
+  "CodeIgniter Database GET": {
+    "prefix": "db_get",
+    "body": [
+      "\\$query = \\$this->db->get(${5:'${1:table}'${4:, ${2:limit}, ${3:offset}}});$0"
+    ],
+    "description": "CodeIgniter Database GET"
+  },
+  "CodeIgniter Database SELECT": {
+    "prefix": "db_select",
+    "body": [
+      "\\$this->db->select('${1:field1, field2...}');$0"
+    ],
+    "description": "CodeIgniter Database SELECT"
+  },
+  "CodeIgniter Database FROM": {
+    "prefix": "db_from",
+    "body": [
+      "\\$this->db->from('${1:table}');$0"
+    ],
+    "description": "CodeIgniter Database FROM"
+  },
+  "CodeIgniter Database JOIN": {
+    "prefix": "db_join",
+    "body": [
+      "\\$this->db->join('${1:table}', '${2:fk = pk}', '${3:INNER}');$0"
+    ],
+    "description": "CodeIgniter Database JOIN"
+  },
+  "CodeIgniter Database WHERE": {
+    "prefix": "db_where",
+    "body": [
+      "\\$this->db->where('${1:field}', \\$${2:value});$0"
+    ],
+    "description": "CodeIgniter Database WHERE"
+  },
+  "CodeIgniter Database LIKE": {
+    "prefix": "db_like",
+    "body": [
+      "\\$this->db->like('${1:field}', \\$${2:match});$0"
+    ],
+    "description": "CodeIgniter Database LIKE"
+  },
+  "CodeIgniter Database GROUP BY": {
+    "prefix": "db_group_by",
+    "body": [
+      "\\$this->db->group_by('${1:field}');$0"
+    ],
+    "description": "CodeIgniter Database GROUP BY"
+  },
+  "CodeIgniter Database DISTINCT": {
+    "prefix": "db_distinct",
+    "body": [
+      "\\$this->db->distinct();$0"
+    ],
+    "description": "CodeIgniter Database DISTINCT"
+  },
+  "CodeIgniter Database HAVING": {
+    "prefix": "db_having",
+    "body": [
+      "\\$this->db->having('${1:field}', \\$${2:value});$0"
+    ],
+    "description": "CodeIgniter Database HAVING"
+  },
+  "CodeIgniter Database ORDER BY": {
+    "prefix": "db_order_by",
+    "body": [
+      "\\$this->db->order_by('${1:field}', '${2:DESC}');$0"
+    ],
+    "description": "CodeIgniter Database ORDER BY"
+  },
+  "CodeIgniter Database LIMIT": {
+    "prefix": "db_limit",
+    "body": [
+      "\\$this->db->limit(${1:10});$0"
+    ],
+    "description": "CodeIgniter Database LIMIT"
+  },
+  "CodeIgniter Database COUNT ALL": {
+    "prefix": "db_count_all",
+    "body": [
+      "\\$this->db->count_all('${1:table}');$0"
+    ],
+    "description": "CodeIgniter Database COUNT ALL"
+  },
+  "CodeIgniter Database COUNT ALL RESULTS": {
+    "prefix": "db_count_all_results",
+    "body": [
+      "\\$this->db->count_all_results('${1:table}');$0"
+    ],
+    "description": "CodeIgniter Database COUNT ALL RESULTS"
+  },
+  "CodeIgniter Database GROUP START": {
+    "prefix": "db_group_start",
+    "body": [
+      "\\$this->db->group_start();$0"
+    ],
+    "description": "CodeIgniter Database GROUP START"
+  },
+  "CodeIgniter Database GROUP END": {
+    "prefix": "db_group_end",
+    "body": [
+      "\\$this->db->group_end();$0"
+    ],
+    "description": "CodeIgniter Database GROUP END"
+  },
+  "CodeIgniter Database AFFECTED ROWS": {
+    "prefix": "db_affected_rows",
+    "body": [
+      "\\$this->db->affected_rows()$0"
+    ],
+    "description": "CodeIgniter Database AFFECTED ROWS"
+  },
+  "CodeIgniter Database INSERT ID": {
+    "prefix": "db_insert_id",
+    "body": [
+      "\\$this->db->insert_id();$0"
+    ],
+    "description": "CodeIgniter Database INSERT ID"
+  },
+  "CodeIgniter Database RESULT": {
+    "prefix": "db_result",
+    "body": [
+      "\\$query->result()$0"
+    ],
+    "description": "CodeIgniter Database RESULT"
+  },
+  "CodeIgniter Database RESULT ARRAY": {
+    "prefix": "db_result_array",
+    "body": [
+      "\\$query->result_array()$0"
+    ],
+    "description": "CodeIgniter Database RESULT ARRAY"
+  },
+  "CodeIgniter Database ROW": {
+    "prefix": "db_row",
+    "body": [
+      "\\$query->row();$0"
+    ],
+    "description": "CodeIgniter Database ROW"
+  },
+  "CodeIgniter Database ROW ARRAY": {
+    "prefix": "db_row_array",
+    "body": [
+      "\\$query->row_array();$0"
+    ],
+    "description": "CodeIgniter Database ROW ARRAY"
+  },
+  "CodeIgniter Database NUM FIELDS": {
+    "prefix": "db_num_fields",
+    "body": [
+      "\\$query->num_fields();$0"
+    ],
+    "description": "CodeIgniter Database NUM FIELDS"
+  },
+  "CodeIgniter Database NUM ROWS": {
+    "prefix": "db_num_rows",
+    "body": [
+      "\\$query->num_rows();$0"
+    ],
+    "description": "CodeIgniter Database NUM ROWS"
+  },
+  "CodeIgniter Load Driver": {
+    "prefix": "load_driver",
+    "body": [
+      "\\$this->load->driver('${1:name}'${2:, \\$config});$0"
+    ],
+    "description": "CodeIgniter Load Driver"
+  },
+  "CodeIgniter Load Library": {
+    "prefix": "load_library",
+    "body": [
+      "\\$this->load->library('${1:name}'${2:, \\$config});$0"
+    ],
+    "description": "CodeIgniter Load Library"
+  },
+  "CodeIgniter Load Model": {
+    "prefix": "load_model",
+    "body": [
+      "\\$this->load->model('${1:name}');$0"
+    ],
+    "description": "CodeIgniter Load Model"
+  },
+  "CodeIgniter Load View": {
+    "prefix": "load_view",
+    "body": [
+      "\\$this->load->view('${1:name}'${3:, \\$${2:data}});$0"
+    ],
+    "description": "CodeIgniter Load View"
+  },
+  "CodeIgniter Input COOKIE": {
+    "prefix": "_cookie",
+    "body": [
+      "\\$this->input->cookie('${1:name}')$0"
+    ],
+    "description": "CodeIgniter Input COOKIE"
+  },
+  "CodeIgniter Input IP ADDRESS": {
+    "prefix": "ip_address",
+    "body": [
+      "\\$this->input->ip_address()$0"
+    ],
+    "description": "CodeIgniter Input IP ADDRESS"
+  },
+  "CodeIgniter Input GET": {
+    "prefix": "_get",
+    "body": [
+      "\\$this->input->get('${1:name}')$0"
+    ],
+    "description": "CodeIgniter Input GET"
+  },
+  "CodeIgniter Input POST": {
+    "prefix": "_post",
+    "body": [
+      "\\$this->input->post('${1:name}')$0"
+    ],
+    "description": "CodeIgniter Input POST"
+  },
+  "CodeIgniter Input SERVER": {
+    "prefix": "_server",
+    "body": [
+      "\\$this->input->server('${1:name}')$0"
+    ],
+    "description": "CodeIgniter Input SERVER"
+  },
+  "CodeIgniter Set Cookie": {
+    "prefix": "set_cookie",
+    "body": [
+      "\\$${1:cookie} = array(",
+      "\t'name'   => '${2:The Cookie Name}',",
+      "\t'value'  => '${3:The Value}',",
+      "\t'expire' => '${4:86500}',",
+      "\t'domain' => '${5:.some-domain.com}',",
+      "\t'path'   => '${6:/}',",
+      "\t'prefix' => '${7:myprefix_}',",
+      "\t'secure' => ${8:TRUE}",
+      ");",
+      "\\$this->input->set_cookie(\\$${1})$0"
+    ],
+    "description": "CodeIgniter Set Cookie"
+  },
+  "CodeIgniter Form Open": {
+    "prefix": "form_open",
+    "body": [
+      "echo form_open('${1:controller/method}', '${2:attr}'${4:, \\$hidden});$0"
+    ],
+    "description": "CodeIgniter Form Open"
+  },
+  "CodeIgniter Form Open Multipart": {
+    "prefix": "form_open_multipart",
+    "body": [
+      "echo form_open_multipart('${1:controller/method}', '${2:attr}'${4:, \\$hidden});$0"
+    ],
+    "description": "CodeIgniter Form Open Multipart"
+  },
+  "CodeIgniter Form Close": {
+    "prefix": "form_close",
+    "body": [
+      "echo form_close();$0"
+    ],
+    "description": "CodeIgniter Form Close"
+  },
+  "CodeIgniter Form Hidden": {
+    "prefix": "form_hidden",
+    "body": [
+      "echo form_hidden('${1:field}', '${2:value}');$0"
+    ],
+    "description": "CodeIgniter Form Hidden"
+  },
+  "CodeIgniter Form Input": {
+    "prefix": "form_input",
+    "body": [
+      "echo form_input('${1:field}', '${2:value}', '${3:attr}');$0"
+    ],
+    "description": "CodeIgniter Form Input"
+  },
+  "CodeIgniter Form Password": {
+    "prefix": "form_password",
+    "body": [
+      "echo form_password('${1:field}', '${2:value}', '${3:attr}');$0"
+    ],
+    "description": "CodeIgniter Form Password"
+  },
+  "CodeIgniter Form Upload": {
+    "prefix": "form_upload",
+    "body": [
+      "echo form_upload('${1:field}', '${2:value}', '${3:attr}');$0"
+    ],
+    "description": "CodeIgniter Form Upload"
+  },
+  "CodeIgniter Form Textarea": {
+    "prefix": "form_textarea",
+    "body": [
+      "echo form_textarea('${1:field}', '${2:value}', '${3:attr}');$0"
+    ],
+    "description": "CodeIgniter Form Textarea"
+  },
+  "CodeIgniter Form Dropdown": {
+    "prefix": "form_dropdown",
+    "body": [
+      "echo form_dropdown('${1:field}', \\$${2:options}, '${3:selected}', '${4:attr}');$0"
+    ],
+    "description": "CodeIgniter Form Dropdown"
+  },
+  "CodeIgniter Form Checkbox": {
+    "prefix": "form_checkbox",
+    "body": [
+      "echo form_checkbox('${1:field}', '${2:value}', ${3:FALSE}, '${4:attr}');$0"
+    ],
+    "description": "CodeIgniter Form Checkbox"
+  },
+  "CodeIgniter Form Radio": {
+    "prefix": "form_radio",
+    "body": [
+      "echo form_radio('${1:field}', '${2:value}', ${3:FALSE}, '${4:attr}');$0"
+    ],
+    "description": "CodeIgniter Form Radio"
+  },
+  "CodeIgniter Form Label": {
+    "prefix": "form_label",
+    "body": [
+      "echo form_label('${1:field}', '${2:id}', '${3:attr}');$0"
+    ],
+    "description": "CodeIgniter Form Label"
+  },
+  "CodeIgniter Form Submit": {
+    "prefix": "form_submit",
+    "body": [
+      "echo form_submit('${1:name}', '${2:value}', '${3:attr}');$0"
+    ],
+    "description": "CodeIgniter Form Submit"
+  },
+  "CodeIgniter Form Reset": {
+    "prefix": "form_reset",
+    "body": [
+      "echo form_reset('${1:name}', '${2:value}', '${3:attr}');$0"
+    ],
+    "description": "CodeIgniter Form Reset"
+  },
+  "CodeIgniter Form Button": {
+    "prefix": "form_button",
+    "body": [
+      "echo form_button('${1:name}', '${2:content}', '${3:attr}');$0"
+    ],
+    "description": "CodeIgniter Form Button"
+  },
+  "CodeIgniter Form Fieldset Open": {
+    "prefix": "form_fieldset",
+    "body": [
+      "echo form_fieldset('${1:legend}'${3:, '${2:attr}'});$0"
+    ],
+    "description": "CodeIgniter Form Fieldset Open"
+  },
+  "CodeIgniter Form Fieldset Close": {
+    "prefix": "form_fieldset_close",
+    "body": [
+      "echo form_fieldset_close();$0"
+    ],
+    "description": "CodeIgniter Form Fieldset Close"
+  },
+  "CodeIgniter Form Set Value": {
+    "prefix": "set_value",
+    "body": [
+      "set_value('${1:field}'${5:, '${2:default}'${4:, ${3:TRUE}}});$0"
+    ],
+    "description": "CodeIgniter Form Set Value"
+  },
+  "CodeIgniter Form Set Select": {
+    "prefix": "set_select",
+    "body": [
+      "set_select('${1:field}', '${2:value}', ${3:TRUE});$0"
+    ],
+    "description": "CodeIgniter Form Set Select"
+  },
+  "CodeIgniter Form Set Checkbox": {
+    "prefix": "set_checkbox",
+    "body": [
+      "set_checkbox('${1:field}', '${2:value}', ${3:TRUE});$0"
+    ],
+    "description": "CodeIgniter Form Set Checkbox"
+  },
+  "CodeIgniter Form Set Radio": {
+    "prefix": "set_radio",
+    "body": [
+      "set_radio('${1:field}', '${2:value}', ${3:TRUE});$0"
+    ],
+    "description": "CodeIgniter Form Set Radio"
+  },
+  "CodeIgniter Form Error": {
+    "prefix": "form_error",
+    "body": [
+      "form_error('${1:field}'${4:, '${2:prefix}', '${3:suffix}'});$0"
+    ],
+    "description": "CodeIgniter Form Error"
+  },
+  "CodeIgniter Form Validation Errors": {
+    "prefix": "validation_errors",
+    "body": [
+      "validation_errors(${3:'${1:prefix}', '${2:suffix}'});$0"
+    ],
+    "description": "CodeIgniter Form Validation Errors"
+  },
+  "CodeIgniter Set Data": {
+    "prefix": "set_data",
+    "body": [
+      "\\$this->form_validation->set_data(\\$${1:data});$0"
+    ],
+    "description": "CodeIgniter Form Validation - Set Data"
+  },
+  "CodeIgniter Set Error Delimiters": {
+    "prefix": "set_error_delimiters",
+    "body": [
+      "\\$this->form_validation->set_error_delimiters('${1:prefix}', '${2:suffix}');$0"
+    ],
+    "description": "CodeIgniter Form Validation - Set Error Delimiters"
+  },
+  "CodeIgniter Set Messages": {
+    "prefix": "set_message",
+    "body": [
+      "\\$this->form_validation->set_message('${1:rule}', '${2:Error Message}');$0"
+    ],
+    "description": "CodeIgniter Form Validation - Set Message"
+  },
+  "CodeIgniter Set Rules": {
+    "prefix": "set_rules",
+    "body": [
+      "\\$this->form_validation->set_rules('${1:field}', '${2:label}', '${3:rules}');$0"
+    ],
+    "description": "CodeIgniter Form Validation - Set Rules"
+  },
+  "CodeIgniter Run": {
+    "prefix": "run_validation",
+    "body": [
+      "\\$this->form_validation->run()$0"
+    ],
+    "description": "CodeIgniter Form Validation - Run"
+  },
+  "CodeIgniter Session Userdata": {
+    "prefix": "sess_userdata",
+    "body": [
+      "\\$this->session->userdata('${1:item}');$0"
+    ],
+    "description": "CodeIgniter Session Userdata"
+  },
+  "CodeIgniter Session Set Userdata": {
+    "prefix": "sess_set_userdata",
+    "body": [
+      "\\$${1:newdata} = array(",
+      "\t'${2:item}' => '${3:value}'$4",
+      ");",
+      "\\$this->session->set_userdata(\\$$1);$0"
+    ],
+    "description": "CodeIgniter Session Set Userdata"
+  },
+  "CodeIgniter Session Has Userdata": {
+    "prefix": "sess_has_userdata",
+    "body": [
+      "\\$this->session->has_userdata('${1:item}');$0"
+    ],
+    "description": "CodeIgniter Session Has Userdata"
+  },
+  "CodeIgniter Session Unset Userdata": {
+    "prefix": "sess_unset_userdata",
+    "body": [
+      "\\$this->session->unset_userdata('${1:item}');$0"
+    ],
+    "description": "CodeIgniter Session Unset Userdata"
+  },
+  "CodeIgniter Session Destroy": {
+    "prefix": "sess_destroy",
+    "body": [
+      "\\$this->session->sess_destroy();$0"
+    ],
+    "description": "CodeIgniter Session Destroy"
+  },
+  "CodeIgniter Session Flashdata": {
+    "prefix": "sess_flashdata",
+    "body": [
+      "\\$this->session->flashdata('${1:item}');$0"
+    ],
+    "description": "CodeIgniter Session Flashdata"
+  },
+  "CodeIgniter Session Set Flashdata": {
+    "prefix": "sess_set_flashdata",
+    "body": [
+      "\\$this->session->set_flashdata('${1:item}', '${2:value}');$0"
+    ],
+    "description": "CodeIgniter Session Set Flashdata"
+  },
+  "CodeIgniter Session Tempdata": {
+    "prefix": "sess_tempdata",
+    "body": [
+      "\\$this->session->tempdata('${1:item}');$0"
+    ],
+    "description": "CodeIgniter Session Tempdata"
+  },
+  "CodeIgniter Session Set Tempdata": {
+    "prefix": "sess_set_tempdata",
+    "body": [
+      "\\$this->session->set_tempdata('${1:item}', '${2:value}', ${3:300});$0"
+    ],
+    "description": "CodeIgniter Session Set Tempdata"
+  },
+  "CodeIgniter Base URL": {
+    "prefix": "base_url",
+    "body": [
+      "base_url('${1}')$0"
+    ],
+    "description": "CodeIgniter Base URL"
+  },
+  "CodeIgniter Site URL": {
+    "prefix": "site_url",
+    "body": [
+      "site_url('${1}')$0"
+    ],
+    "description": "CodeIgniter Site URL"
+  },
+  "CodeIgniter Current URL": {
+    "prefix": "current_url",
+    "body": [
+      "current_url();$0"
+    ],
+    "description": "CodeIgniter Current URL"
+  },
+  "CodeIgniter URI String": {
+    "prefix": "uri_string",
+    "body": [
+      "uri_string();$0"
+    ],
+    "description": "CodeIgniter URI String"
+  },
+  "CodeIgniter Anchor": {
+    "prefix": "anchor",
+    "body": [
+      "anchor('${1:uri}', '${2:title}', '${3:attr}');$0"
+    ],
+    "description": "CodeIgniter Anchor"
+  },
+  "CodeIgniter Mail To": {
+    "prefix": "mailto",
+    "body": [
+      "mailto('${1:email}', '${2:title}', '${3:attr}');$0"
+    ],
+    "description": "CodeIgniter Mail To"
+  },
+  "CodeIgniter URL Title": {
+    "prefix": "url_title",
+    "body": [
+      "url_title(\\$${1:str}, '${2:separator}', ${3:FALSE});$0"
+    ],
+    "description": "CodeIgniter URL Title"
+  },
+  "CodeIgniter Prep URL": {
+    "prefix": "prep_url",
+    "body": [
+      "prep_url('${1:str}');$0"
+    ],
+    "description": "CodeIgniter Prep URL"
+  },
+  "CodeIgniter Redirect": {
+    "prefix": "redirect",
+    "body": [
+      "redirect('${1:uri}'${3:, '${2:refresh}'});$0"
+    ],
+    "description": "CodeIgniter Redirect"
+  },
+  "CodeIgniter URI Segment": {
+    "prefix": "segment",
+    "body": [
+      "\\$this->uri->segment(${1:3});$0"
+    ],
+    "description": "CodeIgniter URI Segment"
+  },
+  "CodeIgniter Upload File": {
+    "prefix": "upload",
+    "body": [
+      "\\$config['upload_path'] = './${1:uploads}/';",
+      "\\$config['allowed_types'] = '${2:gif|jpg|png}';",
+      "\\$config['max_size']      = ${3:100};",
+      "\\$config['max_width']     = ${4:1024};",
+      "\\$config['max_height']    = ${5:768};",
+      "\\$config['encrypt_name']  = ${6:FALSE};",
+      "",
+      "\\$this->load->library('upload', \\$config);",
+      "",
+      "if (! \\$this->upload->do_upload('${7:userfile}'))",
+      "{",
+      "\t\\$error = array('error' => \\$this->upload->display_errors());",
+      "\t\\$this->load->view('upload_form', \\$error);",
+      "}",
+      "else",
+      "{",
+      "\t\\$${8:data} = array('upload_data' => \\$this->upload->data());",
+      "\t\\$this->load->view('upload_success', \\$$8);",
+      "}$0"
+    ],
+    "description": "CodeIgniter Upload File"
+  },
+  "CodeIgniter Send Email": {
+    "prefix": "send_email",
+    "body": [
+      "\\$this->load->library('email');",
+      "",
+      "\\$this->email->from('${1:your@example.com}', '${2:Your Name}');",
+      "\\$this->email->to('${3:someone@example.com}');",
+      "\\$this->email->subject('${4:Subject}');",
+      "\\$this->email->message('${5:Message}');",
+      "",
+      "\\$this->email->send();$0"
+    ],
+    "description": "CodeIgniter Send Email"
+  },
+  "CodeIgniter Get Instance": {
+    "prefix": "get_instance",
+    "body": [
+      "\\$${1:CI} =& get_instance();$0"
+    ],
+    "description": "CodeIgniter Get Instance"
+  }
+}

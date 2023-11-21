@@ -14,7 +14,9 @@ null_ls.setup({
 		-- 	filetypes = { "blade" },
 		-- }),
 		null_ls.builtins.formatting.stylua,
-		null_ls.builtins.formatting.prettierd,
+		null_ls.builtins.formatting.prettierd.with({
+			extra_filetypes = { "blade" },
+		}),
 	},
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then

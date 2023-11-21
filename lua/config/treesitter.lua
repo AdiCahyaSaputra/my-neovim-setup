@@ -19,15 +19,6 @@ ts.setup({
     enable = true,
   },
 
-  -- textobjects = {
-  --   select = {
-  --     enable = true,
-  --   },
-  --   swap = {
-  --     enable = true,
-  --   },
-  -- },
-
   context_commentstring = {
     enable = true,
   },

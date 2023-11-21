@@ -1,0 +1,98 @@
+{
+  "PHP trigger": {
+    "prefix": "php",
+    "body": [
+      "<?php ${1:echo $0} ?>"
+    ],
+    "description": "CodeIgniter Controller"
+  },
+  "CodeIgniter Controller": {
+    "prefix": "controller",
+    "body": [
+      "<?php",
+      "defined('BASEPATH') OR exit('No direct script access allowed');",
+      "",
+      "class ${TM_FILENAME/(.*)\\..+$/$1/} extends ${2:CI}_Controller {",
+      "",
+      "\tpublic function __construct() {",
+      "\t\tparent::__construct();",
+      "\t}",
+      "",
+      "\tpublic function index()",
+      "\t{",
+      "\t\t${0:# code...}",
+      "\t}",
+      "",
+      "}",
+      "",
+      "/* End of file: $TM_FILENAME */",
+      ""
+    ],
+    "description": "CodeIgniter Controller"
+  },
+  "CodeIgniter Helper": {
+    "prefix": "helper",
+    "body": [
+      "<?php",
+      "defined('BASEPATH') OR exit('No direct script access allowed');",
+      "",
+      "if ( ! function_exists('${1:foo}'))",
+      "{",
+      "\tfunction $1(${4:\\$${2:var} = '$3'})",
+      "\t{",
+      "\t\t${0:# code...}",
+      "\t}",
+      "}",
+      "",
+      "/* End of file: $TM_FILENAME */",
+      ""
+    ],
+    "description": "CodeIgniter Helper"
+  },
+  "CodeIgniter Library": {
+    "prefix": "library",
+    "body": [
+      "<?php",
+      "defined('BASEPATH') OR exit('No direct script access allowed');",
+      "",
+      "class ${TM_FILENAME/(.*)\\..+$/$1/} {",
+      "",
+      "\tprotected \\$CI;",
+      "",
+      "\tpublic function __construct() {",
+      "\t\t\\$this->CI =& get_instance();",
+      "\t}",
+      "",
+      "\t${0:# code...}",
+      "",
+      "}",
+      "",
+      "/* End of file: $TM_FILENAME */",
+      ""
+    ],
+    "description": "CodeIgniter Model"
+  },
+  "CodeIgniter Model": {
+    "prefix": "model",
+    "body": [
+      "<?php",
+      "defined('BASEPATH') OR exit('No direct script access allowed');",
+      "",
+      "class ${TM_FILENAME/(.*)\\..+$/$1/} extends ${1:CI}_Model {",
+      "",
+      "\t${3:protected \\$table = '$2';}",
+      "",
+      "\tpublic function __construct() {",
+      "\t\tparent::__construct();",
+      "\t}",
+      "",
+      "\t${0:# code...}",
+      "",
+      "}",
+      "",
+      "/* End of file: $TM_FILENAME */",
+      ""
+    ],
+    "description": "CodeIgniter Model"
+  }
+}

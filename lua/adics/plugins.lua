@@ -36,6 +36,7 @@ lazy.setup({
   },
   { "Tsuzat/NeoSolarized.nvim",       enabled = false },
   { "craftzdog/solarized-osaka.nvim", lazy = false,   priority = 1000 },
+  -- { "craftzdog/solarized-osaka.nvim", enabled = false },
   { "catppuccin/nvim",                enabled = false },
   { "rockerBOO/boo-colorscheme-nvim", enabled = false },
   { "AlexvZyl/nordic.nvim",           enabled = false },
@@ -94,7 +95,7 @@ lazy.setup({
     enabled = false,
   },
 
-  { "akinsho/toggleterm.nvim", version = "*",     config = true,     event = "VeryLazy" },
+  { "akinsho/toggleterm.nvim",     version = "*", config = true, event = "VeryLazy" },
   {
     "glepnir/lspsaga.nvim",
     branch = "main",
@@ -103,11 +104,13 @@ lazy.setup({
       require("config.lspsaga")
     end,
   },
+  { "nvim-tree/nvim-web-devicons", config = true },
   {
     "nvim-lualine/lualine.nvim",
     dependencies = {
-      "kyazdani42/nvim-web-devicons",
+      "nvim-tree/nvim-web-devicons",
     },
+    enabled = true,
   },
 
   {
@@ -134,14 +137,18 @@ lazy.setup({
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
     enabled = false,
   },
-  { "windwp/nvim-ts-autotag",  event = "VeryLazy" },
-  { "windwp/nvim-autopairs",   config = true,     event = "VeryLazy" },
+  { "windwp/nvim-ts-autotag", event = "VeryLazy" },
+  { "windwp/nvim-autopairs",  config = true,     event = "VeryLazy" },
   {
     "nvim-telescope/telescope.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
   },
+  -- {
+  --   "nvim-telescope/telescope-frecency.nvim",
+  --   event = "VeryLazy"
+  -- },
 
   { "nvim-telescope/telescope-ui-select.nvim", event = "VeryLazy" },
   {
@@ -151,8 +158,8 @@ lazy.setup({
     end,
     event = "VeryLazy",
   },
-  { "phaazon/hop.nvim",                        branch = "v2",     config = true,     event = "VeryLazy" },
-  { "lewis6991/gitsigns.nvim",                 config = true,     event = "VeryLazy" },
+  { "phaazon/hop.nvim",                        branch = "v2",     config = true,      event = "VeryLazy" },
+  { "lewis6991/gitsigns.nvim",                 config = true,     event = "VeryLazy", enabled = false },
   { "iamcco/markdown-preview.nvim",            ft = "markdown" },
 
   {
@@ -201,7 +208,7 @@ lazy.setup({
     enabled = true,
   },
 
-  "goolord/alpha-nvim",
+  { "goolord/alpha-nvim",                          enabled = false },
   { "David-Kunz/markid",                           enabled = false },
   { "nvim-treesitter/nvim-treesitter-textobjects", event = "VeryLazy", enabled = false },
   {
@@ -250,5 +257,6 @@ lazy.setup({
       require("config.biscuits")
     end,
     event = "VeryLazy",
+    enabled = false,
   },
 })
