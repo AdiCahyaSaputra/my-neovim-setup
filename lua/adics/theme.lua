@@ -58,20 +58,21 @@
 --
 -- vim.cmd([[colorscheme tokyodark]])
 
--- local ok, tokyonight = pcall(require, 'tokyonight')
--- if not ok then return end
+-- local ok, tokyonight = pcall(require, "tokyonight")
+-- if not ok then
+--   return
+-- end
 --
--- tokyonight.setup {
+-- tokyonight.setup({
 --   style = "storm",
 --   styles = {
 --     comments = { italic = false },
 --     keywords = { italic = false },
 --     sidebars = "dark",
---     float = "dark",
+--     -- float = "dark",
 --   },
---   lualine_bold = true,
---   transparent = false
--- }
+--   transparent = true,
+-- })
 --
 -- vim.cmd("colorscheme tokyonight")
 
@@ -83,16 +84,30 @@
 -- gt.setup({
 -- 	options = {
 -- 		transparent = true,
--- 		terminal_colors = true,
+-- 		terminal_colors = false,
+-- 		dim_inactive = false,
 -- 		darken = {
 -- 			sidebars = {
 -- 				enabled = true,
 -- 			},
 -- 		},
+-- 		inverse = {
+-- 			match_paren = true,
+-- 			visual = true,
+-- 			search = true,
+-- 		},
+-- 	},
+--
+-- 	groups = {
+-- 		all = {
+-- 			CursorLineNr = { fg = "palette.cyan", bg = "none" },
+-- 			CursorLine = { bg = "none" },
+-- 			VertSplit = { fg = "none", bg = "none" },
+-- 		},
 -- 	},
 -- })
 --
--- vim.cmd("colorscheme github_dark")
+-- vim.cmd("colorscheme github_dark_tritanopia")
 
 -- local ok, nf = pcall(require, "nightfox")
 -- if not ok then
@@ -173,47 +188,82 @@
 
 local ok, solarized = pcall(require, "solarized-osaka")
 if not ok then
-  return
+	return
 end
 
 solarized.setup({
-  -- your configuration comes here
-  -- or leave it empty to use the default settings
-  transparent = true,    -- Enable this to disable setting the background color
-  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
-  styles = {
-    -- Style to be applied to different syntax groups
-    -- Value is any valid attr-list value for `:help nvim_set_hl`
-    comments = { italic = false },
-    keywords = { italic = false },
-    functions = { italic = false },
-    variables = { italic = false },
-    -- Background styles. Can be "dark", "transparent" or "normal"
-    sidebars = "transparent",      -- style for sidebars, see below
-    floats = "transparent",        -- style for floating windows
-  },
-  sidebars = { "qf", "help" },     -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
-  day_brightness = 0.3,            -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
-  hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
-  dim_inactive = true,             -- dims inactive windows
-  lualine_bold = true,             -- When `true`, section headers in the lualine theme will be bold
+	-- your configuration comes here
+	-- or leave it empty to use the default settings
+	transparent = true, -- Enable this to disable setting the background color
+	terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
+	styles = {
+		-- Style to be applied to different syntax groups
+		-- Value is any valid attr-list value for `:help nvim_set_hl`
+		comments = { italic = false },
+		keywords = { italic = false },
+		functions = { italic = false },
+		variables = { italic = false },
+		-- Background styles. Can be "dark", "transparent" or "normal"
+		sidebars = "transparent", -- style for sidebars, see below
+		floats = "transparent", -- style for floating windows
+	},
+	sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
+	day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
+	hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
+	dim_inactive = true, -- dims inactive windows
+	lualine_bold = true, -- When `true`, section headers in the lualine theme will be bold
 
-  --- You can override specific color groups to use other groups or a hex color
-  --- function will be called with a ColorScheme table
-  ---@param colors ColorScheme
-  on_colors = function(colors) end,
+	--- You can override specific color groups to use other groups or a hex color
+	--- function will be called with a ColorScheme table
+	---@param colors ColorScheme
+	on_colors = function(colors) end,
 
-  --- You can override specific highlights to use other groups or a hex color
-  --- function will be called with a Highlights and ColorScheme table
-  ---@param highlights Highlights
-  ---@param colors ColorScheme
-  on_highlights = function(highlights, colors) end,
+	--- You can override specific highlights to use other groups or a hex color
+	--- function will be called with a Highlights and ColorScheme table
+	---@param highlights Highlights
+	---@param colors ColorScheme
+	on_highlights = function(highlights, colors)
+		-- highlights.WinSeparator.fg = "none"
+	end,
 })
 
 vim.cmd([[colorscheme solarized-osaka-night]])
--- noirbuddy.setup {
---   preset = 'minimal'
--- }
+
+-- local ok, rp = pcall(require, "rose-pine")
+-- if not ok then
+--   return
+-- end
+--
+-- rp.setup({
+--   variant = "main",
+--   dark_variant = "main",
+--
+--   bold_vert_split = false,
+--
+--   disable_background = true,
+--   disable_float_background = true,
+--   disable_italics = true,
+--
+--   highlight_groups = {
+--     Visual = { fg = "fg", bg = "foam", blend = 5 },
+--     CursorLineNr = { bg = "love", fg = "love", blend = 10 },
+--     CursorLine = { bg = "love", fg = "fg", blend = 1 },
+--   },
+-- })
+--
+-- vim.cmd([[colorscheme rose-pine]])
+
+-- local ok, noirbuddy = pcall(require, "noirbuddy")
+-- if not ok then
+-- 	return
+-- end
+--
+-- local Group = require("colorbuddy").setup({})
+--
+-- noirbuddy.setup({
+-- 	preset = "kiwi",
+-- })
+
 --
 -- require 'nordic'.setup {
 --   -- This callback can be used to override the colors used in the palette.

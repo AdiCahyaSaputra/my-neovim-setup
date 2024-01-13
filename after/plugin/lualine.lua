@@ -130,46 +130,46 @@ end
 --   separator = "",
 -- })
 
-local colors = require("solarized-osaka.colors").setup({ transform = true })
-local config = require("solarized-osaka.config").options
-
-local solarized_osaka = {
-	normal = {
-		a = { bg = colors.blue, fg = colors.black },
-		b = { bg = colors.bg_statusline, fg = colors.fg },
-		c = { bg = colors.bg, fg = colors.fg },
-	},
-	insert = {
-		a = { bg = colors.green, fg = colors.black },
-	},
-	command = {
-		a = { bg = colors.yellow, fg = colors.black },
-	},
-	visual = {
-		a = { bg = colors.magenta, fg = colors.black },
-	},
-	replace = {
-		a = { bg = colors.red, fg = colors.black },
-	},
-	terminal = {
-		a = { bg = colors.green, fg = colors.black },
-	},
-	inactive = {
-		a = { bg = colors.bg_statusline, fg = colors.blue },
-		b = { bg = colors.bg_statusline, fg = colors.fg, gui = "bold" },
-		c = { bg = colors.bg_statusline, fg = colors.fg },
-	},
-}
-
-if config.lualine_bold then
-	for _, mode in pairs(solarized_osaka) do
-		mode.a.gui = "bold"
-	end
-end
+-- local colors = require("solarized-osaka.colors").setup({ transform = true })
+-- local config = require("solarized-osaka.config").options
+--
+-- local solarized_osaka = {
+-- 	normal = {
+-- 		a = { bg = colors.blue, fg = colors.black },
+-- 		b = { bg = colors.bg_statusline, fg = colors.fg },
+-- 		c = { bg = colors.bg, fg = colors.fg },
+-- 	},
+-- 	insert = {
+-- 		a = { bg = colors.green, fg = colors.black },
+-- 	},
+-- 	command = {
+-- 		a = { bg = colors.yellow, fg = colors.black },
+-- 	},
+-- 	visual = {
+-- 		a = { bg = colors.magenta, fg = colors.black },
+-- 	},
+-- 	replace = {
+-- 		a = { bg = colors.red, fg = colors.black },
+-- 	},
+-- 	terminal = {
+-- 		a = { bg = colors.green, fg = colors.black },
+-- 	},
+-- 	inactive = {
+-- 		a = { bg = colors.bg_statusline, fg = colors.blue },
+-- 		b = { bg = colors.bg_statusline, fg = colors.fg, gui = "bold" },
+-- 		c = { bg = colors.bg_statusline, fg = colors.fg },
+-- 	},
+-- }
+--
+-- if config.lualine_bold then
+-- 	for _, mode in pairs(solarized_osaka) do
+-- 		mode.a.gui = "bold"
+-- 	end
+-- end
 
 lualine.setup({
 	options = {
-		theme = solarized_osaka,
+		-- theme = solarized_osaka,
 		-- section_separators = { left = "", right = "" },
 		-- component_separators = { left = "", right = "" },
 	},
