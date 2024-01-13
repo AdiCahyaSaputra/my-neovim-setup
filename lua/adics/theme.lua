@@ -1,313 +1,90 @@
--- if vim.fn.has("termguicolors") then
---   vim.opt.termguicolors = true
--- end
-
--- vim.opt.termguicolors = true
-
--- local ok, onedark = pcall(require, 'onedark')
--- if not ok then return end
---
--- onedark.setup {
---   style = 'deep',
---   transparent = false,
---   code_style = {
---     comments = 'none'
---   }
--- }
---
--- onedark.load()
-
--- local ok, onedarkpro = pcall(require, "onedarkpro")
+-- local ok, solarized = pcall(require, "solarized-osaka")
 -- if not ok then
 --   return
 -- end
 --
--- onedarkpro.setup({
---   options = {
---     cursorline = true,
---     terminal_colors = true,
---     transparency = false,
---   },
--- })
---
--- vim.cmd("colorscheme onedark_dark")
-
--- local ok, tokyodark = pcall(require, "tokyodark")
--- if not ok then
---   return
--- end
---
--- tokyodark.setup({
---   transparent_background = true,    -- set background to transparent
---   gamma = 1.00,                     -- adjust the brightness of the theme
---   styles = {
---     comments = { italic = false },  -- style for comments
---     keywords = { italic = false },  -- style for keywords
---     identifiers = { italic = false }, -- style for identifiers
---     functions = {},                 -- style for functions
---     variables = {},                 -- style for variables
---   },
---   custom_highlights = {} or function(highlights, palette)
---     return {}
---   end, -- extend highlights
---   custom_palette = {} or function(palette)
---     return {}
---   end,                   -- extend palette
---   terminal_colors = true, -- enable terminal colors
--- })
---
--- vim.cmd([[colorscheme tokyodark]])
-
--- local ok, tokyonight = pcall(require, "tokyonight")
--- if not ok then
---   return
--- end
---
--- tokyonight.setup({
---   style = "storm",
---   styles = {
---     comments = { italic = false },
---     keywords = { italic = false },
---     sidebars = "dark",
---     -- float = "dark",
---   },
---   transparent = true,
--- })
---
--- vim.cmd("colorscheme tokyonight")
-
--- local ok, gt = pcall(require, "github-theme")
--- if not ok then
--- 	return
--- end
---
--- gt.setup({
--- 	options = {
--- 		transparent = true,
--- 		terminal_colors = false,
--- 		dim_inactive = false,
--- 		darken = {
--- 			sidebars = {
--- 				enabled = true,
--- 			},
--- 		},
--- 		inverse = {
--- 			match_paren = true,
--- 			visual = true,
--- 			search = true,
--- 		},
--- 	},
---
--- 	groups = {
--- 		all = {
--- 			CursorLineNr = { fg = "palette.cyan", bg = "none" },
--- 			CursorLine = { bg = "none" },
--- 			VertSplit = { fg = "none", bg = "none" },
--- 		},
--- 	},
--- })
---
--- vim.cmd("colorscheme github_dark_tritanopia")
-
--- local ok, nf = pcall(require, "nightfox")
--- if not ok then
--- 	return
--- end
---
--- nf.setup({
--- 	options = {
--- 		transparent = false,
--- 		inverse = {
--- 			search = true,
--- 		},
--- 	},
--- 	groups = {
--- 		terafox = {
--- 			-- LineNr = { fg = "palette.red" },
--- 		},
--- 	},
--- })
---
--- vim.cmd("colorscheme terafox")
-
--- local ok, boo = pcall(require, 'boo-colorscheme')
--- if not ok then return end
---
--- boo.use({
---   italic = false,
---   theme = 'crimson_moonlight',
--- })
-
--- local ok, cp = pcall(require, "catppuccin")
--- if not ok then
--- 	return
--- end
---
--- cp.setup({
--- 	flavour = "mocha",
--- 	transparent_background = false,
--- 	term_colors = true,
--- 	no_italic = true,
--- 	no_underline = true,
--- 	custom_highlights = function(colors)
--- 		return {
--- 			LineNr = { fg = colors.red },
--- 		}
--- 	end,
--- })
---
--- vim.cmd("colorscheme catppuccin")
-
--- local ok, neosolarized = pcall(require, "NeoSolarized")
--- if not ok then
---   return
--- end
---
--- neosolarized.setup({
---   style = "dark",        -- "dark" or "light"
---   transparent = true,    -- true/false; Enable this to disable setting the background color
---   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
---   enable_italics = false, -- Italics for different hightlight groups (eg. Statement, Condition, Comment, Include, etc.)
+-- solarized.setup({
+--   -- your configuration comes here
+--   -- or leave it empty to use the default settings
+--   transparent = true,    -- Enable this to disable setting the background color
+--   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
 --   styles = {
 --     -- Style to be applied to different syntax groups
+--     -- Value is any valid attr-list value for `:help nvim_set_hl`
 --     comments = { italic = false },
 --     keywords = { italic = false },
 --     functions = { italic = false },
 --     variables = { italic = false },
---     string = { italic = false },
---     underline = true, -- true/false; for global underline
---     undercurl = false, -- true/false; for global undercurl
+--     -- Background styles. Can be "dark", "transparent" or "normal"
+--     sidebars = "transparent",      -- style for sidebars, see below
+--     floats = "transparent",        -- style for floating windows
 --   },
+--   sidebars = { "qf", "help" },     -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
+--   day_brightness = 0.3,            -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
+--   hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
+--   dim_inactive = true,             -- dims inactive windows
+--   lualine_bold = true,             -- When `true`, section headers in the lualine theme will be bold
+--
+--   --- You can override specific color groups to use other groups or a hex color
+--   --- function will be called with a ColorScheme table
+--   ---@param colors ColorScheme
+--   on_colors = function(colors) end,
+--
+--   --- You can override specific highlights to use other groups or a hex color
+--   --- function will be called with a Highlights and ColorScheme table
+--   ---@param highlights Highlights
+--   ---@param colors ColorScheme
 --   on_highlights = function(highlights, colors)
---     highlights.WinSeparator.fg = "#152528"
---     highlights.CursorLineNr.fg = colors.yellow
+--     -- highlights.WinSeparator.fg = "none"
 --   end,
 -- })
 --
--- vim.cmd([[colorscheme NeoSolarized]])
+-- vim.cmd([[colorscheme solarized-osaka-night]])
 
-local ok, solarized = pcall(require, "solarized-osaka")
+local ok, tokyonight = pcall(require, "tokyonight")
 if not ok then
 	return
 end
 
-solarized.setup({
-	-- your configuration comes here
-	-- or leave it empty to use the default settings
-	transparent = true, -- Enable this to disable setting the background color
-	terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
+tokyonight.setup({
+	style = "night",
+	transparent = true,
 	styles = {
-		-- Style to be applied to different syntax groups
-		-- Value is any valid attr-list value for `:help nvim_set_hl`
 		comments = { italic = false },
 		keywords = { italic = false },
-		functions = { italic = false },
-		variables = { italic = false },
-		-- Background styles. Can be "dark", "transparent" or "normal"
-		sidebars = "transparent", -- style for sidebars, see below
-		floats = "transparent", -- style for floating windows
+		sidebars = "transparent",
+		floats = "transparent",
 	},
-	sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
-	day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
-	hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
-	dim_inactive = true, -- dims inactive windows
-	lualine_bold = true, -- When `true`, section headers in the lualine theme will be bold
-
-	--- You can override specific color groups to use other groups or a hex color
-	--- function will be called with a ColorScheme table
-	---@param colors ColorScheme
-	on_colors = function(colors) end,
-
-	--- You can override specific highlights to use other groups or a hex color
-	--- function will be called with a Highlights and ColorScheme table
-	---@param highlights Highlights
-	---@param colors ColorScheme
-	on_highlights = function(highlights, colors)
-		-- highlights.WinSeparator.fg = "none"
+	dim_inactive = true,
+	on_highlights = function(hl, c)
+		hl.TelescopeNormal = {
+			bg = c.bg_dark,
+			fg = c.fg_dark,
+		}
+		hl.TelescopeBorder = {
+			bg = c.bg_dark,
+			fg = c.bg_dark,
+		}
+		hl.TelescopePromptNormal = {
+			bg = c.bg_dark,
+		}
+		hl.TelescopePromptBorder = {
+			bg = c.bg_dark,
+			fg = c.bg_dark,
+		}
+		hl.TelescopePromptTitle = {
+			bg = c.bg_dark,
+			fg = c.bg_dark,
+		}
+		hl.TelescopePreviewTitle = {
+			bg = c.bg_dark,
+			fg = c.bg_dark,
+		}
+		hl.TelescopeResultsTitle = {
+			bg = c.dark5,
+			fg = c.bg_dark,
+		}
 	end,
 })
 
-vim.cmd([[colorscheme solarized-osaka-night]])
-
--- local ok, rp = pcall(require, "rose-pine")
--- if not ok then
---   return
--- end
---
--- rp.setup({
---   variant = "main",
---   dark_variant = "main",
---
---   bold_vert_split = false,
---
---   disable_background = true,
---   disable_float_background = true,
---   disable_italics = true,
---
---   highlight_groups = {
---     Visual = { fg = "fg", bg = "foam", blend = 5 },
---     CursorLineNr = { bg = "love", fg = "love", blend = 10 },
---     CursorLine = { bg = "love", fg = "fg", blend = 1 },
---   },
--- })
---
--- vim.cmd([[colorscheme rose-pine]])
-
--- local ok, noirbuddy = pcall(require, "noirbuddy")
--- if not ok then
--- 	return
--- end
---
--- local Group = require("colorbuddy").setup({})
---
--- noirbuddy.setup({
--- 	preset = "kiwi",
--- })
-
---
--- require 'nordic'.setup {
---   -- This callback can be used to override the colors used in the palette.
---   on_palette = function(palette) return palette end,
---   -- Enable bold keywords.
---   bold_keywords = true,
---   -- Enable italic comments.
---   italic_comments = false,
---   -- Enable general editor background transparency.
---   transparent_bg = false,
---   -- Enable brighter float border.
---   bright_border = false,
---   -- Reduce the overall amount of blue in the theme (diverges from base Nord).
---   reduced_blue = true,
---   -- Swap the dark background with the normal one.
---   swap_backgrounds = false,
---   -- Override the styling of any highlight group.
---   override = {},
---   -- Cursorline options.  Also includes visual/selection.
---   cursorline = {
---     -- Bold font in cursorline.
---     bold = false,
---     -- Bold cursorline number.
---     bold_number = true,
---     -- Avialable styles: 'dark', 'light'.
---     theme = 'dark',
---     -- Blending the cursorline bg with the buffer bg.
---     blend = 0.7,
---   },
---   noice = {
---     -- Available styles: `classic`, `flat`.
---     style = 'flat',
---   },
---   telescope = {
---     -- Available styles: `classic`, `flat`.
---     style = 'classic',
---   },
---   ts_context = {
---     -- Enables dark background for treesitter-context window
---     dark_background = true,
---   }
--- }
---
--- vim.cmd.colorscheme 'nordic'
-
--- vim.cmd("colorscheme darcula-solid")
--- vim.cmd("set termguicolors")
+vim.cmd([[colorscheme tokyonight]])
