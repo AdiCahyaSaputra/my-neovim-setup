@@ -2,10 +2,9 @@
 
 Fully written in lua, aesthetic ui, fuzzy finder, lsp, formatter, speed motion and more...
 
-![Hyper 21_09_2023 15_04_27](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/3194105e-a181-4e7f-8f04-f12ad1b3183a)
-![Hyper 21_09_2023 15_04_38](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/5e4e61d6-e3cb-4ecf-97a4-f760c8e46558)
-![Hyper 21_09_2023 15_06_47](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/c7141244-710f-4d05-8965-aa471b852a8f)
-![Hyper 21_09_2023 15_06_58](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/32a57f1a-cbfe-4ebb-9c0f-e5f3e2dc1721)
+![Administrator_ PowerShell 15_01_2024 11_27_07](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/08aa6a00-0b32-4e80-9852-c4303d35ad22)
+![Administrator_ PowerShell 15_01_2024 11_27_13](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/05161cf6-5c1e-4a75-afde-5eb47c439a76)
+![Administrator_ PowerShell 15_01_2024 11_27_26](https://github.com/AdiCahyaSaputra/my-neovim-setup/assets/77385046/ec101412-fcf2-4da4-9984-11853bcdc724)
 
 ### Plugin Manager
 
@@ -124,7 +123,7 @@ vim.g.mapleader = " "
 "<cr>" -- confirm cmp (insert mode)
 ```
 
-## Plugins
+## Plugins (Outdated)
 
 - [onedarkpro](https://github.com/olimorris/onedarkpro.nvim)
 - [lsp-zero.nvim](https://github.com/VonHeikemen/lsp-zero.nvim)

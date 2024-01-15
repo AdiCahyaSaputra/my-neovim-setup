@@ -41,50 +41,103 @@
 --
 -- vim.cmd([[colorscheme solarized-osaka-night]])
 
-local ok, tokyonight = pcall(require, "tokyonight")
+-- local ok, tokyonight = pcall(require, "tokyonight")
+-- if not ok then
+-- 	return
+-- end
+--
+-- tokyonight.setup({
+-- 	style = "night",
+-- 	transparent = true,
+-- 	styles = {
+-- 		comments = { italic = false },
+-- 		keywords = { italic = false },
+-- 		sidebars = "transparent",
+-- 		floats = "transparent",
+-- 	},
+-- 	dim_inactive = true,
+-- 	on_highlights = function(hl, c)
+-- 		hl.TelescopeNormal = {
+-- 			bg = c.bg_dark,
+-- 			fg = c.fg_dark,
+-- 		}
+-- 		hl.TelescopeBorder = {
+-- 			bg = c.bg_dark,
+-- 			fg = c.bg_dark,
+-- 		}
+-- 		hl.TelescopePromptNormal = {
+-- 			bg = c.bg_dark,
+-- 		}
+-- 		hl.TelescopePromptBorder = {
+-- 			bg = c.bg_dark,
+-- 			fg = c.bg_dark,
+-- 		}
+-- 		hl.TelescopePromptTitle = {
+-- 			bg = c.bg_dark,
+-- 			fg = c.bg_dark,
+-- 		}
+-- 		hl.TelescopePreviewTitle = {
+-- 			bg = c.bg_dark,
+-- 			fg = c.bg_dark,
+-- 		}
+-- 		hl.TelescopeResultsTitle = {
+-- 			bg = c.dark5,
+-- 			fg = c.bg_dark,
+-- 		}
+-- 	end,
+-- })
+--
+-- vim.cmd([[colorscheme tokyonight]])
+
+local ok, rose_pine = pcall(require, "rose-pine")
 if not ok then
 	return
 end
 
-tokyonight.setup({
-	style = "night",
-	transparent = true,
+rose_pine.setup({
+	variant = "main",
 	styles = {
-		comments = { italic = false },
-		keywords = { italic = false },
-		sidebars = "transparent",
-		floats = "transparent",
+		bold = true,
+		italic = false,
+		transparency = true,
 	},
-	dim_inactive = true,
-	on_highlights = function(hl, c)
-		hl.TelescopeNormal = {
-			bg = c.bg_dark,
-			fg = c.fg_dark,
-		}
-		hl.TelescopeBorder = {
-			bg = c.bg_dark,
-			fg = c.bg_dark,
-		}
-		hl.TelescopePromptNormal = {
-			bg = c.bg_dark,
-		}
-		hl.TelescopePromptBorder = {
-			bg = c.bg_dark,
-			fg = c.bg_dark,
-		}
-		hl.TelescopePromptTitle = {
-			bg = c.bg_dark,
-			fg = c.bg_dark,
-		}
-		hl.TelescopePreviewTitle = {
-			bg = c.bg_dark,
-			fg = c.bg_dark,
-		}
-		hl.TelescopeResultsTitle = {
-			bg = c.dark5,
-			fg = c.bg_dark,
-		}
-	end,
+	highlight_groups = {
+		StatusLine = { fg = "#000000", bg = "pine", blend = 70 },
+		TelescopeNormal = {
+			bg = "none",
+			fg = "text",
+		},
+		TelescopeBorder = {
+			bg = "none",
+			fg = "pine",
+		},
+		TelescopePromptNormal = {
+			bg = "none",
+		},
+		TelescopePromptBorder = {
+			bg = "none",
+			fg = "pine",
+		},
+		TelescopePromptTitle = {
+			bg = "none",
+			fg = "none",
+		},
+		TelescopePreviewTitle = {
+			bg = "none",
+			fg = "none",
+		},
+		TelescopeResultsTitle = {
+			bg = "none",
+			fg = "text",
+		},
+		TelescopeSelectionCaret = { fg = "pine", bg = "highlight_med" },
+		TelescopeMultiSelection = { fg = "text", bg = "highlight_high" },
+		TelescopeSelection = { fg = "text", bg = "highlight_med" },
+		Pmenu = { bg = "base", fg = "text" },
+		NeoTreeNormal = { bg = "none", fg = "text" },
+		VertSplit = { fg = "pine" },
+		WinSeparator = { fg = "pine" },
+	},
 })
 
-vim.cmd([[colorscheme tokyonight]])
+vim.cmd("colorscheme rose-pine")
