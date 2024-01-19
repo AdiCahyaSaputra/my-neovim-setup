@@ -15,6 +15,10 @@ telescope.setup({
     --   hijack_netrw = true,
     -- },
   },
+  -- defaults = {
+  --   border = {},
+  --   borderchars = { "─", "│", "─", "│", "[]", "[]", "[]", "[]" },
+  -- },
 })
 
 telescope.load_extension("ui-select")

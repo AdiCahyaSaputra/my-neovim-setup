@@ -78,6 +78,8 @@ end
 
 vim.cmd("autocmd! TermOpen term://*toggleterm* lua set_toggleterm_keybind()")
 
+bind("n", "<C-n>", "<C-\\><C-n>")
+
 bind("n", "<A-t>", "<cmd>ToggleTerm direction=float<cr>", { noremap = true, silent = true })
 
 bind("n", "<leader>x", "<cmd>TroubleToggle workspace_diagnostics<cr>", { noremap = true })

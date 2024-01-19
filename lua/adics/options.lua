@@ -11,11 +11,11 @@ vim.o.shiftwidth = 2
 vim.o.tabstop = 2
 vim.o.softtabstop = 2
 vim.o.showmode = false
-vim.o.shell = "cmd.exe"
+vim.o.shell = "pwsh.exe"
 -- vim.o.showtabline = 2
 vim.opt.hidden = true
 vim.opt.autoindent = true
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 vim.opt.smartindent = true
 vim.opt.hlsearch = true
 vim.opt.showcmd = true
@@ -31,6 +31,6 @@ vim.opt.background = "dark"
 vim.opt.clipboard = "unnamedplus" -- Required dependecies. In my wayland is 'wl-clipboard' or in ubuntu is 'xclip'
 
 vim.g.skip_ts_context_commentstring_module = true
-vim.opt.statusline = " %f %m %= %y %l:%c "
+vim.opt.statusline = " %f %m %= %y "
 
 vim.opt.mouse = ""
