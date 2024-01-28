@@ -31,6 +31,7 @@ vim.opt.background = "dark"
 vim.opt.clipboard = "unnamedplus" -- Required dependecies. In my wayland is 'wl-clipboard' or in ubuntu is 'xclip'
 
 vim.g.skip_ts_context_commentstring_module = true
-vim.opt.statusline = " %f %m %= %y "
+-- vim.opt.statusline = " %f %m %= %y "
+vim.o.statusline = [[%!v:lua.require('adics.statusline').statusline()]]
 
 vim.opt.mouse = ""
