@@ -137,6 +137,7 @@ rose_pine.setup({
 		NeoTreeNormal = { bg = "none", fg = "text" },
 		VertSplit = { fg = "pine" },
 		WinSeparator = { fg = "pine" },
+		Directory = { fg = "pine" },
 	},
 })
 
